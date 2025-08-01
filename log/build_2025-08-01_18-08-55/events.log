@@ -1,0 +1,379 @@
+[0.000000] (-) TimerEvent: {}
+[0.000375] (custom_messeage) JobQueued: {'identifier': 'custom_messeage', 'dependencies': OrderedDict()}
+[0.000702] (pick_and_place) JobQueued: {'identifier': 'pick_and_place', 'dependencies': OrderedDict()}
+[0.000860] (custom_messeage) JobStarted: {'identifier': 'custom_messeage'}
+[0.008657] (pick_and_place) JobStarted: {'identifier': 'pick_and_place'}
+[0.018327] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'cmake'}
+[0.019109] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage', '-DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 53144 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws/ros2_ws/src', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/7', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '253', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '62', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 53144 192.168.5.1 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[0.099699] (-) TimerEvent: {}
+[0.134627] (custom_messeage) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.199818] (-) TimerEvent: {}
+[0.239055] (custom_messeage) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.265997] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299929] (-) TimerEvent: {}
+[0.400309] (-) TimerEvent: {}
+[0.447978] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.463127] (custom_messeage) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.463579] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.464139] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.479313] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500455] (-) TimerEvent: {}
+[0.602473] (-) TimerEvent: {}
+[0.679456] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.694009] (custom_messeage) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.694444] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.695145] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.701610] (custom_messeage) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.702542] (-) TimerEvent: {}
+[0.802836] (-) TimerEvent: {}
+[0.903603] (-) TimerEvent: {}
+[0.954604] (custom_messeage) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.003716] (-) TimerEvent: {}
+[1.104087] (-) TimerEvent: {}
+[1.169877] (custom_messeage) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[1.183031] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.204177] (-) TimerEvent: {}
+[1.288144] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.304270] (-) TimerEvent: {}
+[1.375551] (custom_messeage) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[1.404373] (-) TimerEvent: {}
+[1.504885] (-) TimerEvent: {}
+[1.517745] (pick_and_place) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/pick_and_place', 'build', '--build-base', '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build', 'install', '--record', '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 53144 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws/ros2_ws/src', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/7', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '253', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '62', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 53144 192.168.5.1 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.604992] (-) TimerEvent: {}
+[1.705362] (-) TimerEvent: {}
+[1.805712] (-) TimerEvent: {}
+[1.906096] (-) TimerEvent: {}
+[1.982463] (pick_and_place) StdoutLine: {'line': b'running egg_info\n'}
+[2.006196] (-) TimerEvent: {}
+[2.017696] (pick_and_place) StdoutLine: {'line': b'writing ../../build/pick_and_place/pick_and_place.egg-info/PKG-INFO\n'}
+[2.018244] (pick_and_place) StdoutLine: {'line': b'writing dependency_links to ../../build/pick_and_place/pick_and_place.egg-info/dependency_links.txt\n'}
+[2.019232] (pick_and_place) StdoutLine: {'line': b'writing entry points to ../../build/pick_and_place/pick_and_place.egg-info/entry_points.txt\n'}
+[2.019818] (pick_and_place) StdoutLine: {'line': b'writing requirements to ../../build/pick_and_place/pick_and_place.egg-info/requires.txt\n'}
+[2.020461] (pick_and_place) StdoutLine: {'line': b'writing top-level names to ../../build/pick_and_place/pick_and_place.egg-info/top_level.txt\n'}
+[2.092543] (pick_and_place) StdoutLine: {'line': b"reading manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'\n"}
+[2.093057] (pick_and_place) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[2.094088] (pick_and_place) StdoutLine: {'line': b"writing manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'\n"}
+[2.094658] (pick_and_place) StdoutLine: {'line': b'running build\n'}
+[2.094843] (pick_and_place) StdoutLine: {'line': b'running build_py\n'}
+[2.095135] (pick_and_place) StdoutLine: {'line': b'copying pick_and_place/robot2_control_node.py -> /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build/lib/pick_and_place\n'}
+[2.095939] (pick_and_place) StdoutLine: {'line': b'running install\n'}
+[2.105461] (pick_and_place) StdoutLine: {'line': b'running install_lib\n'}
+[2.106260] (-) TimerEvent: {}
+[2.140497] (pick_and_place) StdoutLine: {'line': b'copying /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build/lib/pick_and_place/robot2_control_node.py -> /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place\n'}
+[2.141802] (pick_and_place) StdoutLine: {'line': b'byte-compiling /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place/robot2_control_node.py to robot2_control_node.cpython-312.pyc\n'}
+[2.144088] (pick_and_place) StdoutLine: {'line': b'running install_data\n'}
+[2.144495] (pick_and_place) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.184352] (pick_and_place) StdoutLine: {'line': b"removing '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[2.184923] (pick_and_place) StdoutLine: {'line': b'Copying ../../build/pick_and_place/pick_and_place.egg-info to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info\n'}
+[2.186332] (pick_and_place) StdoutLine: {'line': b'running install_scripts\n'}
+[2.206363] (-) TimerEvent: {}
+[2.306753] (-) TimerEvent: {}
+[2.406070] (custom_messeage) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[2.406823] (-) TimerEvent: {}
+[2.415387] (pick_and_place) StdoutLine: {'line': b'Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[2.415722] (pick_and_place) StdoutLine: {'line': b'Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[2.417248] (pick_and_place) StdoutLine: {'line': b'Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[2.418543] (pick_and_place) StdoutLine: {'line': b'Installing robot2_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[2.419645] (pick_and_place) StdoutLine: {'line': b'Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[2.421000] (pick_and_place) StdoutLine: {'line': b"writing list of installed files to '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log'\n"}
+[2.506965] (-) TimerEvent: {}
+[2.515476] (pick_and_place) CommandEnded: {'returncode': 0}
+[2.533271] (pick_and_place) JobEnded: {'identifier': 'pick_and_place', 'rc': 0}
+[2.607061] (-) TimerEvent: {}
+[2.707382] (-) TimerEvent: {}
+[2.807786] (-) TimerEvent: {}
+[2.908187] (-) TimerEvent: {}
+[3.008534] (-) TimerEvent: {}
+[3.108891] (-) TimerEvent: {}
+[3.116137] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.208994] (-) TimerEvent: {}
+[3.309361] (-) TimerEvent: {}
+[3.409735] (-) TimerEvent: {}
+[3.510075] (-) TimerEvent: {}
+[3.610449] (-) TimerEvent: {}
+[3.710816] (-) TimerEvent: {}
+[3.811171] (-) TimerEvent: {}
+[3.911561] (-) TimerEvent: {}
+[4.007065] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[4.011630] (-) TimerEvent: {}
+[4.013838] (custom_messeage) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[4.111741] (-) TimerEvent: {}
+[4.212081] (-) TimerEvent: {}
+[4.232126] (custom_messeage) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[4.312193] (-) TimerEvent: {}
+[4.412569] (-) TimerEvent: {}
+[4.512929] (-) TimerEvent: {}
+[4.613321] (-) TimerEvent: {}
+[4.713661] (-) TimerEvent: {}
+[4.814014] (-) TimerEvent: {}
+[4.914461] (-) TimerEvent: {}
+[4.962106] (custom_messeage) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[5.014567] (-) TimerEvent: {}
+[5.021948] (custom_messeage) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[5.087629] (custom_messeage) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[5.090824] (custom_messeage) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[5.095951] (custom_messeage) StdoutLine: {'line': b'-- Configuring done (5.1s)\n'}
+[5.114663] (-) TimerEvent: {}
+[5.146022] (custom_messeage) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[5.168672] (custom_messeage) StdoutLine: {'line': b'-- Build files have been written to: /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage\n'}
+[5.194769] (custom_messeage) CommandEnded: {'returncode': 0}
+[5.195488] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'build'}
+[5.197049] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', '--', '-j4', '-l4'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 53144 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws/ros2_ws/src', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/7', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '253', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '62', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 53144 192.168.5.1 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[5.214770] (-) TimerEvent: {}
+[5.295870] (custom_messeage) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[5.313793] (custom_messeage) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_copy_custom_messeage\n'}
+[5.314848] (-) TimerEvent: {}
+[5.415219] (-) TimerEvent: {}
+[5.517497] (-) TimerEvent: {}
+[5.617982] (-) TimerEvent: {}
+[5.664983] (custom_messeage) StdoutLine: {'line': b'[  2%] Built target custom_messeage__rosidl_generator_type_description\n'}
+[5.683494] (custom_messeage) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[5.707316] (custom_messeage) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[5.718255] (-) TimerEvent: {}
+[5.758568] (custom_messeage) StdoutLine: {'line': b'running egg_info\n'}
+[5.759486] (custom_messeage) StdoutLine: {'line': b'creating custom_messeage.egg-info\n'}
+[5.796661] (custom_messeage) StdoutLine: {'line': b'writing custom_messeage.egg-info/PKG-INFO\n'}
+[5.797754] (custom_messeage) StdoutLine: {'line': b'writing dependency_links to custom_messeage.egg-info/dependency_links.txt\n'}
+[5.798148] (custom_messeage) StdoutLine: {'line': b'writing top-level names to custom_messeage.egg-info/top_level.txt\n'}
+[5.798288] (custom_messeage) StdoutLine: {'line': b"writing manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[5.818383] (-) TimerEvent: {}
+[5.904193] (custom_messeage) StdoutLine: {'line': b"reading manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[5.905139] (custom_messeage) StdoutLine: {'line': b"writing manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[5.921487] (-) TimerEvent: {}
+[6.002851] (custom_messeage) StdoutLine: {'line': b'[  8%] Built target ament_cmake_python_build_custom_messeage_egg\n'}
+[6.021598] (-) TimerEvent: {}
+[6.121977] (-) TimerEvent: {}
+[6.223534] (-) TimerEvent: {}
+[6.225742] (custom_messeage) StdoutLine: {'line': b'[  8%] Built target custom_messeage__cpp\n'}
+[6.262888] (custom_messeage) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__description.c.o\x1b[0m\n'}
+[6.264838] (custom_messeage) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__functions.c.o\x1b[0m\n'}
+[6.265602] (custom_messeage) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[6.323648] (-) TimerEvent: {}
+[6.424046] (-) TimerEvent: {}
+[6.464378] (custom_messeage) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_generator_c.so\x1b[0m\n'}
+[6.524170] (-) TimerEvent: {}
+[6.542162] (custom_messeage) StdoutLine: {'line': b'[ 20%] Built target custom_messeage__rosidl_generator_c\n'}
+[6.564504] (custom_messeage) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[6.565303] (custom_messeage) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.575482] (custom_messeage) StdoutLine: {'line': b'[ 29%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.575864] (custom_messeage) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[6.624344] (-) TimerEvent: {}
+[6.724806] (-) TimerEvent: {}
+[6.825198] (-) TimerEvent: {}
+[6.925592] (-) TimerEvent: {}
+[7.025970] (-) TimerEvent: {}
+[7.039280] (custom_messeage) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_messeage/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[7.097442] (custom_messeage) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_messeage/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[7.127506] (-) TimerEvent: {}
+[7.188007] (custom_messeage) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_c.so\x1b[0m\n'}
+[7.191597] (custom_messeage) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_messeage/srv/detail/robot_arm_request__type_support_c.cpp.o\x1b[0m\n'}
+[7.198354] (custom_messeage) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_messeage/srv/detail/dds_fastrtps/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[7.215994] (custom_messeage) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[7.228529] (-) TimerEvent: {}
+[7.279808] (custom_messeage) StdoutLine: {'line': b'[ 50%] Built target custom_messeage__rosidl_typesupport_c\n'}
+[7.290650] (custom_messeage) StdoutLine: {'line': b'[ 50%] Built target custom_messeage__rosidl_typesupport_introspection_c\n'}
+[7.302326] (custom_messeage) StdoutLine: {'line': b'[ 52%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[7.316572] (custom_messeage) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[7.329339] (-) TimerEvent: {}
+[7.430156] (-) TimerEvent: {}
+[7.530773] (-) TimerEvent: {}
+[7.633492] (-) TimerEvent: {}
+[7.734109] (-) TimerEvent: {}
+[7.834740] (-) TimerEvent: {}
+[7.851533] (custom_messeage) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_messeage/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[7.874767] (custom_messeage) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_messeage/srv/detail/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[7.934863] (-) TimerEvent: {}
+[8.035510] (-) TimerEvent: {}
+[8.136142] (-) TimerEvent: {}
+[8.236841] (-) TimerEvent: {}
+[8.338955] (-) TimerEvent: {}
+[8.418357] (custom_messeage) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[8.439106] (-) TimerEvent: {}
+[8.539616] (-) TimerEvent: {}
+[8.636218] (custom_messeage) StdoutLine: {'line': b'[ 64%] Built target custom_messeage__rosidl_typesupport_fastrtps_c\n'}
+[8.639831] (-) TimerEvent: {}
+[8.686184] (custom_messeage) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[8.737891] (custom_messeage) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[8.739954] (-) TimerEvent: {}
+[8.820662] (custom_messeage) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[8.842570] (-) TimerEvent: {}
+[8.903122] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage__rosidl_typesupport_fastrtps_cpp\n'}
+[8.942714] (-) TimerEvent: {}
+[8.947621] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage__rosidl_typesupport_cpp\n'}
+[8.998294] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage__rosidl_typesupport_introspection_cpp\n'}
+[9.039877] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage\n'}
+[9.042788] (-) TimerEvent: {}
+[9.081927] (custom_messeage) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.142895] (-) TimerEvent: {}
+[9.243227] (-) TimerEvent: {}
+[9.343541] (-) TimerEvent: {}
+[9.443814] (-) TimerEvent: {}
+[9.544143] (-) TimerEvent: {}
+[9.624820] (custom_messeage) StdoutLine: {'line': b'[ 76%] Built target custom_messeage__py\n'}
+[9.644265] (-) TimerEvent: {}
+[9.665101] (custom_messeage) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_py.dir/rosidl_generator_py/custom_messeage/srv/_robot_arm_request_s.c.o\x1b[0m\n'}
+[9.744387] (-) TimerEvent: {}
+[9.844809] (-) TimerEvent: {}
+[9.945172] (-) TimerEvent: {}
+[9.984906] (custom_messeage) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_generator_py.so\x1b[0m\n'}
+[10.045290] (-) TimerEvent: {}
+[10.068175] (custom_messeage) StdoutLine: {'line': b'[ 82%] Built target custom_messeage__rosidl_generator_py\n'}
+[10.110066] (custom_messeage) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[10.110466] (custom_messeage) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[10.110817] (custom_messeage) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[10.146496] (-) TimerEvent: {}
+[10.246937] (-) TimerEvent: {}
+[10.309477] (custom_messeage) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[10.310888] (custom_messeage) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[10.311169] (custom_messeage) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[10.347175] (-) TimerEvent: {}
+[10.374920] (custom_messeage) StdoutLine: {'line': b'[100%] Built target custom_messeage_s__rosidl_typesupport_introspection_c\n'}
+[10.375286] (custom_messeage) StdoutLine: {'line': b'[100%] Built target custom_messeage_s__rosidl_typesupport_fastrtps_c\n'}
+[10.377725] (custom_messeage) StdoutLine: {'line': b'[100%] Built target custom_messeage_s__rosidl_typesupport_c\n'}
+[10.401651] (custom_messeage) CommandEnded: {'returncode': 0}
+[10.402477] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'install'}
+[10.422197] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 53144 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws/ros2_ws/src', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/7', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '253', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '62', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 53144 192.168.5.1 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[10.439467] (custom_messeage) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.439816] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/rosidl_interfaces/custom_messeage\n'}
+[10.440215] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.json\n'}
+[10.440457] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.440651] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg\n'}
+[10.440790] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_c__visibility_control.h\n'}
+[10.440950] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.441081] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.441224] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__description.c\n'}
+[10.441341] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.c\n'}
+[10.441487] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__functions.h\n'}
+[10.441689] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.h\n'}
+[10.441862] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.h\n'}
+[10.441983] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__functions.c\n'}
+[10.442121] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.h\n'}
+[10.442384] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.sh\n'}
+[10.442576] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.dsv\n'}
+[10.442835] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_c.so\n'}
+[10.443472] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_c.so" to ""\n'}
+[10.443609] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.443721] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg\n'}
+[10.443811] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[10.443943] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.444028] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.444114] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_c.h\n'}
+[10.444221] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_c.so\n'}
+[10.444796] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.444969] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.445063] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg\n'}
+[10.445170] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[10.445262] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.445389] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.445498] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_c.h\n'}
+[10.445587] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.c\n'}
+[10.445704] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_c.so\n'}
+[10.446274] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.446439] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_c.so\n'}
+[10.447016] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_c.so" to ""\n'}
+[10.447127] (-) TimerEvent: {}
+[10.447268] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.447376] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg\n'}
+[10.447570] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[10.447669] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.447761] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.447850] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__builder.hpp\n'}
+[10.447990] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.hpp\n'}
+[10.448100] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__traits.hpp\n'}
+[10.448195] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.hpp\n'}
+[10.448314] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.hpp\n'}
+[10.448429] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.448565] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg\n'}
+[10.448674] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[10.448802] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.448892] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.448980] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/dds_fastrtps\n'}
+[10.449091] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[10.449184] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so\n'}
+[10.449892] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[10.450080] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage\n'}
+[10.450188] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv\n'}
+[10.450274] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail\n'}
+[10.450365] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[10.450492] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.cpp\n'}
+[10.450602] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_cpp.so\n'}
+[10.451235] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[10.451374] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_cpp.so\n'}
+[10.452029] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_cpp.so" to ""\n'}
+[10.452170] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.sh\n'}
+[10.452281] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.dsv\n'}
+[10.452447] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info\n'}
+[10.452625] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[10.452759] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[10.452886] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[10.453012] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[10.453191] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage\n'}
+[10.453317] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\n'}
+[10.453583] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/__init__.py\n'}
+[10.453719] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_c.c\n'}
+[10.453860] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\n'}
+[10.454124] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv\n'}
+[10.454231] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/__init__.py\n'}
+[10.454371] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request.py\n'}
+[10.454536] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request_s.c\n'}
+[10.454694] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[10.454851] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\n'}
+[10.455115] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[10.514979] (custom_messeage) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage'...\n"}
+[10.515312] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/__init__.py'...\n"}
+[10.515453] (custom_messeage) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv'...\n"}
+[10.515579] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/__init__.py'...\n"}
+[10.515687] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request.py'...\n"}
+[10.527992] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\n'}
+[10.528533] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[10.528882] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\n'}
+[10.529412] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so" to ""\n'}
+[10.529736] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\n'}
+[10.530255] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so" to ""\n'}
+[10.530383] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_py.so\n'}
+[10.531039] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_py.so" to ""\n'}
+[10.531218] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.idl\n'}
+[10.531332] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.srv\n'}
+[10.531558] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/package_run_dependencies/custom_messeage\n'}
+[10.531788] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/parent_prefix_path/custom_messeage\n'}
+[10.531969] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.sh\n'}
+[10.532132] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.dsv\n'}
+[10.532295] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.sh\n'}
+[10.532482] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.dsv\n'}
+[10.532654] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.bash\n'}
+[10.532819] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.sh\n'}
+[10.532990] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.zsh\n'}
+[10.533164] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.dsv\n'}
+[10.533352] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.dsv\n'}
+[10.533622] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/packages/custom_messeage\n'}
+[10.533886] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cExport.cmake\n'}
+[10.534110] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cExport-noconfig.cmake\n'}
+[10.534324] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[10.534539] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[10.534760] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cExport.cmake\n'}
+[10.534968] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[10.535180] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cExport.cmake\n'}
+[10.535387] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[10.535610] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cppExport.cmake\n'}
+[10.535829] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[10.536028] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[10.536245] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[10.536460] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[10.536677] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cppExport.cmake\n'}
+[10.536889] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[10.537102] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_pyExport.cmake\n'}
+[10.537292] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_pyExport-noconfig.cmake\n'}
+[10.537506] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake-extras.cmake\n'}
+[10.537695] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[10.537889] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[10.538077] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[10.538278] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[10.538474] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[10.538668] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[10.538856] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeageConfig.cmake\n'}
+[10.539010] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeageConfig-version.cmake\n'}
+[10.539188] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.xml\n'}
+[10.542807] (custom_messeage) CommandEnded: {'returncode': 0}
+[10.547236] (-) TimerEvent: {}
+[10.573153] (custom_messeage) JobEnded: {'identifier': 'custom_messeage', 'rc': 0}
+[10.574048] (-) EventReactorShutdown: {}

@@ -1,0 +1,20 @@
+[1.785s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_place/build --no-deps symlink_data
+[2.328s] running develop
+[2.678s] running egg_info
+[2.709s] writing pick_place.egg-info/PKG-INFO
+[2.711s] writing dependency_links to pick_place.egg-info/dependency_links.txt
+[2.711s] writing entry points to pick_place.egg-info/entry_points.txt
+[2.711s] writing requirements to pick_place.egg-info/requires.txt
+[2.711s] writing top-level names to pick_place.egg-info/top_level.txt
+[2.779s] reading manifest file 'pick_place.egg-info/SOURCES.txt'
+[2.780s] writing manifest file 'pick_place.egg-info/SOURCES.txt'
+[2.816s] running build_ext
+[2.816s] Creating /home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages/pick-place.egg-link (link to .)
+[2.817s] Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/pick_place
+[2.817s] Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/pick_place
+[2.818s] Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/pick_place
+[2.818s] Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/pick_place
+[2.818s] 
+[2.818s] Installed /home/jetcobot/sun_ws/ros2_ws/build/pick_place
+[2.819s] running symlink_data
+[2.952s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_place/build --no-deps symlink_data

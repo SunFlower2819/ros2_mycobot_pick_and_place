@@ -1,0 +1,1 @@
+/home/jetcobot/sun_ws/ros2_ws/src/pick_place/launch/pick_place_launch.py
