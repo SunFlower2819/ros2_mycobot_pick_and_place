@@ -1,5 +1,0 @@
-[console_scripts]
-camera_node = pick_place.camera_node:main
-control_node = pick_place.control_node:main
-detection_node = pick_place.detection_node:main
-transform_node = pick_place.transform_node:main

@@ -5,7 +5,8 @@ from pymycobot.mycobot280 import MyCobot280
 from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
-from pick_and_place.image_capture import get_frame
+# from pick_and_place.image_capture import get_frame
+from pick_and_place.image_capture import CameraManager  # ← 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
 
 from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
@@ -25,6 +26,13 @@ class Robot2ControlNode(Node):
         self.mc.thread_lock = True
         print("로봇이 연결되었습니다.")
 
+        # 카메라 초기화 (예외 처리 추가)
+        try:
+            self.camera = CameraManager()  # 여러 디바이스 자동 시도
+            self.get_logger().info("카메라가 성공적으로 초기화되었습니다.")
+        except RuntimeError as e:
+            self.get_logger().error(f"카메라 초기화 실패: {e}")
+            self.camera = None  # 카메라 없이도 동작하도록
  
     def arm2_control_callback(self, request, response):
         shelf_num = request.shelf_num
@@ -35,14 +43,14 @@ class Robot2ControlNode(Node):
         self.get_logger().info(f'[서비스 요청] action: {action}, shelf_num: {shelf_num}, pinky_num: {pinky_num}, shoe_info: {shoe_info}')
 
         if action == 'buffer_to_pinky':
-            success, msg = self.handle_buffer_to_pinky(pinky_num, shoe_info)
+            success = self.handle_buffer_to_pinky(pinky_num, shoe_info)
         elif action == 'pinky_to_buffer':
-            success, msg = self.handle_pinky_to_buffer(pinky_num, shoe_info)
+            success = self.handle_pinky_to_buffer(pinky_num, shoe_info)
         else:
-            success, msg = False, f"지원하지 않는 action: {action}"
+            success = False, f"지원하지 않는 action: {action}"
 
         response.success = success
-        response.message = msg
+        # response.message = msg
         return response
 
 
@@ -55,7 +63,10 @@ class Robot2ControlNode(Node):
         time.sleep(5)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
-        frame = get_frame()
+        # frame = self.camera.get_frame()
+        frame = self.camera.get_frame() ###ham
+        # self.get_logger().info(f'[이미지 데이터] : {ret}')
+
         camera_coords, rvec_deg = detect_target(frame)
 
         if camera_coords is not None and rvec_deg is not None:
@@ -89,29 +100,38 @@ class Robot2ControlNode(Node):
 
         else:
             print("April Tag 좌표를 가져올 수 없습니다.")
+            return False # "버퍼에서 핑키로 이동 실패"
 
         time.sleep(3)
         print("그리퍼를 완전히 닫습니다.")
         self.mc.set_gripper_value(0, 50)
         time.sleep(1)
 
-        self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
+        # self.mc.send_angles([0, 0, 0, 0, 0, 40], 20) # colcon build --symlink-install
 
         self.get_logger().info(f"버퍼 → 핑키: {pinky_num}, 신발: {shoe_info}")
-        return True, "버퍼에서 핑키로 이동 완료"
+        return True # "버퍼에서 핑키로 이동 완료"
 
     def handle_pinky_to_buffer(self, pinky_num, shoe_info):
         # TODO: 실제 로봇 로직 작성
         self.get_logger().info(f"핑키 → 버퍼: {pinky_num}, 신발: {shoe_info}")
-        return True, "핑키에서 버퍼로 이동 완료"
+        return True # "핑키에서 버퍼로 이동 완료"
 
-
+def destroy_node(self):
+    """노드 종료 시 리소스 정리"""
+    if self.camera:
+        self.camera.release()  # 카메라 해제
+    super().destroy_node()
 
 def main(args=None):
     rclpy.init(args=args)
     node = Robot2ControlNode()
-    rclpy.spin(node)
-    rclpy.shutdown()
+    try:
+        rclpy.spin(node)
+    finally:
+        node.camera.release()  # 안전하게 종료 시 카메라 해제
+        node.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

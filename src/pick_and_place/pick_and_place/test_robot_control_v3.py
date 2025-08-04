@@ -9,13 +9,19 @@ from pymycobot.mycobot280 import MyCobot280
 from pymycobot.genre import Angle, Coord
 
 from base_coordinate_transform import transform_target_pose_camera_to_base
-from image_capture import get_frame
+from image_capture import CameraManager  # ← 클래스 가져오기
 from image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
 
 def main():
     mc = MyCobot280('/dev/ttyJETCOBOT', 1000000)
     mc.thread_lock = True
     print("로봇이 연결되었습니다.")
+    
+    # 카메라 초기화 (예외 처리 추가)
+    try:
+        camera = CameraManager()  # 여러 디바이스 자동 시도
+    except RuntimeError as e:
+        camera = None  # 카메라 없이도 동작하도록
 
     message = "pick_from_shelf1"
     if message == "pick_from_shelf1":
@@ -31,7 +37,7 @@ def main():
 
 
     # 프레임 가져오고, 프레임에서 에이프릴테그 감지
-    frame = get_frame()
+    frame = camera.get_frame() ###ham
     camera_coords, rvec_deg = detect_target(frame)
 
 

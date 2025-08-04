@@ -1,6 +1,1 @@
-int32 shelf_num
-int32 pinky_num
-string action
-string shoe_info
----
-bool success
+/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage/srv/RobotArmRequest.srv

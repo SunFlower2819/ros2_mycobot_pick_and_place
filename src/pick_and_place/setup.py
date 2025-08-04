@@ -32,6 +32,7 @@ setup(
             'transform_node = pick_and_place.transform_node:main',
             'control_node = pick_and_place.control_node:main',
             'robot2_control_node = pick_and_place.robot2_control_node:main',  # 실행 파일 등록
+            'camera_test_node = pick_and_place.camera_test_node:main'
         ],
     },
 )

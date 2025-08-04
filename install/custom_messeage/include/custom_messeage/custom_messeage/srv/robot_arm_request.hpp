@@ -1,12 +1,1 @@
-// generated from rosidl_generator_cpp/resource/idl.hpp.em
-// generated code does not contain a copyright notice
-
-#ifndef CUSTOM_MESSEAGE__SRV__ROBOT_ARM_REQUEST_HPP_
-#define CUSTOM_MESSEAGE__SRV__ROBOT_ARM_REQUEST_HPP_
-
-#include "custom_messeage/srv/detail/robot_arm_request__struct.hpp"
-#include "custom_messeage/srv/detail/robot_arm_request__builder.hpp"
-#include "custom_messeage/srv/detail/robot_arm_request__traits.hpp"
-#include "custom_messeage/srv/detail/robot_arm_request__type_support.hpp"
-
-#endif  // CUSTOM_MESSEAGE__SRV__ROBOT_ARM_REQUEST_HPP_
+/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/rosidl_generator_cpp/custom_messeage/srv/robot_arm_request.hpp
