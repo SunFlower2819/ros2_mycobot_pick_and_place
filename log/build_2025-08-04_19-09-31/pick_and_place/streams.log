@@ -1,0 +1,22 @@
+[2.025s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data
+[2.715s] running develop
+[3.240s] running egg_info
+[3.282s] writing pick_and_place.egg-info/PKG-INFO
+[3.282s] writing dependency_links to pick_and_place.egg-info/dependency_links.txt
+[3.283s] writing entry points to pick_and_place.egg-info/entry_points.txt
+[3.284s] writing requirements to pick_and_place.egg-info/requires.txt
+[3.284s] writing top-level names to pick_and_place.egg-info/top_level.txt
+[3.382s] reading manifest file 'pick_and_place.egg-info/SOURCES.txt'
+[3.383s] writing manifest file 'pick_and_place.egg-info/SOURCES.txt'
+[3.435s] running build_ext
+[3.435s] Creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick-and-place.egg-link (link to .)
+[3.436s] Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.437s] Installing camera_test_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.437s] Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.437s] Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.438s] Installing robot2_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.438s] Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.438s] 
+[3.438s] Installed /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place
+[3.438s] running symlink_data
+[3.558s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data

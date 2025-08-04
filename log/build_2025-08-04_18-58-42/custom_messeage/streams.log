@@ -1,0 +1,83 @@
+[0.023s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage -- -j4 -l4
+[0.128s] [  2%] Built target custom_messeage__rosidl_generator_type_description
+[0.151s] [  2%] Built target ament_cmake_python_symlink_custom_messeage
+[0.191s] [  5%] Built target custom_messeage__cpp
+[0.191s] [ 20%] Built target custom_messeage__rosidl_generator_c
+[0.246s] [ 29%] Built target custom_messeage__rosidl_typesupport_cpp
+[0.271s] [ 38%] Built target custom_messeage__rosidl_typesupport_fastrtps_c
+[0.283s] [ 47%] Built target custom_messeage__rosidl_typesupport_introspection_c
+[0.326s] [ 55%] Built target custom_messeage__rosidl_typesupport_c
+[0.339s] [ 73%] Built target custom_messeage__rosidl_typesupport_introspection_cpp
+[0.340s] [ 73%] Built target custom_messeage__rosidl_typesupport_fastrtps_cpp
+[0.384s] [ 73%] Built target custom_messeage
+[0.437s] [ 76%] Built target custom_messeage__py
+[0.487s] [ 82%] Built target custom_messeage__rosidl_generator_py
+[0.559s] [ 88%] Built target custom_messeage_s__rosidl_typesupport_fastrtps_c
+[0.565s] [ 94%] Built target custom_messeage_s__rosidl_typesupport_c
+[0.575s] [100%] Built target custom_messeage_s__rosidl_typesupport_introspection_c
+[0.643s] running egg_info
+[0.679s] writing custom_messeage.egg-info/PKG-INFO
+[0.679s] writing dependency_links to custom_messeage.egg-info/dependency_links.txt
+[0.680s] writing top-level names to custom_messeage.egg-info/top_level.txt
+[0.787s] reading manifest file 'custom_messeage.egg-info/SOURCES.txt'
+[0.788s] writing manifest file 'custom_messeage.egg-info/SOURCES.txt'
+[0.862s] [100%] Built target ament_cmake_python_build_custom_messeage_egg
+[0.886s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage -- -j4 -l4
+[0.906s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage
+[0.922s] -- Install configuration: ""
+[0.923s] -- Execute custom install script
+[0.924s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/rosidl_interfaces/custom_messeage
+[0.924s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.json
+[0.925s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_c__visibility_control.h
+[0.925s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__functions.h
+[0.926s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.h
+[0.926s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.h
+[0.927s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.h
+[0.927s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.sh
+[0.927s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.dsv
+[0.928s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.928s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_c.h
+[0.928s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.928s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_c.h
+[0.929s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.929s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__builder.hpp
+[0.929s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.hpp
+[0.930s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__traits.hpp
+[0.930s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.hpp
+[0.930s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.hpp
+[0.930s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.930s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_cpp.hpp
+[0.932s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_cpp.hpp
+[0.932s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.sh
+[0.932s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.dsv
+[0.933s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/PKG-INFO
+[0.933s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/SOURCES.txt
+[0.933s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/dependency_links.txt
+[0.935s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/top_level.txt
+[0.935s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/__init__.py
+[0.935s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_c.c
+[0.935s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_introspection_c.c
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/__init__.py
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request.py
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request_s.c
+[0.936s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.idl
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.srv
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/package_run_dependencies/custom_messeage
+[0.937s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/parent_prefix_path/custom_messeage
+[0.939s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.sh
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.dsv
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.sh
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.dsv
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.bash
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.sh
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.zsh
+[0.940s] -- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.dsv
+[0.941s] -- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.dsv
+[0.945s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage

@@ -5,7 +5,6 @@ from pymycobot.mycobot280 import MyCobot280
 from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
-# from pick_and_place.image_capture import get_frame
 from pick_and_place.image_capture import CameraManager  # ← 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
 
@@ -56,18 +55,18 @@ class Robot2ControlNode(Node):
 
     def handle_buffer_to_pinky(self, pinky_num, shoe_info):
         # TODO: 실제 로봇 로직 작성
-        self.mc.send_angles([96.59, 1.31, -52.38, -36.82, -1.4, 58.97], 20)
+        # self.mc.send_angles([96.59, 1.31, -52.38, -36.82, -1.4, 58.97], 20)
+        self.mc.send_angles([90.26, 30.93, -0.79, -89.2, -0.26, 42.45], 20)
+        print("그리퍼를 완전히 엽니다.")
+        self.mc.set_gripper_value(100, 50)
         cur_joints_rad = self.mc.get_radians()
         print("라디안:", cur_joints_rad)
 
         time.sleep(5)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
-        # frame = self.camera.get_frame()
-        frame = self.camera.get_frame() ###ham
-        # self.get_logger().info(f'[이미지 데이터] : {ret}')
-
-        camera_coords, rvec_deg = detect_target(frame)
+        frame = self.camera.get_frame()
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=100) # 타겟 id 설정
 
         if camera_coords is not None and rvec_deg is not None:
             print("\n=== April Tag 좌표 정보 ===")
@@ -94,6 +93,21 @@ class Robot2ControlNode(Node):
 
                 current_coords = self.mc.get_coords()
                 print(f"이동 후 현재 좌표: {current_coords}")
+
+                time.sleep(3)
+                print(f"{tag_id} 에이프릴 테그를 잡기 위해 그리퍼를 완전히 닫습니다.")
+                self.mc.set_gripper_value(0, 50)
+                time.sleep(1)
+
+                self.mc.send_angles([90.26, 30.93, -0.79, -89.2, -0.26, 42.45], 20)
+                time.sleep(5)
+                self.mc.send_angles([-15.73, -40.78, -6.59, -0.17, 0.96, 43.33], 20)
+                time.sleep(5)
+                self.mc.send_angles([-14.41, -62.13, -0.94, 20.3, 2.54, 42.45], 20)
+                time.sleep(3)
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(3)
+                self.mc.send_angles([90.26, 30.93, -0.79, -89.2, -0.26, 42.45], 20)
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
