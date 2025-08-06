@@ -13,6 +13,7 @@ pick_and_place/__init__.py
 pick_and_place/base_coordinate_transform.py
 pick_and_place/camera_test_node.py
 pick_and_place/image_capture.py
+pick_and_place/image_caputure_old.py
 pick_and_place/image_detection.py
 pick_and_place/robot2_control_node.py
 pick_and_place/test_robot_control_v3.py

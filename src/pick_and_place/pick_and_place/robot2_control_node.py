@@ -6,7 +6,7 @@ from pymycobot.mycobot280 import MyCobot280
 from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
-from pick_and_place.image_capture import CameraManager  # ← 클래스 가져오기
+from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
 
 from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
@@ -30,7 +30,9 @@ class Robot2ControlNode(Node):
 
         # 카메라 초기화 (예외 처리 추가)
         try:
-            self.camera = CameraManager()  # 여러 디바이스 자동 시도
+            # self.camera = CameraManager()  # 여러 디바이스 자동 시도
+
+            self.camera = CameraManager(enable_streaming=True, flask_port=5000)  # 스트리밍 활성화
             self.get_logger().info("카메라가 성공적으로 초기화되었습니다.")
         except RuntimeError as e:
             self.get_logger().error(f"카메라 초기화 실패: {e}")
@@ -232,13 +234,13 @@ class Robot2ControlNode(Node):
                 print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
 
                 # 핑크로 가는 경유지로 이동 (1차)
-                print("\n[2]: 경유지(1차) 이동 중...")
+                print("\n[3]: 경유지(1차) 이동 중...")
                 self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
                 time.sleep(3)
 
                 # offset값 설정
                 base_coords[0] -= 50
-                base_coords[1] += 20
+                base_coords[1] += 10
                 base_coords[2] += 70
                 
                 # base 기준 좌표로 이동 후 물건 잡기
@@ -248,35 +250,35 @@ class Robot2ControlNode(Node):
                 time.sleep(1)
 
                 # 핑키에서 후진하는 경유지
-                print("\n[3]: 경유지(후진) 이동")
+                print("\n[4]: 경유지(후진) 이동")
                 self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
                 time.sleep(3)
 
-                #콜렉션 이동하기 전에 경유지
+                # 콜렉션 이동하기 전에 경유지
                 self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
                 time.sleep(3)
                 
                 # collection으로 이동
-                print(f"\n[4]: 버퍼로 이동 중...")
+                print(f"\n[5]: 버퍼로 이동 중...")
                 self.mc.send_angles([78.04, -53.43, -19.07, -11.33, 1.05, 33.66], 20)
                 time.sleep(3)
 
                 # 놓기
-                print("\n[5]: 그리퍼 열기")
+                print("\n[6]: 그리퍼 열기")
                 self.mc.set_gripper_value(100, 50)
                 time.sleep(1)
 
                 # 초기위치로 가기 전의 경유지 후진 
-                print("\n[6]: 후진(상승) 동작")
+                print("\n[7]: 후진(상승) 동작")
                 self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
                 time.sleep(3)
 
                 # 초기 위치(핑키 바라보는 방향) 복귀
-                print("\n[7]: 초기 위치 복귀")
+                print("\n[8]: 초기 위치 복귀")
                 self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
                 time.sleep(2)
                 self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
-                print("\n:white_check_mark: 작업 완료")
+                print("\n[9]: 작업 완료")
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
