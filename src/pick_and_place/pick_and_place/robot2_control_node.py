@@ -11,6 +11,8 @@ from pick_and_place.image_detection import detect_target  # detect() 내부에�
 
 from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
 
+## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기
+
 
 class Robot2ControlNode(Node):
     def __init__(self):
@@ -53,11 +55,12 @@ class Robot2ControlNode(Node):
         # response.message = msg
         return response
 
-
+    
+    '''
+    RobotArm2가 buffer에서 pinky로 물건을 옮기는 함수
+    '''
     def handle_buffer_to_pinky(self, pinky_num, shoe_info):
         # TODO: 실제 로봇 로직 작성
-        # self.mc.send_angles([90.26, 30.93, -0.79, -89.2, -0.26, 42.45], 20)
-        
         print(f"{pinky_num} 버퍼를 위한 초기자세로 이동..")
         if pinky_num == 1:
             self.mc.send_angles([137.1, -9.84, -31.28, -30.84, -3.69, 91.14], 20) # 1번 버퍼 보는 초기 자세
@@ -149,7 +152,7 @@ class Robot2ControlNode(Node):
         # 수거존 위치 인식
         print("\n=== 핑키 AprilTag 인식 ===")
         frame = self.camera.get_frame()
-        camera_coords2, rvec_deg2, tag_id2 = detect_target(frame, target_id=3) # 타겟 id 설정
+        camera_coords2, rvec_deg2, tag_id2 = detect_target(frame, target_id=10) # 타겟 id 설정
 
         if camera_coords2 is not None and rvec_deg2 is not None:
             try:
@@ -187,14 +190,101 @@ class Robot2ControlNode(Node):
         # 초기 위치로 이동
         self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
         time.sleep(2)
-        self.mc.send_angles([0, 0, 0, 0, 0, 40], 20) # colcon build --symlink-install
+        self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
 
         self.get_logger().info(f"버퍼 → 핑키: {pinky_num}, 신발: {shoe_info}")
         return True # "버퍼에서 핑키로 이동 완료"
     
-
+    '''
+    RobotArm2가 pinky에서 buffer로 물건을 옮기는 함수
+    '''
     def handle_pinky_to_buffer(self, pinky_num, shoe_info):
         # TODO: 실제 로봇 로직 작성
+        
+        # 핑키 바라보는 위치로 이동
+        print("\n[1]: 핑키 방향으로 이동 중...")
+        self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
+        self.mc.set_gripper_value(100, 50)  # 그리퍼 열기
+        time.sleep(5)
+
+        print("그리퍼를 완전히 엽니다.")
+        self.mc.set_gripper_value(100, 50)
+        
+        cur_joints_rad = self.mc.get_radians()
+        print("라디안:", cur_joints_rad)
+
+        # 프레임 가져오고, 프레임에서 에이프릴테그 감지
+        print("\n[2] :brain: AprilTag 인식 중...")
+        frame = self.camera.get_frame()
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=3) # 타겟 id 설정
+
+        if camera_coords is not None and rvec_deg is not None:
+            print("\n=== April Tag 좌표 정보 ===")
+            print(f"카메라 기준 좌표: {camera_coords}")
+            print(f"회전 벡터 (도): {rvec_deg}")
+
+            print("\n=== Base 좌표계로 변환 중... ===")
+            try:
+                base_coords = transform_target_pose_camera_to_base(camera_coords, rvec_deg, cur_joints_rad)
+
+                # roll, pitch, yaw 고정
+                base_coords[3], base_coords[4], base_coords[5] = -150.0, 25.0, -138.0
+                print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
+
+                # 핑크로 가는 경유지로 이동 (1차)
+                print("\n[2]: 경유지(1차) 이동 중...")
+                self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
+                time.sleep(3)
+
+                # offset값 설정
+                base_coords[0] -= 50
+                base_coords[1] += 20
+                base_coords[2] += 70
+                
+                # base 기준 좌표로 이동 후 물건 잡기
+                self.mc.send_coords(base_coords, 20, 1)
+                time.sleep(3)
+                self.mc.set_gripper_value(0, 50)  # 그리퍼 닫기
+                time.sleep(1)
+
+                # 핑키에서 후진하는 경유지
+                print("\n[3]: 경유지(후진) 이동")
+                self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
+                time.sleep(3)
+
+                #콜렉션 이동하기 전에 경유지
+                self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
+                time.sleep(3)
+                
+                # collection으로 이동
+                print(f"\n[4]: 버퍼로 이동 중...")
+                self.mc.send_angles([78.04, -53.43, -19.07, -11.33, 1.05, 33.66], 20)
+                time.sleep(3)
+
+                # 놓기
+                print("\n[5]: 그리퍼 열기")
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(1)
+
+                # 초기위치로 가기 전의 경유지 후진 
+                print("\n[6]: 후진(상승) 동작")
+                self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
+                time.sleep(3)
+
+                # 초기 위치(핑키 바라보는 방향) 복귀
+                print("\n[7]: 초기 위치 복귀")
+                self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
+                time.sleep(2)
+                self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
+                print("\n:white_check_mark: 작업 완료")
+
+            except Exception as e:
+                print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
+
+        else:
+            print("April Tag 좌표를 가져올 수 없습니다.")
+            return False # "버퍼에서 핑키로 이동 실패"
+        
         self.get_logger().info(f"핑키 → 버퍼: {pinky_num}, 신발: {shoe_info}")
         return True # "핑키에서 버퍼로 이동 완료"
 
