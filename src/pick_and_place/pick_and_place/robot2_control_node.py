@@ -44,9 +44,9 @@ class Robot2ControlNode(Node):
 
         self.get_logger().info(f'[서비스 요청] action: {action}, shelf_num: {shelf_num}, pinky_num: {pinky_id}')
 
-        if action == 'arm2_buffer_to_pinky':
+        if action == 'buffer_to_pinky':
             success, msg = self.handle_buffer_to_pinky(pinky_id)
-        elif action == 'arm2_pinky_to_buffer':
+        elif action == 'pinky_to_buffer':
             success, msg = self.handle_pinky_to_buffer(pinky_id)
         else:
             success = False, f"지원하지 않는 action: {action}"
@@ -60,7 +60,8 @@ class Robot2ControlNode(Node):
         response.success = success
         return response
 
-    
+
+##=========================================================================================
     '''
     RobotArm2가 buffer에서 pinky로 물건을 옮기는 함수
     '''
@@ -201,6 +202,8 @@ class Robot2ControlNode(Node):
         self.get_logger().info(f"버퍼 → 핑키{pinky_id}")
         return True, 'arm2_buffer_to_pinky' # "버퍼에서 핑키로 이동 완료"
     
+##=========================================================================================
+    
     '''
     RobotArm2가 pinky에서 buffer로 물건을 옮기는 함수
     '''
@@ -293,6 +296,7 @@ class Robot2ControlNode(Node):
         
         self.get_logger().info(f"핑키{pinky_id} → 버퍼")
         return True, 'arm2_pinky_to_buffer' # "핑키에서 버퍼로 이동 완료"
+##=========================================================================================
 
 
 def destroy_node(self):
