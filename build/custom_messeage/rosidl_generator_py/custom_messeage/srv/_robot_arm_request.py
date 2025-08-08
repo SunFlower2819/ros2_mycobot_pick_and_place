@@ -62,27 +62,24 @@ class RobotArmRequest_Request(metaclass=Metaclass_RobotArmRequest_Request):
     """Message class 'RobotArmRequest_Request'."""
 
     __slots__ = [
-        '_shelf_num',
-        '_pinky_num',
+        '_robot_id',
         '_action',
-        '_shoe_info',
+        '_shelf_num',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
-        'shelf_num': 'int32',
-        'pinky_num': 'int32',
+        'robot_id': 'int32',
         'action': 'string',
-        'shoe_info': 'string',
+        'shelf_num': 'int32',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -94,10 +91,9 @@ class RobotArmRequest_Request(metaclass=Metaclass_RobotArmRequest_Request):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.shelf_num = kwargs.get('shelf_num', int())
-        self.pinky_num = kwargs.get('pinky_num', int())
+        self.robot_id = kwargs.get('robot_id', int())
         self.action = kwargs.get('action', str())
-        self.shoe_info = kwargs.get('shoe_info', str())
+        self.shelf_num = kwargs.get('shelf_num', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -129,13 +125,11 @@ class RobotArmRequest_Request(metaclass=Metaclass_RobotArmRequest_Request):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.shelf_num != other.shelf_num:
-            return False
-        if self.pinky_num != other.pinky_num:
+        if self.robot_id != other.robot_id:
             return False
         if self.action != other.action:
             return False
-        if self.shoe_info != other.shoe_info:
+        if self.shelf_num != other.shelf_num:
             return False
         return True
 
@@ -145,34 +139,19 @@ class RobotArmRequest_Request(metaclass=Metaclass_RobotArmRequest_Request):
         return copy(cls._fields_and_field_types)
 
     @builtins.property
-    def shelf_num(self):
-        """Message field 'shelf_num'."""
-        return self._shelf_num
+    def robot_id(self):
+        """Message field 'robot_id'."""
+        return self._robot_id
 
-    @shelf_num.setter
-    def shelf_num(self, value):
+    @robot_id.setter
+    def robot_id(self, value):
         if self._check_fields:
             assert \
                 isinstance(value, int), \
-                "The 'shelf_num' field must be of type 'int'"
+                "The 'robot_id' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'shelf_num' field must be an integer in [-2147483648, 2147483647]"
-        self._shelf_num = value
-
-    @builtins.property
-    def pinky_num(self):
-        """Message field 'pinky_num'."""
-        return self._pinky_num
-
-    @pinky_num.setter
-    def pinky_num(self, value):
-        if self._check_fields:
-            assert \
-                isinstance(value, int), \
-                "The 'pinky_num' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'pinky_num' field must be an integer in [-2147483648, 2147483647]"
-        self._pinky_num = value
+                "The 'robot_id' field must be an integer in [-2147483648, 2147483647]"
+        self._robot_id = value
 
     @builtins.property
     def action(self):
@@ -188,17 +167,19 @@ class RobotArmRequest_Request(metaclass=Metaclass_RobotArmRequest_Request):
         self._action = value
 
     @builtins.property
-    def shoe_info(self):
-        """Message field 'shoe_info'."""
-        return self._shoe_info
+    def shelf_num(self):
+        """Message field 'shelf_num'."""
+        return self._shelf_num
 
-    @shoe_info.setter
-    def shoe_info(self, value):
+    @shelf_num.setter
+    def shelf_num(self, value):
         if self._check_fields:
             assert \
-                isinstance(value, str), \
-                "The 'shoe_info' field must be of type 'str'"
-        self._shoe_info = value
+                isinstance(value, int), \
+                "The 'shelf_num' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'shelf_num' field must be an integer in [-2147483648, 2147483647]"
+        self._shelf_num = value
 
 
 # Import statements for member types
@@ -255,17 +236,32 @@ class RobotArmRequest_Response(metaclass=Metaclass_RobotArmRequest_Response):
     """Message class 'RobotArmRequest_Response'."""
 
     __slots__ = [
+        '_action',
+        '_shelf_num',
+        '_model',
+        '_size',
+        '_color',
         '_success',
         '_check_fields',
     ]
 
     _fields_and_field_types = {
+        'action': 'string',
+        'shelf_num': 'int32',
+        'model': 'string',
+        'size': 'int32',
+        'color': 'string',
         'success': 'boolean',
     }
 
     # This attribute is used to store an rosidl_parser.definition variable
     # related to the data type of each of the components the message.
     SLOT_TYPES = (
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.UnboundedString(),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
@@ -278,6 +274,11 @@ class RobotArmRequest_Response(metaclass=Metaclass_RobotArmRequest_Response):
             assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
                 'Invalid arguments passed to constructor: %s' % \
                 ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.action = kwargs.get('action', str())
+        self.shelf_num = kwargs.get('shelf_num', int())
+        self.model = kwargs.get('model', str())
+        self.size = kwargs.get('size', int())
+        self.color = kwargs.get('color', str())
         self.success = kwargs.get('success', bool())
 
     def __repr__(self):
@@ -310,6 +311,16 @@ class RobotArmRequest_Response(metaclass=Metaclass_RobotArmRequest_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.action != other.action:
+            return False
+        if self.shelf_num != other.shelf_num:
+            return False
+        if self.model != other.model:
+            return False
+        if self.size != other.size:
+            return False
+        if self.color != other.color:
+            return False
         if self.success != other.success:
             return False
         return True
@@ -318,6 +329,75 @@ class RobotArmRequest_Response(metaclass=Metaclass_RobotArmRequest_Response):
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @builtins.property
+    def action(self):
+        """Message field 'action'."""
+        return self._action
+
+    @action.setter
+    def action(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, str), \
+                "The 'action' field must be of type 'str'"
+        self._action = value
+
+    @builtins.property
+    def shelf_num(self):
+        """Message field 'shelf_num'."""
+        return self._shelf_num
+
+    @shelf_num.setter
+    def shelf_num(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'shelf_num' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'shelf_num' field must be an integer in [-2147483648, 2147483647]"
+        self._shelf_num = value
+
+    @builtins.property
+    def model(self):
+        """Message field 'model'."""
+        return self._model
+
+    @model.setter
+    def model(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, str), \
+                "The 'model' field must be of type 'str'"
+        self._model = value
+
+    @builtins.property
+    def size(self):
+        """Message field 'size'."""
+        return self._size
+
+    @size.setter
+    def size(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, int), \
+                "The 'size' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'size' field must be an integer in [-2147483648, 2147483647]"
+        self._size = value
+
+    @builtins.property
+    def color(self):
+        """Message field 'color'."""
+        return self._color
+
+    @color.setter
+    def color(self, value):
+        if self._check_fields:
+            assert \
+                isinstance(value, str), \
+                "The 'color' field must be of type 'str'"
+        self._color = value
 
     @builtins.property
     def success(self):

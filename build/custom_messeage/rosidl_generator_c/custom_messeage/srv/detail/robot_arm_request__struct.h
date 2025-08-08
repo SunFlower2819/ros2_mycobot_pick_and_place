@@ -22,16 +22,14 @@ extern "C"
 
 // Include directives for member types
 // Member 'action'
-// Member 'shoe_info'
 #include "rosidl_runtime_c/string.h"
 
 /// Struct defined in srv/RobotArmRequest in the package custom_messeage.
 typedef struct custom_messeage__srv__RobotArmRequest_Request
 {
-  int32_t shelf_num;
-  int32_t pinky_num;
+  int32_t robot_id;
   rosidl_runtime_c__String action;
-  rosidl_runtime_c__String shoe_info;
+  int32_t shelf_num;
 } custom_messeage__srv__RobotArmRequest_Request;
 
 // Struct for a sequence of custom_messeage__srv__RobotArmRequest_Request.
@@ -46,9 +44,21 @@ typedef struct custom_messeage__srv__RobotArmRequest_Request__Sequence
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'action'
+// Member 'model'
+// Member 'color'
+// already included above
+// #include "rosidl_runtime_c/string.h"
+
 /// Struct defined in srv/RobotArmRequest in the package custom_messeage.
 typedef struct custom_messeage__srv__RobotArmRequest_Response
 {
+  rosidl_runtime_c__String action;
+  int32_t shelf_num;
+  rosidl_runtime_c__String model;
+  int32_t size;
+  rosidl_runtime_c__String color;
   bool success;
 } custom_messeage__srv__RobotArmRequest_Response;
 

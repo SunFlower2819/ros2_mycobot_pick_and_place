@@ -41,52 +41,40 @@ struct RobotArmRequest_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->shelf_num = 0l;
-      this->pinky_num = 0l;
+      this->robot_id = 0l;
       this->action = "";
-      this->shoe_info = "";
+      this->shelf_num = 0l;
     }
   }
 
   explicit RobotArmRequest_Request_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : action(_alloc),
-    shoe_info(_alloc)
+  : action(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->shelf_num = 0l;
-      this->pinky_num = 0l;
+      this->robot_id = 0l;
       this->action = "";
-      this->shoe_info = "";
+      this->shelf_num = 0l;
     }
   }
 
   // field types and members
-  using _shelf_num_type =
+  using _robot_id_type =
     int32_t;
-  _shelf_num_type shelf_num;
-  using _pinky_num_type =
-    int32_t;
-  _pinky_num_type pinky_num;
+  _robot_id_type robot_id;
   using _action_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _action_type action;
-  using _shoe_info_type =
-    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
-  _shoe_info_type shoe_info;
+  using _shelf_num_type =
+    int32_t;
+  _shelf_num_type shelf_num;
 
   // setters for named parameter idiom
-  Type & set__shelf_num(
+  Type & set__robot_id(
     const int32_t & _arg)
   {
-    this->shelf_num = _arg;
-    return *this;
-  }
-  Type & set__pinky_num(
-    const int32_t & _arg)
-  {
-    this->pinky_num = _arg;
+    this->robot_id = _arg;
     return *this;
   }
   Type & set__action(
@@ -95,10 +83,10 @@ struct RobotArmRequest_Request_
     this->action = _arg;
     return *this;
   }
-  Type & set__shoe_info(
-    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  Type & set__shelf_num(
+    const int32_t & _arg)
   {
-    this->shoe_info = _arg;
+    this->shelf_num = _arg;
     return *this;
   }
 
@@ -144,16 +132,13 @@ struct RobotArmRequest_Request_
   // comparison operators
   bool operator==(const RobotArmRequest_Request_ & other) const
   {
-    if (this->shelf_num != other.shelf_num) {
-      return false;
-    }
-    if (this->pinky_num != other.pinky_num) {
+    if (this->robot_id != other.robot_id) {
       return false;
     }
     if (this->action != other.action) {
       return false;
     }
-    if (this->shoe_info != other.shoe_info) {
+    if (this->shelf_num != other.shelf_num) {
       return false;
     }
     return true;
@@ -198,26 +183,83 @@ struct RobotArmRequest_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->action = "";
+      this->shelf_num = 0l;
+      this->model = "";
+      this->size = 0l;
+      this->color = "";
       this->success = false;
     }
   }
 
   explicit RobotArmRequest_Response_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : action(_alloc),
+    model(_alloc),
+    color(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->action = "";
+      this->shelf_num = 0l;
+      this->model = "";
+      this->size = 0l;
+      this->color = "";
       this->success = false;
     }
   }
 
   // field types and members
+  using _action_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _action_type action;
+  using _shelf_num_type =
+    int32_t;
+  _shelf_num_type shelf_num;
+  using _model_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _model_type model;
+  using _size_type =
+    int32_t;
+  _size_type size;
+  using _color_type =
+    std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
+  _color_type color;
   using _success_type =
     bool;
   _success_type success;
 
   // setters for named parameter idiom
+  Type & set__action(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->action = _arg;
+    return *this;
+  }
+  Type & set__shelf_num(
+    const int32_t & _arg)
+  {
+    this->shelf_num = _arg;
+    return *this;
+  }
+  Type & set__model(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->model = _arg;
+    return *this;
+  }
+  Type & set__size(
+    const int32_t & _arg)
+  {
+    this->size = _arg;
+    return *this;
+  }
+  Type & set__color(
+    const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
+  {
+    this->color = _arg;
+    return *this;
+  }
   Type & set__success(
     const bool & _arg)
   {
@@ -267,6 +309,21 @@ struct RobotArmRequest_Response_
   // comparison operators
   bool operator==(const RobotArmRequest_Response_ & other) const
   {
+    if (this->action != other.action) {
+      return false;
+    }
+    if (this->shelf_num != other.shelf_num) {
+      return false;
+    }
+    if (this->model != other.model) {
+      return false;
+    }
+    if (this->size != other.size) {
+      return false;
+    }
+    if (this->color != other.color) {
+      return false;
+    }
     if (this->success != other.success) {
       return false;
     }

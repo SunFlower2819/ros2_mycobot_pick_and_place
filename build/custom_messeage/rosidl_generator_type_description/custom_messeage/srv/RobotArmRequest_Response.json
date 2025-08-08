@@ -4,6 +4,56 @@
       "type_name": "custom_messeage/srv/RobotArmRequest_Response",
       "fields": [
         {
+          "name": "action",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "shelf_num",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "model",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "size",
+          "type": {
+            "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "color",
+          "type": {
+            "type_id": 17,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
           "name": "success",
           "type": {
             "type_id": 15,
@@ -20,7 +70,7 @@
   "type_hashes": [
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Response",
-      "hash_string": "RIHS01_29e812eb7df61f405dc3304250380fb0eb9d5a1190da2bd45b9a94e35ef310fb"
+      "hash_string": "RIHS01_f28b2c1bff64ef99c296483b0f441244096f18b3e46b60a50ef5796aa792002a"
     }
   ]
 }

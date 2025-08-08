@@ -53,22 +53,13 @@ bool custom_messeage__srv__robot_arm_request__request__convert_from_py(PyObject 
     assert(strncmp("custom_messeage.srv._robot_arm_request.RobotArmRequest_Request", full_classname_dest, 62) == 0);
   }
   custom_messeage__srv__RobotArmRequest_Request * ros_message = _ros_message;
-  {  // shelf_num
-    PyObject * field = PyObject_GetAttrString(_pymsg, "shelf_num");
+  {  // robot_id
+    PyObject * field = PyObject_GetAttrString(_pymsg, "robot_id");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->shelf_num = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // pinky_num
-    PyObject * field = PyObject_GetAttrString(_pymsg, "pinky_num");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->pinky_num = (int32_t)PyLong_AsLong(field);
+    ros_message->robot_id = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // action
@@ -86,19 +77,13 @@ bool custom_messeage__srv__robot_arm_request__request__convert_from_py(PyObject 
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
-  {  // shoe_info
-    PyObject * field = PyObject_GetAttrString(_pymsg, "shoe_info");
+  {  // shelf_num
+    PyObject * field = PyObject_GetAttrString(_pymsg, "shelf_num");
     if (!field) {
       return false;
     }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->shoe_info, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
+    assert(PyLong_Check(field));
+    ros_message->shelf_num = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -123,22 +108,11 @@ PyObject * custom_messeage__srv__robot_arm_request__request__convert_to_py(void 
     }
   }
   custom_messeage__srv__RobotArmRequest_Request * ros_message = (custom_messeage__srv__RobotArmRequest_Request *)raw_ros_message;
-  {  // shelf_num
+  {  // robot_id
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->shelf_num);
+    field = PyLong_FromLong(ros_message->robot_id);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "shelf_num", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // pinky_num
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->pinky_num);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "pinky_num", field);
+      int rc = PyObject_SetAttrString(_pymessage, "robot_id", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -162,17 +136,11 @@ PyObject * custom_messeage__srv__robot_arm_request__request__convert_to_py(void 
       }
     }
   }
-  {  // shoe_info
+  {  // shelf_num
     PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->shoe_info.data,
-      strlen(ros_message->shoe_info.data),
-      "replace");
-    if (!field) {
-      return NULL;
-    }
+    field = PyLong_FromLong(ros_message->shelf_num);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "shoe_info", field);
+      int rc = PyObject_SetAttrString(_pymessage, "shelf_num", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -197,6 +165,11 @@ PyObject * custom_messeage__srv__robot_arm_request__request__convert_to_py(void 
 // #include "custom_messeage/srv/detail/robot_arm_request__struct.h"
 // already included above
 // #include "custom_messeage/srv/detail/robot_arm_request__functions.h"
+
+// already included above
+// #include "rosidl_runtime_c/string.h"
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
 
 
 ROSIDL_GENERATOR_C_EXPORT
@@ -232,6 +205,69 @@ bool custom_messeage__srv__robot_arm_request__response__convert_from_py(PyObject
     assert(strncmp("custom_messeage.srv._robot_arm_request.RobotArmRequest_Response", full_classname_dest, 63) == 0);
   }
   custom_messeage__srv__RobotArmRequest_Response * ros_message = _ros_message;
+  {  // action
+    PyObject * field = PyObject_GetAttrString(_pymsg, "action");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->action, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // shelf_num
+    PyObject * field = PyObject_GetAttrString(_pymsg, "shelf_num");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->shelf_num = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // model
+    PyObject * field = PyObject_GetAttrString(_pymsg, "model");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->model, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // size
+    PyObject * field = PyObject_GetAttrString(_pymsg, "size");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->size = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // color
+    PyObject * field = PyObject_GetAttrString(_pymsg, "color");
+    if (!field) {
+      return false;
+    }
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
+      Py_DECREF(field);
+      return false;
+    }
+    rosidl_runtime_c__String__assign(&ros_message->color, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
   {  // success
     PyObject * field = PyObject_GetAttrString(_pymsg, "success");
     if (!field) {
@@ -263,6 +299,79 @@ PyObject * custom_messeage__srv__robot_arm_request__response__convert_to_py(void
     }
   }
   custom_messeage__srv__RobotArmRequest_Response * ros_message = (custom_messeage__srv__RobotArmRequest_Response *)raw_ros_message;
+  {  // action
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->action.data,
+      strlen(ros_message->action.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "action", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // shelf_num
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->shelf_num);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "shelf_num", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // model
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->model.data,
+      strlen(ros_message->model.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "model", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // size
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->size);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "size", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // color
+    PyObject * field = NULL;
+    field = PyUnicode_DecodeUTF8(
+      ros_message->color.data,
+      strlen(ros_message->color.data),
+      "replace");
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "color", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // success
     PyObject * field = NULL;
     field = PyBool_FromLong(ros_message->success ? 1 : 0);

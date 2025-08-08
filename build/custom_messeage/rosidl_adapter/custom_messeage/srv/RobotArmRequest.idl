@@ -6,15 +6,23 @@
 module custom_messeage {
   module srv {
     struct RobotArmRequest_Request {
-      int32 shelf_num;
-
-      int32 pinky_num;
+      int32 robot_id;
 
       string action;
 
-      string shoe_info;
+      int32 shelf_num;
     };
     struct RobotArmRequest_Response {
+      string action;
+
+      int32 shelf_num;
+
+      string model;
+
+      int32 size;
+
+      string color;
+
       boolean success;
     };
   };

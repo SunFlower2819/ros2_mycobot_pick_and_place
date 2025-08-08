@@ -65,17 +65,7 @@
         "type_name": "custom_messeage/srv/RobotArmRequest_Request",
         "fields": [
           {
-            "name": "shelf_num",
-            "type": {
-              "type_id": 6,
-              "capacity": 0,
-              "string_capacity": 0,
-              "nested_type_name": ""
-            },
-            "default_value": ""
-          },
-          {
-            "name": "pinky_num",
+            "name": "robot_id",
             "type": {
               "type_id": 6,
               "capacity": 0,
@@ -95,9 +85,9 @@
             "default_value": ""
           },
           {
-            "name": "shoe_info",
+            "name": "shelf_num",
             "type": {
-              "type_id": 17,
+              "type_id": 6,
               "capacity": 0,
               "string_capacity": 0,
               "nested_type_name": ""
@@ -109,6 +99,56 @@
       {
         "type_name": "custom_messeage/srv/RobotArmRequest_Response",
         "fields": [
+          {
+            "name": "action",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "shelf_num",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "model",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "size",
+            "type": {
+              "type_id": 6,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
+          {
+            "name": "color",
+            "type": {
+              "type_id": 17,
+              "capacity": 0,
+              "string_capacity": 0,
+              "nested_type_name": ""
+            },
+            "default_value": ""
+          },
           {
             "name": "success",
             "type": {
@@ -171,7 +211,7 @@
   "type_hashes": [
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Event",
-      "hash_string": "RIHS01_2c0c1179db5800a01cbea1081fa6b268b7681b511a630a925d798ae055023f4f"
+      "hash_string": "RIHS01_0cc782d3cd32f2d5866a33cd94eaf25635b826efc1bef2459c4b740d14f06dc3"
     },
     {
       "type_name": "builtin_interfaces/msg/Time",
@@ -179,11 +219,11 @@
     },
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Request",
-      "hash_string": "RIHS01_ccace10be616e77f850d18bd82f41f4b462e067ef0ab2f736d7e2dfcfd2b4698"
+      "hash_string": "RIHS01_e9325c12ef3ef4aee83dbefef69fb5e131b13d89ef3f4f5703d0793607fb8256"
     },
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Response",
-      "hash_string": "RIHS01_29e812eb7df61f405dc3304250380fb0eb9d5a1190da2bd45b9a94e35ef310fb"
+      "hash_string": "RIHS01_f28b2c1bff64ef99c296483b0f441244096f18b3e46b60a50ef5796aa792002a"
     },
     {
       "type_name": "service_msgs/msg/ServiceEventInfo",

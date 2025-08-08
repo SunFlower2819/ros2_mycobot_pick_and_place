@@ -28,17 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: shelf_num
+  // member: robot_id
   {
-    out << "shelf_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
-    out << ", ";
-  }
-
-  // member: pinky_num
-  {
-    out << "pinky_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.pinky_num, out);
+    out << "robot_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
     out << ", ";
   }
 
@@ -49,10 +42,10 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: shoe_info
+  // member: shelf_num
   {
-    out << "shoe_info: ";
-    rosidl_generator_traits::value_to_yaml(msg.shoe_info, out);
+    out << "shelf_num: ";
+    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -61,23 +54,13 @@ inline void to_block_style_yaml(
   const RobotArmRequest_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: shelf_num
+  // member: robot_id
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "shelf_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
-    out << "\n";
-  }
-
-  // member: pinky_num
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "pinky_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.pinky_num, out);
+    out << "robot_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
     out << "\n";
   }
 
@@ -91,13 +74,13 @@ inline void to_block_style_yaml(
     out << "\n";
   }
 
-  // member: shoe_info
+  // member: shelf_num
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "shoe_info: ";
-    rosidl_generator_traits::value_to_yaml(msg.shoe_info, out);
+    out << "shelf_num: ";
+    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
     out << "\n";
   }
 }  // NOLINT(readability/fn_size)
@@ -171,6 +154,41 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: action
+  {
+    out << "action: ";
+    rosidl_generator_traits::value_to_yaml(msg.action, out);
+    out << ", ";
+  }
+
+  // member: shelf_num
+  {
+    out << "shelf_num: ";
+    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
+    out << ", ";
+  }
+
+  // member: model
+  {
+    out << "model: ";
+    rosidl_generator_traits::value_to_yaml(msg.model, out);
+    out << ", ";
+  }
+
+  // member: size
+  {
+    out << "size: ";
+    rosidl_generator_traits::value_to_yaml(msg.size, out);
+    out << ", ";
+  }
+
+  // member: color
+  {
+    out << "color: ";
+    rosidl_generator_traits::value_to_yaml(msg.color, out);
+    out << ", ";
+  }
+
   // member: success
   {
     out << "success: ";
@@ -183,6 +201,56 @@ inline void to_block_style_yaml(
   const RobotArmRequest_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: action
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "action: ";
+    rosidl_generator_traits::value_to_yaml(msg.action, out);
+    out << "\n";
+  }
+
+  // member: shelf_num
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "shelf_num: ";
+    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
+    out << "\n";
+  }
+
+  // member: model
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "model: ";
+    rosidl_generator_traits::value_to_yaml(msg.model, out);
+    out << "\n";
+  }
+
+  // member: size
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "size: ";
+    rosidl_generator_traits::value_to_yaml(msg.size, out);
+    out << "\n";
+  }
+
+  // member: color
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "color: ";
+    rosidl_generator_traits::value_to_yaml(msg.color, out);
+    out << "\n";
+  }
+
   // member: success
   {
     if (indentation > 0) {
@@ -240,11 +308,11 @@ inline const char * name<custom_messeage::srv::RobotArmRequest_Response>()
 
 template<>
 struct has_fixed_size<custom_messeage::srv::RobotArmRequest_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<custom_messeage::srv::RobotArmRequest_Response>
-  : std::integral_constant<bool, true> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<custom_messeage::srv::RobotArmRequest_Response>

@@ -6,12 +6,11 @@ from pymycobot.mycobot280 import MyCobot280
 from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
-from pick_and_place.image_capture import CameraManager  # ← 클래스 가져오기
+from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
-
 from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
 
-## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기
+## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
 
 
 class Robot2ControlNode(Node):
@@ -30,43 +29,49 @@ class Robot2ControlNode(Node):
 
         # 카메라 초기화 (예외 처리 추가)
         try:
-            self.camera = CameraManager()  # 여러 디바이스 자동 시도
+            # self.camera = CameraManager()  # 여러 디바이스 자동 시도
+
+            self.camera = CameraManager(enable_streaming=True, flask_port=5000)  # 스트리밍 활성화
             self.get_logger().info("카메라가 성공적으로 초기화되었습니다.")
         except RuntimeError as e:
             self.get_logger().error(f"카메라 초기화 실패: {e}")
             self.camera = None  # 카메라 없이도 동작하도록
  
     def arm2_control_callback(self, request, response):
-        shelf_num = request.shelf_num
+        pinky_id = request.robot_id
         action = request.action.lower()
-        pinky_num = request.pinky_num
-        shoe_info = request.shoe_info
+        shelf_num = request.shelf_num
 
-        self.get_logger().info(f'[서비스 요청] action: {action}, shelf_num: {shelf_num}, pinky_num: {pinky_num}, shoe_info: {shoe_info}')
+        self.get_logger().info(f'[서비스 요청] action: {action}, shelf_num: {shelf_num}, pinky_num: {pinky_id}')
 
-        if action == 'buffer_to_pinky':
-            success = self.handle_buffer_to_pinky(pinky_num, shoe_info)
-        elif action == 'pinky_to_buffer':
-            success = self.handle_pinky_to_buffer(pinky_num, shoe_info)
+        if action == 'arm2_buffer_to_pinky':
+            success, msg = self.handle_buffer_to_pinky(pinky_id)
+        elif action == 'arm2_pinky_to_buffer':
+            success, msg = self.handle_pinky_to_buffer(pinky_id)
         else:
             success = False, f"지원하지 않는 action: {action}"
 
+        ## Note: OCR 인식 후 얻은 데이터 저장
+        response.action = msg
+        response.shelf_num = 3
+        response.model = 'None'
+        response.size = -1
+        response.color = 'None'
         response.success = success
-        # response.message = msg
         return response
 
     
     '''
     RobotArm2가 buffer에서 pinky로 물건을 옮기는 함수
     '''
-    def handle_buffer_to_pinky(self, pinky_num, shoe_info):
+    def handle_buffer_to_pinky(self, pinky_id):
         # TODO: 실제 로봇 로직 작성
-        print(f"{pinky_num} 버퍼를 위한 초기자세로 이동..")
-        if pinky_num == 1:
+        print(f"{pinky_id} 버퍼를 위한 초기자세로 이동..")
+        if pinky_id == 1:
             self.mc.send_angles([137.1, -9.84, -31.28, -30.84, -3.69, 91.14], 20) # 1번 버퍼 보는 초기 자세
-        elif pinky_num == 2:
+        elif pinky_id == 2:
             self.mc.send_angles([119.0, -12.04, -32.34, -36.12, -2.1, 69.78], 20) # 2번 버퍼 보는 초기 자세
-        elif pinky_num == 3:
+        elif pinky_id == 3:
             self.mc.send_angles([86.39, -7.2, -32.34, -39.99, -0.7, 42.8], 20) # 3번 버퍼 보는 초기 자세
         else:
             print("정의되지 않은 핑키 번호")
@@ -80,7 +85,7 @@ class Robot2ControlNode(Node):
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         time.sleep(5)
         frame = self.camera.get_frame()
-        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=3) # 타겟 id 설정
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=pinky_id) # 타겟 id = pinky_id
 
         if camera_coords is not None and rvec_deg is not None:
             print("\n=== April Tag 좌표 정보 ===")
@@ -98,15 +103,15 @@ class Robot2ControlNode(Node):
 
                 approach_coords = base_coords.copy()
                 ## 버퍼마다 각각의 offset값 설정
-                if pinky_num == 1:
+                if pinky_id == 1:
                     approach_coords[0] -= 10
                     approach_coords[1] -= 7
                     approach_coords[2] += 70
-                elif pinky_num == 2:
+                elif pinky_id == 2:
                     approach_coords[0] -= 5
                     approach_coords[1] -= 10
                     approach_coords[2] += 70
-                elif pinky_num == 3:
+                elif pinky_id == 3:
                     approach_coords[0] -= 10
                     approach_coords[1] -= 10
                     approach_coords[2] += 70
@@ -125,7 +130,7 @@ class Robot2ControlNode(Node):
                 ## Note: 되는데 안된다고 판단할 위험 있음 (오차 범위 재설정 필요)
                 if np.linalg.norm(np.array(approach_coords) - np.array(current_coords)) > 30.0:  # mm 단위 기준
                     print("이동할 수 없는 좌표값입니다.")
-                    return False
+                    return False, '갈 수 없는 베이스 좌표로 인한 실패'
 
                 print(f"이동 후 현재 좌표: {current_coords}")
 
@@ -138,7 +143,7 @@ class Robot2ControlNode(Node):
 
         else:
             print("April Tag 좌표를 가져올 수 없습니다.")
-            return False # "버퍼에서 핑키로 이동 실패"
+            return False, '에이프릴 테그 인식 실패' # "버퍼에서 핑키로 이동 실패"
         
         #ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
@@ -152,7 +157,7 @@ class Robot2ControlNode(Node):
         # 수거존 위치 인식
         print("\n=== 핑키 AprilTag 인식 ===")
         frame = self.camera.get_frame()
-        camera_coords2, rvec_deg2, tag_id2 = detect_target(frame, target_id=10) # 타겟 id 설정
+        camera_coords2, rvec_deg2, tag_id2 = detect_target(frame, target_id=pinky_id) # 타겟 id 설정
 
         if camera_coords2 is not None and rvec_deg2 is not None:
             try:
@@ -186,19 +191,20 @@ class Robot2ControlNode(Node):
                 print(f"수거존 이동 중 오류 발생: {e}")
         else:
             print("수거존 AprilTag 인식 실패")
+            return False, '에이프릴 테그 인식 실패' # "버퍼에서 핑키로 이동 실패
 
         # 초기 위치로 이동
         self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
         time.sleep(2)
         self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
 
-        self.get_logger().info(f"버퍼 → 핑키: {pinky_num}, 신발: {shoe_info}")
-        return True # "버퍼에서 핑키로 이동 완료"
+        self.get_logger().info(f"버퍼 → 핑키{pinky_id}")
+        return True, 'arm2_buffer_to_pinky' # "버퍼에서 핑키로 이동 완료"
     
     '''
     RobotArm2가 pinky에서 buffer로 물건을 옮기는 함수
     '''
-    def handle_pinky_to_buffer(self, pinky_num, shoe_info):
+    def handle_pinky_to_buffer(self, pinky_id):
         # TODO: 실제 로봇 로직 작성
         
         # 핑키 바라보는 위치로 이동
@@ -259,9 +265,6 @@ class Robot2ControlNode(Node):
                 # collection으로 이동
                 print(f"\n[5]: 버퍼로 이동 중...")
                 self.mc.send_angles([78.04, -53.43, -19.07, -11.33, 1.05, 33.66], 20)
-                # self.mc.send_angles([78.66, -27.15, -87.97, 46.66, 2.63, 42.62], 20)
-                # self.mc.send_angles([74.88, -50.09, -23.81, -10.28, 10.37, 29.79], 20)
-                # self.mc.send_angles([74.79, -129.72, 109.42, -30.14, 6.85, -146.95],20)
                 time.sleep(3)
 
                 # 놓기
@@ -279,17 +282,17 @@ class Robot2ControlNode(Node):
                 self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
                 time.sleep(2)
                 self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
-                print("\n:white_check_mark: 작업 완료")
+                print("\n[9]: 작업 완료")
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
 
         else:
             print("April Tag 좌표를 가져올 수 없습니다.")
-            return False # "버퍼에서 핑키로 이동 실패"
+            return False, '에이프릴 테그 인식 실패' # "버퍼에서 핑키로 이동 실패"
         
-        self.get_logger().info(f"핑키 → 버퍼: {pinky_num}, 신발: {shoe_info}")
-        return True # "핑키에서 버퍼로 이동 완료"
+        self.get_logger().info(f"핑키{pinky_id} → 버퍼")
+        return True, 'arm2_pinky_to_buffer' # "핑키에서 버퍼로 이동 완료"
 
 
 def destroy_node(self):

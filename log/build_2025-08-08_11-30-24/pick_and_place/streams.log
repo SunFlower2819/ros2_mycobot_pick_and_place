@@ -1,0 +1,27 @@
+[2.604s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pick_and_place build --build-base /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build install --record /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log --single-version-externally-managed install_data
+[3.205s] running egg_info
+[3.249s] writing ../../build/pick_and_place/pick_and_place.egg-info/PKG-INFO
+[3.250s] writing dependency_links to ../../build/pick_and_place/pick_and_place.egg-info/dependency_links.txt
+[3.251s] writing entry points to ../../build/pick_and_place/pick_and_place.egg-info/entry_points.txt
+[3.251s] writing requirements to ../../build/pick_and_place/pick_and_place.egg-info/requires.txt
+[3.251s] writing top-level names to ../../build/pick_and_place/pick_and_place.egg-info/top_level.txt
+[3.356s] reading manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'
+[3.359s] adding license file 'LICENSE'
+[3.359s] writing manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'
+[3.360s] running build
+[3.360s] running build_py
+[3.361s] running install
+[3.374s] running install_lib
+[3.427s] running install_data
+[3.427s] running install_egg_info
+[3.476s] removing '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info' (and everything under it)
+[3.478s] Copying ../../build/pick_and_place/pick_and_place.egg-info to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info
+[3.478s] running install_scripts
+[3.829s] Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.829s] Installing camera_test_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.837s] Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.837s] Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.837s] Installing robot2_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.837s] Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.838s] writing list of installed files to '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log'
+[3.964s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pick_and_place build --build-base /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build install --record /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log --single-version-externally-managed install_data

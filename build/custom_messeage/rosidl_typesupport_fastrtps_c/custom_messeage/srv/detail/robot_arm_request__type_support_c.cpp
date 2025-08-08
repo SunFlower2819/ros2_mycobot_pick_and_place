@@ -36,8 +36,8 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // action, shoe_info
-#include "rosidl_runtime_c/string_functions.h"  // action, shoe_info
+#include "rosidl_runtime_c/string.h"  // action
+#include "rosidl_runtime_c/string_functions.h"  // action
 
 // forward declare type support functions
 
@@ -50,14 +50,9 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Request(
   const custom_messeage__srv__RobotArmRequest_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: shelf_num
+  // Field name: robot_id
   {
-    cdr << ros_message->shelf_num;
-  }
-
-  // Field name: pinky_num
-  {
-    cdr << ros_message->pinky_num;
+    cdr << ros_message->robot_id;
   }
 
   // Field name: action
@@ -74,18 +69,9 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Request(
     cdr << str->data;
   }
 
-  // Field name: shoe_info
+  // Field name: shelf_num
   {
-    const rosidl_runtime_c__String * str = &ros_message->shoe_info;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->shelf_num;
   }
 
   return true;
@@ -96,14 +82,9 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Request(
   eprosima::fastcdr::Cdr & cdr,
   custom_messeage__srv__RobotArmRequest_Request * ros_message)
 {
-  // Field name: shelf_num
+  // Field name: robot_id
   {
-    cdr >> ros_message->shelf_num;
-  }
-
-  // Field name: pinky_num
-  {
-    cdr >> ros_message->pinky_num;
+    cdr >> ros_message->robot_id;
   }
 
   // Field name: action
@@ -122,20 +103,9 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Request(
     }
   }
 
-  // Field name: shoe_info
+  // Field name: shelf_num
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->shoe_info.data) {
-      rosidl_runtime_c__String__init(&ros_message->shoe_info);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->shoe_info,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'shoe_info'\n");
-      return false;
-    }
+    cdr >> ros_message->shelf_num;
   }
 
   return true;
@@ -156,16 +126,9 @@ size_t get_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: shelf_num
+  // Field name: robot_id
   {
-    size_t item_size = sizeof(ros_message->shelf_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: pinky_num
-  {
-    size_t item_size = sizeof(ros_message->pinky_num);
+    size_t item_size = sizeof(ros_message->robot_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -175,10 +138,12 @@ size_t get_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->action.size + 1);
 
-  // Field name: shoe_info
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->shoe_info.size + 1);
+  // Field name: shelf_num
+  {
+    size_t item_size = sizeof(ros_message->shelf_num);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -202,15 +167,7 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: shelf_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: pinky_num
+  // Field name: robot_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -230,16 +187,12 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
     }
   }
 
-  // Field name: shoe_info
+  // Field name: shelf_num
   {
     size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
 
@@ -251,7 +204,7 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
     using DataType = custom_messeage__srv__RobotArmRequest_Request;
     is_plain =
       (
-      offsetof(DataType, shoe_info) +
+      offsetof(DataType, shelf_num) +
       last_member_size
       ) == ret_val;
   }
@@ -263,14 +216,9 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Request(
   const custom_messeage__srv__RobotArmRequest_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: shelf_num
+  // Field name: robot_id
   {
-    cdr << ros_message->shelf_num;
-  }
-
-  // Field name: pinky_num
-  {
-    cdr << ros_message->pinky_num;
+    cdr << ros_message->robot_id;
   }
 
   // Field name: action
@@ -287,18 +235,9 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Request(
     cdr << str->data;
   }
 
-  // Field name: shoe_info
+  // Field name: shelf_num
   {
-    const rosidl_runtime_c__String * str = &ros_message->shoe_info;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->shelf_num;
   }
 
   return true;
@@ -319,16 +258,9 @@ size_t get_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: shelf_num
+  // Field name: robot_id
   {
-    size_t item_size = sizeof(ros_message->shelf_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-
-  // Field name: pinky_num
-  {
-    size_t item_size = sizeof(ros_message->pinky_num);
+    size_t item_size = sizeof(ros_message->robot_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -338,10 +270,12 @@ size_t get_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->action.size + 1);
 
-  // Field name: shoe_info
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->shoe_info.size + 1);
+  // Field name: shelf_num
+  {
+    size_t item_size = sizeof(ros_message->shelf_num);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -363,15 +297,7 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: shelf_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-
-  // Field name: pinky_num
+  // Field name: robot_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -391,16 +317,12 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
     }
   }
 
-  // Field name: shoe_info
+  // Field name: shelf_num
   {
     size_t array_size = 1;
-    full_bounded = false;
-    is_plain = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   size_t ret_val = current_alignment - initial_alignment;
@@ -411,7 +333,7 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
     using DataType = custom_messeage__srv__RobotArmRequest_Request;
     is_plain =
       (
-      offsetof(DataType, shoe_info) +
+      offsetof(DataType, shelf_num) +
       last_member_size
       ) == ret_val;
   }
@@ -540,6 +462,10 @@ extern "C"
 {
 #endif
 
+// already included above
+// #include "rosidl_runtime_c/string.h"  // action, color, model
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"  // action, color, model
 
 // forward declare type support functions
 
@@ -552,6 +478,58 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Response(
   const custom_messeage__srv__RobotArmRequest_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Field name: action
+  {
+    const rosidl_runtime_c__String * str = &ros_message->action;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: shelf_num
+  {
+    cdr << ros_message->shelf_num;
+  }
+
+  // Field name: model
+  {
+    const rosidl_runtime_c__String * str = &ros_message->model;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: size
+  {
+    cdr << ros_message->size;
+  }
+
+  // Field name: color
+  {
+    const rosidl_runtime_c__String * str = &ros_message->color;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   // Field name: success
   {
     cdr << (ros_message->success ? true : false);
@@ -565,6 +543,64 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Response(
   eprosima::fastcdr::Cdr & cdr,
   custom_messeage__srv__RobotArmRequest_Response * ros_message)
 {
+  // Field name: action
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->action.data) {
+      rosidl_runtime_c__String__init(&ros_message->action);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->action,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'action'\n");
+      return false;
+    }
+  }
+
+  // Field name: shelf_num
+  {
+    cdr >> ros_message->shelf_num;
+  }
+
+  // Field name: model
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->model.data) {
+      rosidl_runtime_c__String__init(&ros_message->model);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->model,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'model'\n");
+      return false;
+    }
+  }
+
+  // Field name: size
+  {
+    cdr >> ros_message->size;
+  }
+
+  // Field name: color
+  {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->color.data) {
+      rosidl_runtime_c__String__init(&ros_message->color);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->color,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'color'\n");
+      return false;
+    }
+  }
+
   // Field name: success
   {
     uint8_t tmp;
@@ -589,6 +625,35 @@ size_t get_serialized_size_custom_messeage__srv__RobotArmRequest_Response(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
+
+  // Field name: action
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->action.size + 1);
+
+  // Field name: shelf_num
+  {
+    size_t item_size = sizeof(ros_message->shelf_num);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: model
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->model.size + 1);
+
+  // Field name: size
+  {
+    size_t item_size = sizeof(ros_message->size);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: color
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->color.size + 1);
 
   // Field name: success
   {
@@ -619,6 +684,58 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Response(
   full_bounded = true;
   is_plain = true;
 
+  // Field name: action
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: shelf_num
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: model
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: size
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: color
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   // Field name: success
   {
     size_t array_size = 1;
@@ -647,6 +764,58 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Response(
   const custom_messeage__srv__RobotArmRequest_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Field name: action
+  {
+    const rosidl_runtime_c__String * str = &ros_message->action;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: shelf_num
+  {
+    cdr << ros_message->shelf_num;
+  }
+
+  // Field name: model
+  {
+    const rosidl_runtime_c__String * str = &ros_message->model;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
+  // Field name: size
+  {
+    cdr << ros_message->size;
+  }
+
+  // Field name: color
+  {
+    const rosidl_runtime_c__String * str = &ros_message->color;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
+      return false;
+    }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
+  }
+
   // Field name: success
   {
     cdr << (ros_message->success ? true : false);
@@ -669,6 +838,35 @@ size_t get_serialized_size_key_custom_messeage__srv__RobotArmRequest_Response(
   const size_t wchar_size = 4;
   (void)padding;
   (void)wchar_size;
+
+  // Field name: action
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->action.size + 1);
+
+  // Field name: shelf_num
+  {
+    size_t item_size = sizeof(ros_message->shelf_num);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: model
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->model.size + 1);
+
+  // Field name: size
+  {
+    size_t item_size = sizeof(ros_message->size);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: color
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->color.size + 1);
 
   // Field name: success
   {
@@ -697,6 +895,58 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Response(
 
   full_bounded = true;
   is_plain = true;
+  // Field name: action
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: shelf_num
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: model
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
+  // Field name: size
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: color
+  {
+    size_t array_size = 1;
+    full_bounded = false;
+    is_plain = false;
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
+    }
+  }
+
   // Field name: success
   {
     size_t array_size = 1;

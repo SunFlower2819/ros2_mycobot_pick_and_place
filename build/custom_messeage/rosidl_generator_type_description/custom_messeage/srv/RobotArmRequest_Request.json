@@ -4,17 +4,7 @@
       "type_name": "custom_messeage/srv/RobotArmRequest_Request",
       "fields": [
         {
-          "name": "shelf_num",
-          "type": {
-            "type_id": 6,
-            "capacity": 0,
-            "string_capacity": 0,
-            "nested_type_name": ""
-          },
-          "default_value": ""
-        },
-        {
-          "name": "pinky_num",
+          "name": "robot_id",
           "type": {
             "type_id": 6,
             "capacity": 0,
@@ -34,9 +24,9 @@
           "default_value": ""
         },
         {
-          "name": "shoe_info",
+          "name": "shelf_num",
           "type": {
-            "type_id": 17,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -50,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Request",
-      "hash_string": "RIHS01_ccace10be616e77f850d18bd82f41f4b462e067ef0ab2f736d7e2dfcfd2b4698"
+      "hash_string": "RIHS01_e9325c12ef3ef4aee83dbefef69fb5e131b13d89ef3f4f5703d0793607fb8256"
     }
   ]
 }
