@@ -49,7 +49,7 @@ class Robot2ControlNode(Node):
         elif action == 'pinky_to_buffer':
             success, msg = self.handle_pinky_to_buffer(pinky_id)
         else:
-            success = False, f"지원하지 않는 action: {action}"
+            success, msg = False, f"지원하지 않는 action: {action}"
 
         ## Note: OCR 인식 후 얻은 데이터 저장
         response.action = msg
@@ -80,8 +80,8 @@ class Robot2ControlNode(Node):
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        cur_joints_rad = self.mc.get_radians()
-        print("라디안:", cur_joints_rad)
+        # cur_joints_rad = self.mc.get_radians()
+        # print("라디안:", cur_joints_rad)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         time.sleep(5)
@@ -95,11 +95,12 @@ class Robot2ControlNode(Node):
 
             print("\n=== Base 좌표계로 변환 중... ===")
             try:
-                base_coords = transform_target_pose_camera_to_base(camera_coords, rvec_deg, cur_joints_rad)
+                base_coords = transform_target_pose_camera_to_base(
+                    camera_coords, rvec_deg, self.mc.get_radians()
+                )
 
                 # roll, pitch, yaw 고정
                 base_coords[3], base_coords[4], base_coords[5] = -177.0, 2.0, -52.0
-
                 print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
 
                 approach_coords = base_coords.copy()
@@ -169,7 +170,7 @@ class Robot2ControlNode(Node):
                 # 그리퍼 방향은 그대로 유지 (roll, pitch, yaw 고정)
                 base_coords2[3], base_coords2[4], base_coords2[5] = -136.02, 32.56, -131.44
 
-                # z축 위로 60mm 이동 (위에서 내려놓기 위해)
+                # x,y,z 보정
                 base_coords2[0] -= 80
                 base_coords2[1] += 0
                 base_coords2[2] += 80

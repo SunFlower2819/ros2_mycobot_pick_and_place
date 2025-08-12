@@ -4,3 +4,6 @@ source;share/pick_and_place/hook/pythonpath.sh
 source;share/pick_and_place/hook/ament_prefix_path.ps1
 source;share/pick_and_place/hook/ament_prefix_path.dsv
 source;share/pick_and_place/hook/ament_prefix_path.sh
+source;../../build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.ps1
+source;../../build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.dsv
+source;../../build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.sh

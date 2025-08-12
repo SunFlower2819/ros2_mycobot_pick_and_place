@@ -1,0 +1,30 @@
+[1.672s] Invoking command in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pick_and_place build --build-base /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build install --record /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log --single-version-externally-managed install_data
+[2.479s] running egg_info
+[2.518s] writing ../../build/pick_and_place/pick_and_place.egg-info/PKG-INFO
+[2.519s] writing dependency_links to ../../build/pick_and_place/pick_and_place.egg-info/dependency_links.txt
+[2.546s] writing entry points to ../../build/pick_and_place/pick_and_place.egg-info/entry_points.txt
+[2.547s] writing requirements to ../../build/pick_and_place/pick_and_place.egg-info/requires.txt
+[2.550s] writing top-level names to ../../build/pick_and_place/pick_and_place.egg-info/top_level.txt
+[2.667s] reading manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'
+[2.668s] adding license file 'LICENSE'
+[2.669s] writing manifest file '../../build/pick_and_place/pick_and_place.egg-info/SOURCES.txt'
+[2.670s] running build
+[2.670s] running build_py
+[2.670s] copying pick_and_place/robot2_control_node.py -> /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build/lib/pick_and_place
+[2.671s] running install
+[2.682s] running install_lib
+[2.732s] copying /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build/lib/pick_and_place/robot2_control_node.py -> /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place
+[2.733s] byte-compiling /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place/robot2_control_node.py to robot2_control_node.cpython-312.pyc
+[2.739s] running install_data
+[2.739s] running install_egg_info
+[2.824s] removing '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info' (and everything under it)
+[2.825s] Copying ../../build/pick_and_place/pick_and_place.egg-info to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick_and_place-0.0.0-py3.12.egg-info
+[2.827s] running install_scripts
+[3.121s] Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.121s] Installing camera_test_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.123s] Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.126s] Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.127s] Installing robot2_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.127s] Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.129s] writing list of installed files to '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log'
+[3.243s] Invoked command in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/pick_and_place build --build-base /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build install --record /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/install.log --single-version-externally-managed install_data
