@@ -220,8 +220,8 @@ class Robot2ControlNode(Node):
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        cur_joints_rad = self.mc.get_radians()
-        print("라디안:", cur_joints_rad)
+        # cur_joints_rad = self.mc.get_radians()
+        # print("라디안:", cur_joints_rad)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         print("\n[2] :brain: AprilTag 인식 중...")
@@ -235,7 +235,9 @@ class Robot2ControlNode(Node):
 
             print("\n=== Base 좌표계로 변환 중... ===")
             try:
-                base_coords = transform_target_pose_camera_to_base(camera_coords, rvec_deg, cur_joints_rad)
+                base_coords = transform_target_pose_camera_to_base(
+                    camera_coords, rvec_deg, self.mc.get_radians()
+                )
 
                 # roll, pitch, yaw 고정
                 base_coords[3], base_coords[4], base_coords[5] = -150.0, 25.0, -138.0

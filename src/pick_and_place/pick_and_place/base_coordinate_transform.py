@@ -101,25 +101,3 @@ def transform_target_pose_camera_to_base(camera_coords, rvec_deg, joint_angles):
     combined = position.tolist() + rpy.tolist()
     
     return combined
-
-# # 간단한 테스트 함수
-# def test_transform():
-#     """변환 함수 테스트"""
-#     # 테스트 데이터
-#     camera_coords = [-10.56, -1.73, 296.36]   # mm
-#     rvec_deg = [-10.5, 20.12, 85.9]          # degree
-#     joint_angles = [-0.003, 0.382, -0.644, -0.974, 0.038, 0.816]  # 라디안
-    
-#     # 변환 수행
-#     result = transform_target_pose_camera_to_base(camera_coords, rvec_deg, joint_angles)
-    
-#     print("=== 좌표 변환 테스트 ===")
-#     print(f"카메라 좌표: {camera_coords}")
-#     print(f"회전 벡터: {rvec_deg}")
-#     print(f"조인트 각도: {joint_angles}")
-#     print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {result}")
-    
-#     return result
-
-# # if __name__ == '__main__':
-# #     test_transform()
