@@ -8,7 +8,8 @@ from pymycobot.genre import Angle, Coord
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
 from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
-from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
+# from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
+from robocallee_fms.srv import RobotArmRequest
 
 ## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
 

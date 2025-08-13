@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "robocallee_fms__py",
+		"source" : "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/robocallee_fms/robocallee_fms__py"
+	}
+}

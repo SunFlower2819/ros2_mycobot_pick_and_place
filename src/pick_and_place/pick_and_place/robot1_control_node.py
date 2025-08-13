@@ -8,9 +8,34 @@ from pymycobot.genre import Angle, Coord
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
 from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
-from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
+# from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
+from robocallee_fms.srv import RobotArmRequest
 
 ## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
+
+# ───────────────────────────────────────────────────
+# ✅ 버퍼 위치 정의
+# ───────────────────────────────────────────────────
+BUFFER_POSITIONS = {
+    "buffer1": [-100.1, -59.23, -13.27, -4.13, -2.19, 36.03],
+    "buffer2":[-86.22, -62.84, 6.5, -24.96, -2.46, 48.69],
+    "buffer3":[-66.35, -53.7, -15.9, -14.67, -6.24, 66.88]
+}
+
+# ✅ 버퍼별 1차 후퇴 조인트 각도 정의
+BUFFER_APPROACH_ANGLES = {
+    "buffer1": [-96.06, -43.41, -13.27, -23.81, -5.71, 44.56],
+    "buffer2": [-83.23, -52.99, 7.11, -37.08, -5.18, 49.83],
+    "buffer3": [-69.52, -38.75, -13.27, -26.19, -5.44, 65.91]
+}
+
+# 버퍼 이름으로 이동하는 함수
+def move_to_buffer(mc, buffer_name, speed=20):
+    if buffer_name in BUFFER_POSITIONS:
+        print(f"{buffer_name}로 이동합니다.")
+        mc.send_angles(BUFFER_POSITIONS[buffer_name], speed)
+    else:
+        print(f"❌ 알 수 없는 버퍼 이름: {buffer_name}")
 
 class Robot2ControlNode(Node):
     def __init__(self):
@@ -133,32 +158,29 @@ class Robot2ControlNode(Node):
                 self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20)
                 time.sleep(2)
 
-                # # 1차 경유지 이동
-                # buffer_name = "None"  # ← 여기를 "buffer1", "buffer2", "buffer3"로 바꿀 수 있음
+                # 1차 경유지 이동
+                buffer_name = "buffer3"  # ← 여기를 "buffer1", "buffer2", "buffer3"로 바꿀 수 있음
 
-                # print("경유지로 이동 중...")
-                # mc.send_angles([-12.39, 29.7, 25.22, -68.73, 11.33, 47.72], 20)
+                # 버퍼별 2차 경유지 이동
+                if buffer_name in BUFFER_APPROACH_ANGLES:
+                    print("버퍼 상단으로 1차 이동 중...")
+                    self.mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
+                    time.sleep(2)
 
-                # # 버퍼별 2차 경유지 이동
-                # if buffer_name in BUFFER_APPROACH_ANGLES:
-                #     print("버퍼 상단으로 1차 이동 중...")
-                #     mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
-                #     time.sleep(2)
+                # ✅ 도착지 이름으로 이동
+                move_to_buffer(self.mc, buffer_name)
+                time.sleep(2)
 
-                # # ✅ 도착지 이름으로 이동
-                # move_to_buffer(mc, buffer_name)
-                # time.sleep(3)
+                # 놓기
+                print("그리퍼를 완전히 엽니다.")
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(1)
 
-                # # 놓기
-                # print("그리퍼를 완전히 엽니다.")
-                # mc.set_gripper_value(100, 50)
-                # time.sleep(1)
-
-                # # 버퍼별 1차 후퇴 앵글로 이동
-                # if buffer_name in BUFFER_APPROACH_ANGLES:
-                #     print("버퍼 상단으로 1차 이동 중...")
-                #     mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
-                #     time.sleep(1)
+                # 버퍼별 1차 후퇴 앵글로 이동
+                if buffer_name in BUFFER_APPROACH_ANGLES:
+                    print("버퍼 상단으로 1차 이동 중...")
+                    self.mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
+                    time.sleep(1)
 
                 # 복귀
                 print("초기 위치로 복귀합니다.")
