@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetcobot/sun_ws/ros2_ws/src/custom_messeage
+CMAKE_SOURCE_DIR = /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage
+CMAKE_BINARY_DIR = /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetcobot/sun_ws/ros2_ws/src/custom_messeage /home/jetcobot/sun_ws/ros2_ws/src/custom_messeage /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/uninstall.dir/depend
 

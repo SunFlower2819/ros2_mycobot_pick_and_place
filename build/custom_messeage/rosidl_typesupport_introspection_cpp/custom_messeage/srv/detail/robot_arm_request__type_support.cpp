@@ -40,7 +40,7 @@ void RobotArmRequest_Request_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmRequest_Request_message_member_array[3] = {
   {
-    "robot_id",  // name
+    "amr_id",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
@@ -48,7 +48,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmReque
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_messeage::srv::RobotArmRequest_Request, robot_id),  // bytes offset in struct
+    offsetof(custom_messeage::srv::RobotArmRequest_Request, amr_id),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -200,7 +200,43 @@ void RobotArmRequest_Response_fini_function(void * message_memory)
   typed_message->~RobotArmRequest_Response();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmRequest_Response_message_member_array[6] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmRequest_Response_message_member_array[7] = {
+  {
+    "robot_id",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage::srv::RobotArmRequest_Response, robot_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "amr_id",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage::srv::RobotArmRequest_Response, amr_id),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
   {
     "action",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
@@ -211,24 +247,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmReque
     0,  // array size
     false,  // is upper bound
     offsetof(custom_messeage::srv::RobotArmRequest_Response, action),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr,  // fetch(index, &value) function pointer
-    nullptr,  // assign(index, value) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "shelf_num",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(custom_messeage::srv::RobotArmRequest_Response, shelf_num),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -314,7 +332,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember RobotArmReque
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers RobotArmRequest_Response_message_members = {
   "custom_messeage::srv",  // message namespace
   "RobotArmRequest_Response",  // message name
-  6,  // number of fields
+  7,  // number of fields
   sizeof(custom_messeage::srv::RobotArmRequest_Response),
   false,  // has_any_key_member_
   RobotArmRequest_Response_message_member_array,  // message members

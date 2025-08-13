@@ -12,7 +12,6 @@
 
 // Include directives for member types
 // Member `action`
-// Member `shoe_info`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -21,18 +20,13 @@ custom_messeage__srv__RobotArmRequest_Request__init(custom_messeage__srv__RobotA
   if (!msg) {
     return false;
   }
-  // shelf_num
-  // pinky_num
+  // amr_id
   // action
   if (!rosidl_runtime_c__String__init(&msg->action)) {
     custom_messeage__srv__RobotArmRequest_Request__fini(msg);
     return false;
   }
-  // shoe_info
-  if (!rosidl_runtime_c__String__init(&msg->shoe_info)) {
-    custom_messeage__srv__RobotArmRequest_Request__fini(msg);
-    return false;
-  }
+  // shelf_num
   return true;
 }
 
@@ -42,12 +36,10 @@ custom_messeage__srv__RobotArmRequest_Request__fini(custom_messeage__srv__RobotA
   if (!msg) {
     return;
   }
-  // shelf_num
-  // pinky_num
+  // amr_id
   // action
   rosidl_runtime_c__String__fini(&msg->action);
-  // shoe_info
-  rosidl_runtime_c__String__fini(&msg->shoe_info);
+  // shelf_num
 }
 
 bool
@@ -56,12 +48,8 @@ custom_messeage__srv__RobotArmRequest_Request__are_equal(const custom_messeage__
   if (!lhs || !rhs) {
     return false;
   }
-  // shelf_num
-  if (lhs->shelf_num != rhs->shelf_num) {
-    return false;
-  }
-  // pinky_num
-  if (lhs->pinky_num != rhs->pinky_num) {
+  // amr_id
+  if (lhs->amr_id != rhs->amr_id) {
     return false;
   }
   // action
@@ -70,10 +58,8 @@ custom_messeage__srv__RobotArmRequest_Request__are_equal(const custom_messeage__
   {
     return false;
   }
-  // shoe_info
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->shoe_info), &(rhs->shoe_info)))
-  {
+  // shelf_num
+  if (lhs->shelf_num != rhs->shelf_num) {
     return false;
   }
   return true;
@@ -87,22 +73,16 @@ custom_messeage__srv__RobotArmRequest_Request__copy(
   if (!input || !output) {
     return false;
   }
-  // shelf_num
-  output->shelf_num = input->shelf_num;
-  // pinky_num
-  output->pinky_num = input->pinky_num;
+  // amr_id
+  output->amr_id = input->amr_id;
   // action
   if (!rosidl_runtime_c__String__copy(
       &(input->action), &(output->action)))
   {
     return false;
   }
-  // shoe_info
-  if (!rosidl_runtime_c__String__copy(
-      &(input->shoe_info), &(output->shoe_info)))
-  {
-    return false;
-  }
+  // shelf_num
+  output->shelf_num = input->shelf_num;
   return true;
 }
 
@@ -286,10 +266,35 @@ custom_messeage__srv__RobotArmRequest_Request__Sequence__copy(
 }
 
 
+// Include directives for member types
+// Member `action`
+// Member `model`
+// Member `color`
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
+
 bool
 custom_messeage__srv__RobotArmRequest_Response__init(custom_messeage__srv__RobotArmRequest_Response * msg)
 {
   if (!msg) {
+    return false;
+  }
+  // robot_id
+  // amr_id
+  // action
+  if (!rosidl_runtime_c__String__init(&msg->action)) {
+    custom_messeage__srv__RobotArmRequest_Response__fini(msg);
+    return false;
+  }
+  // model
+  if (!rosidl_runtime_c__String__init(&msg->model)) {
+    custom_messeage__srv__RobotArmRequest_Response__fini(msg);
+    return false;
+  }
+  // size
+  // color
+  if (!rosidl_runtime_c__String__init(&msg->color)) {
+    custom_messeage__srv__RobotArmRequest_Response__fini(msg);
     return false;
   }
   // success
@@ -302,6 +307,15 @@ custom_messeage__srv__RobotArmRequest_Response__fini(custom_messeage__srv__Robot
   if (!msg) {
     return;
   }
+  // robot_id
+  // amr_id
+  // action
+  rosidl_runtime_c__String__fini(&msg->action);
+  // model
+  rosidl_runtime_c__String__fini(&msg->model);
+  // size
+  // color
+  rosidl_runtime_c__String__fini(&msg->color);
   // success
 }
 
@@ -309,6 +323,36 @@ bool
 custom_messeage__srv__RobotArmRequest_Response__are_equal(const custom_messeage__srv__RobotArmRequest_Response * lhs, const custom_messeage__srv__RobotArmRequest_Response * rhs)
 {
   if (!lhs || !rhs) {
+    return false;
+  }
+  // robot_id
+  if (lhs->robot_id != rhs->robot_id) {
+    return false;
+  }
+  // amr_id
+  if (lhs->amr_id != rhs->amr_id) {
+    return false;
+  }
+  // action
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->action), &(rhs->action)))
+  {
+    return false;
+  }
+  // model
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->model), &(rhs->model)))
+  {
+    return false;
+  }
+  // size
+  if (lhs->size != rhs->size) {
+    return false;
+  }
+  // color
+  if (!rosidl_runtime_c__String__are_equal(
+      &(lhs->color), &(rhs->color)))
+  {
     return false;
   }
   // success
@@ -324,6 +368,30 @@ custom_messeage__srv__RobotArmRequest_Response__copy(
   custom_messeage__srv__RobotArmRequest_Response * output)
 {
   if (!input || !output) {
+    return false;
+  }
+  // robot_id
+  output->robot_id = input->robot_id;
+  // amr_id
+  output->amr_id = input->amr_id;
+  // action
+  if (!rosidl_runtime_c__String__copy(
+      &(input->action), &(output->action)))
+  {
+    return false;
+  }
+  // model
+  if (!rosidl_runtime_c__String__copy(
+      &(input->model), &(output->model)))
+  {
+    return false;
+  }
+  // size
+  output->size = input->size;
+  // color
+  if (!rosidl_runtime_c__String__copy(
+      &(input->color), &(output->color)))
+  {
     return false;
   }
   // success

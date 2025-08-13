@@ -38,7 +38,7 @@ class Robot2ControlNode(Node):
             self.camera = None  # 카메라 없이도 동작하도록
  
     def arm2_control_callback(self, request, response):
-        pinky_id = request.robot_id
+        pinky_id = request.amr_id
         action = request.action.lower()
         shelf_num = request.shelf_num
 
@@ -49,12 +49,12 @@ class Robot2ControlNode(Node):
         elif action == 'pinky_to_buffer':
             success, msg = self.handle_pinky_to_buffer(pinky_id)
         else:
-            success = False
-            msg = f"지원하지 않는 action: {action}"
+            success, msg = False, f"지원하지 않는 action: {action}"
 
         ## Note: OCR 인식 후 얻은 데이터 저장
+        response.robot_id = 2
+        response.amr_id = pinky_id
         response.action = msg
-        response.shelf_num = 3
         response.model = 'None'
         response.size = -1
         response.color = 'None'
@@ -81,8 +81,8 @@ class Robot2ControlNode(Node):
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        cur_joints_rad = self.mc.get_radians()
-        print("라디안:", cur_joints_rad)
+        # cur_joints_rad = self.mc.get_radians()
+        # print("라디안:", cur_joints_rad)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         time.sleep(5)
@@ -96,15 +96,16 @@ class Robot2ControlNode(Node):
 
             print("\n=== Base 좌표계로 변환 중... ===")
             try:
-                base_coords = transform_target_pose_camera_to_base(camera_coords, rvec_deg, cur_joints_rad)
+                base_coords = transform_target_pose_camera_to_base(
+                    camera_coords, rvec_deg, self.mc.get_radians()
+                )
 
                 # roll, pitch, yaw 고정
                 base_coords[3], base_coords[4], base_coords[5] = -177.0, 2.0, -52.0
-
                 print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
 
                 approach_coords = base_coords.copy()
-                ## 버퍼마다 각각의 offset값 설정
+                # 버퍼마다 각각의 offset값 설정
                 if pinky_id == 1:
                     approach_coords[0] -= 10
                     approach_coords[1] -= 7
@@ -142,6 +143,7 @@ class Robot2ControlNode(Node):
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
+                return False, "좌표 변환 또는 로봇 이동 중 오류 발생"
 
         else:
             print("April Tag 좌표를 가져올 수 없습니다.")
@@ -220,8 +222,8 @@ class Robot2ControlNode(Node):
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        cur_joints_rad = self.mc.get_radians()
-        print("라디안:", cur_joints_rad)
+        # cur_joints_rad = self.mc.get_radians()
+        # print("라디안:", cur_joints_rad)
 
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         print("\n[2] :brain: AprilTag 인식 중...")
@@ -235,7 +237,9 @@ class Robot2ControlNode(Node):
 
             print("\n=== Base 좌표계로 변환 중... ===")
             try:
-                base_coords = transform_target_pose_camera_to_base(camera_coords, rvec_deg, cur_joints_rad)
+                base_coords = transform_target_pose_camera_to_base(
+                    camera_coords, rvec_deg, self.mc.get_radians()
+                )
 
                 # roll, pitch, yaw 고정
                 base_coords[3], base_coords[4], base_coords[5] = -150.0, 25.0, -138.0

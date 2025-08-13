@@ -11,10 +11,10 @@ custom_messeage__srv__RobotArmRequest__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x6e, 0x10, 0xd9, 0x5d, 0x59, 0x0a, 0x05, 0x6d,
-      0xdd, 0x7b, 0xf9, 0xd7, 0x5d, 0xec, 0x74, 0xeb,
-      0x97, 0xb6, 0xed, 0x58, 0xc0, 0x54, 0x70, 0x4c,
-      0xf3, 0xb6, 0x18, 0x3f, 0x31, 0xa4, 0xb1, 0xb0,
+      0x6a, 0xe1, 0x34, 0xa2, 0xd7, 0xbe, 0xaf, 0x84,
+      0xe0, 0xd6, 0xb4, 0xe4, 0x76, 0xe6, 0x3e, 0xf0,
+      0xbf, 0x4b, 0x89, 0xec, 0xd6, 0xf5, 0xe7, 0xb6,
+      0xe7, 0x97, 0x18, 0x0b, 0x70, 0x82, 0xae, 0xa5,
     }};
   return &hash;
 }
@@ -26,10 +26,10 @@ custom_messeage__srv__RobotArmRequest_Request__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xe9, 0x32, 0x5c, 0x12, 0xef, 0x3e, 0xf4, 0xae,
-      0xe8, 0x3d, 0xbe, 0xfe, 0xf6, 0x9f, 0xb5, 0xe1,
-      0x31, 0xb1, 0x3d, 0x89, 0xef, 0x3f, 0x4f, 0x57,
-      0x03, 0xd0, 0x79, 0x36, 0x07, 0xfb, 0x82, 0x56,
+      0x8a, 0x01, 0x16, 0x45, 0x10, 0xfe, 0x72, 0x7f,
+      0x65, 0x47, 0xac, 0x92, 0xe6, 0x53, 0x2e, 0xe6,
+      0x8f, 0xa7, 0x48, 0x67, 0xfc, 0x92, 0xf8, 0xd7,
+      0xeb, 0xab, 0x34, 0xec, 0xf5, 0x3f, 0xca, 0x6b,
     }};
   return &hash;
 }
@@ -41,10 +41,10 @@ custom_messeage__srv__RobotArmRequest_Response__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xf2, 0x8b, 0x2c, 0x1b, 0xff, 0x64, 0xef, 0x99,
-      0xc2, 0x96, 0x48, 0x3b, 0x0f, 0x44, 0x12, 0x44,
-      0x09, 0x6f, 0x18, 0xb3, 0xe4, 0x6b, 0x60, 0xa5,
-      0x0e, 0xf5, 0x79, 0x6a, 0xa7, 0x92, 0x00, 0x2a,
+      0x6a, 0x56, 0x60, 0x18, 0x24, 0xbf, 0x02, 0x74,
+      0xf7, 0xf4, 0x00, 0x6a, 0xfd, 0x10, 0x63, 0x23,
+      0x43, 0x94, 0x03, 0x9b, 0x1c, 0xc4, 0x9e, 0xf6,
+      0xc4, 0x78, 0xa1, 0x68, 0xe2, 0x6e, 0xe6, 0xdd,
     }};
   return &hash;
 }
@@ -56,10 +56,10 @@ custom_messeage__srv__RobotArmRequest_Event__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x0c, 0xc7, 0x82, 0xd3, 0xcd, 0x32, 0xf2, 0xd5,
-      0x86, 0x6a, 0x33, 0xcd, 0x94, 0xea, 0xf2, 0x56,
-      0x35, 0xb8, 0x26, 0xef, 0xc1, 0xbe, 0xf2, 0x45,
-      0x9c, 0x4b, 0x74, 0x0d, 0x14, 0xf0, 0x6d, 0xc3,
+      0x9e, 0x91, 0xa9, 0x34, 0xf7, 0xc7, 0x96, 0xe7,
+      0x2b, 0x7f, 0x7b, 0x0f, 0xa0, 0x21, 0x62, 0x40,
+      0xbd, 0x79, 0x7b, 0xe2, 0xbf, 0xa9, 0x26, 0xee,
+      0x26, 0x8b, 0xe1, 0x0d, 0xf9, 0x9a, 0x90, 0xec,
     }};
   return &hash;
 }
@@ -68,8 +68,8 @@ custom_messeage__srv__RobotArmRequest_Event__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "service_msgs/msg/detail/service_event_info__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
+#include "service_msgs/msg/detail/service_event_info__functions.h"
 
 // Hashes for external referenced types
 #ifndef NDEBUG
@@ -181,13 +181,13 @@ custom_messeage__srv__RobotArmRequest__get_type_description(
   return &description;
 }
 // Define type names, field names, and default values
-static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__robot_id[] = "robot_id";
+static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__amr_id[] = "amr_id";
 static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__action[] = "action";
 static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shelf_num[] = "shelf_num";
 
 static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmRequest_Request__FIELDS[] = {
   {
-    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__robot_id, 8, 8},
+    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__amr_id, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
@@ -237,8 +237,9 @@ custom_messeage__srv__RobotArmRequest_Request__get_type_description(
   return &description;
 }
 // Define type names, field names, and default values
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__robot_id[] = "robot_id";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__amr_id[] = "amr_id";
 static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__action[] = "action";
-static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__shelf_num[] = "shelf_num";
 static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__model[] = "model";
 static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__size[] = "size";
 static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__color[] = "color";
@@ -246,9 +247,9 @@ static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__success[
 
 static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmRequest_Response__FIELDS[] = {
   {
-    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__action, 6, 6},
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__robot_id, 8, 8},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -256,9 +257,19 @@ static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmR
     {NULL, 0, 0},
   },
   {
-    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__shelf_num, 9, 9},
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__amr_id, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__action, 6, 6},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
       0,
       0,
       {NULL, 0, 0},
@@ -316,7 +327,7 @@ custom_messeage__srv__RobotArmRequest_Response__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {custom_messeage__srv__RobotArmRequest_Response__TYPE_NAME, 44, 44},
-      {custom_messeage__srv__RobotArmRequest_Response__FIELDS, 6, 6},
+      {custom_messeage__srv__RobotArmRequest_Response__FIELDS, 7, 7},
     },
     {NULL, 0, 0},
   };
@@ -408,12 +419,13 @@ custom_messeage__srv__RobotArmRequest_Event__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "int32 robot_id\n"
+  "int32 amr_id\n"
   "string action\n"
   "int32 shelf_num\n"
   "---\n"
+  "int32 robot_id\n"
+  "int32 amr_id\n"
   "string action\n"
-  "int32 shelf_num\n"
   "string model\n"
   "int32 size\n"
   "string color\n"
@@ -432,7 +444,7 @@ custom_messeage__srv__RobotArmRequest__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {custom_messeage__srv__RobotArmRequest__TYPE_NAME, 35, 35},
     {srv_encoding, 3, 3},
-    {toplevel_type_raw_source, 128, 128},
+    {toplevel_type_raw_source, 138, 138},
   };
   return &source;
 }

@@ -50,9 +50,9 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Request(
   const custom_messeage__srv__RobotArmRequest_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: robot_id
+  // Field name: amr_id
   {
-    cdr << ros_message->robot_id;
+    cdr << ros_message->amr_id;
   }
 
   // Field name: action
@@ -82,9 +82,9 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Request(
   eprosima::fastcdr::Cdr & cdr,
   custom_messeage__srv__RobotArmRequest_Request * ros_message)
 {
-  // Field name: robot_id
+  // Field name: amr_id
   {
-    cdr >> ros_message->robot_id;
+    cdr >> ros_message->amr_id;
   }
 
   // Field name: action
@@ -126,9 +126,9 @@ size_t get_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: robot_id
+  // Field name: amr_id
   {
-    size_t item_size = sizeof(ros_message->robot_id);
+    size_t item_size = sizeof(ros_message->amr_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -167,7 +167,7 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Request(
   full_bounded = true;
   is_plain = true;
 
-  // Field name: robot_id
+  // Field name: amr_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -216,9 +216,9 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Request(
   const custom_messeage__srv__RobotArmRequest_Request * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Field name: robot_id
+  // Field name: amr_id
   {
-    cdr << ros_message->robot_id;
+    cdr << ros_message->amr_id;
   }
 
   // Field name: action
@@ -258,9 +258,9 @@ size_t get_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
   (void)padding;
   (void)wchar_size;
 
-  // Field name: robot_id
+  // Field name: amr_id
   {
-    size_t item_size = sizeof(ros_message->robot_id);
+    size_t item_size = sizeof(ros_message->amr_id);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -297,7 +297,7 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Request(
 
   full_bounded = true;
   is_plain = true;
-  // Field name: robot_id
+  // Field name: amr_id
   {
     size_t array_size = 1;
     last_member_size = array_size * sizeof(uint32_t);
@@ -478,6 +478,16 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Response(
   const custom_messeage__srv__RobotArmRequest_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Field name: robot_id
+  {
+    cdr << ros_message->robot_id;
+  }
+
+  // Field name: amr_id
+  {
+    cdr << ros_message->amr_id;
+  }
+
   // Field name: action
   {
     const rosidl_runtime_c__String * str = &ros_message->action;
@@ -490,11 +500,6 @@ bool cdr_serialize_custom_messeage__srv__RobotArmRequest_Response(
       return false;
     }
     cdr << str->data;
-  }
-
-  // Field name: shelf_num
-  {
-    cdr << ros_message->shelf_num;
   }
 
   // Field name: model
@@ -543,6 +548,16 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Response(
   eprosima::fastcdr::Cdr & cdr,
   custom_messeage__srv__RobotArmRequest_Response * ros_message)
 {
+  // Field name: robot_id
+  {
+    cdr >> ros_message->robot_id;
+  }
+
+  // Field name: amr_id
+  {
+    cdr >> ros_message->amr_id;
+  }
+
   // Field name: action
   {
     std::string tmp;
@@ -557,11 +572,6 @@ bool cdr_deserialize_custom_messeage__srv__RobotArmRequest_Response(
       fprintf(stderr, "failed to assign string into field 'action'\n");
       return false;
     }
-  }
-
-  // Field name: shelf_num
-  {
-    cdr >> ros_message->shelf_num;
   }
 
   // Field name: model
@@ -626,17 +636,24 @@ size_t get_serialized_size_custom_messeage__srv__RobotArmRequest_Response(
   (void)padding;
   (void)wchar_size;
 
+  // Field name: robot_id
+  {
+    size_t item_size = sizeof(ros_message->robot_id);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: amr_id
+  {
+    size_t item_size = sizeof(ros_message->amr_id);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: action
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->action.size + 1);
-
-  // Field name: shelf_num
-  {
-    size_t item_size = sizeof(ros_message->shelf_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
 
   // Field name: model
   current_alignment += padding +
@@ -684,6 +701,22 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Response(
   full_bounded = true;
   is_plain = true;
 
+  // Field name: robot_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: amr_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: action
   {
     size_t array_size = 1;
@@ -694,14 +727,6 @@ size_t max_serialized_size_custom_messeage__srv__RobotArmRequest_Response(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
-  }
-
-  // Field name: shelf_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: model
@@ -764,6 +789,16 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Response(
   const custom_messeage__srv__RobotArmRequest_Response * ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
+  // Field name: robot_id
+  {
+    cdr << ros_message->robot_id;
+  }
+
+  // Field name: amr_id
+  {
+    cdr << ros_message->amr_id;
+  }
+
   // Field name: action
   {
     const rosidl_runtime_c__String * str = &ros_message->action;
@@ -776,11 +811,6 @@ bool cdr_serialize_key_custom_messeage__srv__RobotArmRequest_Response(
       return false;
     }
     cdr << str->data;
-  }
-
-  // Field name: shelf_num
-  {
-    cdr << ros_message->shelf_num;
   }
 
   // Field name: model
@@ -839,17 +869,24 @@ size_t get_serialized_size_key_custom_messeage__srv__RobotArmRequest_Response(
   (void)padding;
   (void)wchar_size;
 
+  // Field name: robot_id
+  {
+    size_t item_size = sizeof(ros_message->robot_id);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
+  // Field name: amr_id
+  {
+    size_t item_size = sizeof(ros_message->amr_id);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+
   // Field name: action
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
     (ros_message->action.size + 1);
-
-  // Field name: shelf_num
-  {
-    size_t item_size = sizeof(ros_message->shelf_num);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
 
   // Field name: model
   current_alignment += padding +
@@ -895,6 +932,22 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Response(
 
   full_bounded = true;
   is_plain = true;
+  // Field name: robot_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Field name: amr_id
+  {
+    size_t array_size = 1;
+    last_member_size = array_size * sizeof(uint32_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
   // Field name: action
   {
     size_t array_size = 1;
@@ -905,14 +958,6 @@ size_t max_serialized_size_key_custom_messeage__srv__RobotArmRequest_Response(
         eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
         1;
     }
-  }
-
-  // Field name: shelf_num
-  {
-    size_t array_size = 1;
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Field name: model

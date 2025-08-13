@@ -14,7 +14,6 @@
 
 // Include directives for member types
 // Member `action`
-// Member `shoe_info`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -36,9 +35,9 @@ void custom_messeage__srv__RobotArmRequest_Request__rosidl_typesupport_introspec
   custom_messeage__srv__RobotArmRequest_Request__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__RobotArmRequest_Request__rosidl_typesupport_introspection_c__RobotArmRequest_Request_message_member_array[4] = {
+static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__RobotArmRequest_Request__rosidl_typesupport_introspection_c__RobotArmRequest_Request_message_member_array[3] = {
   {
-    "shelf_num",  // name
+    "amr_id",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
@@ -46,25 +45,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__R
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_messeage__srv__RobotArmRequest_Request, shelf_num),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "pinky_num",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is key
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(custom_messeage__srv__RobotArmRequest_Request, pinky_num),  // bytes offset in struct
+    offsetof(custom_messeage__srv__RobotArmRequest_Request, amr_id),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -92,15 +73,15 @@ static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__R
     NULL  // resize(index) function pointer
   },
   {
-    "shoe_info",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    "shelf_num",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is key
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(custom_messeage__srv__RobotArmRequest_Request, shoe_info),  // bytes offset in struct
+    offsetof(custom_messeage__srv__RobotArmRequest_Request, shelf_num),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -114,7 +95,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__R
 static const rosidl_typesupport_introspection_c__MessageMembers custom_messeage__srv__RobotArmRequest_Request__rosidl_typesupport_introspection_c__RobotArmRequest_Request_message_members = {
   "custom_messeage__srv",  // message namespace
   "RobotArmRequest_Request",  // message name
-  4,  // number of fields
+  3,  // number of fields
   sizeof(custom_messeage__srv__RobotArmRequest_Request),
   false,  // has_any_key_member_
   custom_messeage__srv__RobotArmRequest_Request__rosidl_typesupport_introspection_c__RobotArmRequest_Request_message_member_array,  // message members
@@ -164,6 +145,13 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 // #include "custom_messeage/srv/detail/robot_arm_request__struct.h"
 
 
+// Include directives for member types
+// Member `action`
+// Member `model`
+// Member `color`
+// already included above
+// #include "rosidl_runtime_c/string_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -183,7 +171,115 @@ void custom_messeage__srv__RobotArmRequest_Response__rosidl_typesupport_introspe
   custom_messeage__srv__RobotArmRequest_Response__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__RobotArmRequest_Response__rosidl_typesupport_introspection_c__RobotArmRequest_Response_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__RobotArmRequest_Response__rosidl_typesupport_introspection_c__RobotArmRequest_Response_message_member_array[7] = {
+  {
+    "robot_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, robot_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "amr_id",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, amr_id),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "action",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, action),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "model",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, model),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "size",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, size),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "color",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is key
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(custom_messeage__srv__RobotArmRequest_Response, color),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
   {
     "success",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -207,7 +303,7 @@ static rosidl_typesupport_introspection_c__MessageMember custom_messeage__srv__R
 static const rosidl_typesupport_introspection_c__MessageMembers custom_messeage__srv__RobotArmRequest_Response__rosidl_typesupport_introspection_c__RobotArmRequest_Response_message_members = {
   "custom_messeage__srv",  // message namespace
   "RobotArmRequest_Response",  // message name
-  1,  // number of fields
+  7,  // number of fields
   sizeof(custom_messeage__srv__RobotArmRequest_Response),
   false,  // has_any_key_member_
   custom_messeage__srv__RobotArmRequest_Response__rosidl_typesupport_introspection_c__RobotArmRequest_Response_message_member_array,  // message members

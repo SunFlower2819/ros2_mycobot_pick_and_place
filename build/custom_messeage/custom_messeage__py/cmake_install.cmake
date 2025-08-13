@@ -1,8 +1,8 @@
-# Install script for directory: /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/custom_messeage__py
+# Install script for directory: /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage/custom_messeage__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage")
+  set(CMAKE_INSTALL_PREFIX "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/custom_messeage")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

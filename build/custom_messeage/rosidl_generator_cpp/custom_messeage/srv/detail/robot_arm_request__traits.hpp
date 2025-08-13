@@ -28,10 +28,10 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
-  // member: robot_id
+  // member: amr_id
   {
-    out << "robot_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
+    out << "amr_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.amr_id, out);
     out << ", ";
   }
 
@@ -54,13 +54,13 @@ inline void to_block_style_yaml(
   const RobotArmRequest_Request & msg,
   std::ostream & out, size_t indentation = 0)
 {
-  // member: robot_id
+  // member: amr_id
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "robot_id: ";
-    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
+    out << "amr_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.amr_id, out);
     out << "\n";
   }
 
@@ -154,17 +154,24 @@ inline void to_flow_style_yaml(
   std::ostream & out)
 {
   out << "{";
+  // member: robot_id
+  {
+    out << "robot_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
+    out << ", ";
+  }
+
+  // member: amr_id
+  {
+    out << "amr_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.amr_id, out);
+    out << ", ";
+  }
+
   // member: action
   {
     out << "action: ";
     rosidl_generator_traits::value_to_yaml(msg.action, out);
-    out << ", ";
-  }
-
-  // member: shelf_num
-  {
-    out << "shelf_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
     out << ", ";
   }
 
@@ -201,6 +208,26 @@ inline void to_block_style_yaml(
   const RobotArmRequest_Response & msg,
   std::ostream & out, size_t indentation = 0)
 {
+  // member: robot_id
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "robot_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.robot_id, out);
+    out << "\n";
+  }
+
+  // member: amr_id
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "amr_id: ";
+    rosidl_generator_traits::value_to_yaml(msg.amr_id, out);
+    out << "\n";
+  }
+
   // member: action
   {
     if (indentation > 0) {
@@ -208,16 +235,6 @@ inline void to_block_style_yaml(
     }
     out << "action: ";
     rosidl_generator_traits::value_to_yaml(msg.action, out);
-    out << "\n";
-  }
-
-  // member: shelf_num
-  {
-    if (indentation > 0) {
-      out << std::string(indentation, ' ');
-    }
-    out << "shelf_num: ";
-    rosidl_generator_traits::value_to_yaml(msg.shelf_num, out);
     out << "\n";
   }
 

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "custom_messeage__py",
+		"source" : "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage/custom_messeage__py"
+	}
+}

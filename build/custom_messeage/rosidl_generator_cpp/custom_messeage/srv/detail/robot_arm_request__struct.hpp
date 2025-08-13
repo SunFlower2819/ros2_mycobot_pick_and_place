@@ -41,7 +41,7 @@ struct RobotArmRequest_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->robot_id = 0l;
+      this->amr_id = 0l;
       this->action = "";
       this->shelf_num = 0l;
     }
@@ -53,16 +53,16 @@ struct RobotArmRequest_Request_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->robot_id = 0l;
+      this->amr_id = 0l;
       this->action = "";
       this->shelf_num = 0l;
     }
   }
 
   // field types and members
-  using _robot_id_type =
+  using _amr_id_type =
     int32_t;
-  _robot_id_type robot_id;
+  _amr_id_type amr_id;
   using _action_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _action_type action;
@@ -71,10 +71,10 @@ struct RobotArmRequest_Request_
   _shelf_num_type shelf_num;
 
   // setters for named parameter idiom
-  Type & set__robot_id(
+  Type & set__amr_id(
     const int32_t & _arg)
   {
-    this->robot_id = _arg;
+    this->amr_id = _arg;
     return *this;
   }
   Type & set__action(
@@ -132,7 +132,7 @@ struct RobotArmRequest_Request_
   // comparison operators
   bool operator==(const RobotArmRequest_Request_ & other) const
   {
-    if (this->robot_id != other.robot_id) {
+    if (this->amr_id != other.amr_id) {
       return false;
     }
     if (this->action != other.action) {
@@ -183,8 +183,9 @@ struct RobotArmRequest_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->robot_id = 0l;
+      this->amr_id = 0l;
       this->action = "";
-      this->shelf_num = 0l;
       this->model = "";
       this->size = 0l;
       this->color = "";
@@ -200,8 +201,9 @@ struct RobotArmRequest_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->robot_id = 0l;
+      this->amr_id = 0l;
       this->action = "";
-      this->shelf_num = 0l;
       this->model = "";
       this->size = 0l;
       this->color = "";
@@ -210,12 +212,15 @@ struct RobotArmRequest_Response_
   }
 
   // field types and members
+  using _robot_id_type =
+    int32_t;
+  _robot_id_type robot_id;
+  using _amr_id_type =
+    int32_t;
+  _amr_id_type amr_id;
   using _action_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _action_type action;
-  using _shelf_num_type =
-    int32_t;
-  _shelf_num_type shelf_num;
   using _model_type =
     std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>;
   _model_type model;
@@ -230,16 +235,22 @@ struct RobotArmRequest_Response_
   _success_type success;
 
   // setters for named parameter idiom
+  Type & set__robot_id(
+    const int32_t & _arg)
+  {
+    this->robot_id = _arg;
+    return *this;
+  }
+  Type & set__amr_id(
+    const int32_t & _arg)
+  {
+    this->amr_id = _arg;
+    return *this;
+  }
   Type & set__action(
     const std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> & _arg)
   {
     this->action = _arg;
-    return *this;
-  }
-  Type & set__shelf_num(
-    const int32_t & _arg)
-  {
-    this->shelf_num = _arg;
     return *this;
   }
   Type & set__model(
@@ -309,10 +320,13 @@ struct RobotArmRequest_Response_
   // comparison operators
   bool operator==(const RobotArmRequest_Response_ & other) const
   {
-    if (this->action != other.action) {
+    if (this->robot_id != other.robot_id) {
       return false;
     }
-    if (this->shelf_num != other.shelf_num) {
+    if (this->amr_id != other.amr_id) {
+      return false;
+    }
+    if (this->action != other.action) {
       return false;
     }
     if (this->model != other.model) {

@@ -1,6 +1,0 @@
-string action
-int32 pinky_num
-int32 shelf_num
-string shoe_info
----
-bool success

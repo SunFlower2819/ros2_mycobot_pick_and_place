@@ -4,7 +4,7 @@
       "type_name": "custom_messeage/srv/RobotArmRequest_Request",
       "fields": [
         {
-          "name": "robot_id",
+          "name": "amr_id",
           "type": {
             "type_id": 6,
             "capacity": 0,
@@ -40,7 +40,7 @@
   "type_hashes": [
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Request",
-      "hash_string": "RIHS01_e9325c12ef3ef4aee83dbefef69fb5e131b13d89ef3f4f5703d0793607fb8256"
+      "hash_string": "RIHS01_8a01164510fe727f6547ac92e6532ee68fa74867fc92f8d7ebab34ecf53fca6b"
     }
   ]
 }

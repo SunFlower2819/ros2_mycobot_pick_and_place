@@ -56,15 +56,15 @@ private:
   ::custom_messeage::srv::RobotArmRequest_Request msg_;
 };
 
-class Init_RobotArmRequest_Request_robot_id
+class Init_RobotArmRequest_Request_amr_id
 {
 public:
-  Init_RobotArmRequest_Request_robot_id()
+  Init_RobotArmRequest_Request_amr_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RobotArmRequest_Request_action robot_id(::custom_messeage::srv::RobotArmRequest_Request::_robot_id_type arg)
+  Init_RobotArmRequest_Request_action amr_id(::custom_messeage::srv::RobotArmRequest_Request::_amr_id_type arg)
   {
-    msg_.robot_id = std::move(arg);
+    msg_.amr_id = std::move(arg);
     return Init_RobotArmRequest_Request_action(msg_);
   }
 
@@ -83,7 +83,7 @@ template<>
 inline
 auto build<::custom_messeage::srv::RobotArmRequest_Request>()
 {
-  return custom_messeage::srv::builder::Init_RobotArmRequest_Request_robot_id();
+  return custom_messeage::srv::builder::Init_RobotArmRequest_Request_amr_id();
 }
 
 }  // namespace custom_messeage
@@ -162,15 +162,15 @@ private:
   ::custom_messeage::srv::RobotArmRequest_Response msg_;
 };
 
-class Init_RobotArmRequest_Response_shelf_num
+class Init_RobotArmRequest_Response_action
 {
 public:
-  explicit Init_RobotArmRequest_Response_shelf_num(::custom_messeage::srv::RobotArmRequest_Response & msg)
+  explicit Init_RobotArmRequest_Response_action(::custom_messeage::srv::RobotArmRequest_Response & msg)
   : msg_(msg)
   {}
-  Init_RobotArmRequest_Response_model shelf_num(::custom_messeage::srv::RobotArmRequest_Response::_shelf_num_type arg)
+  Init_RobotArmRequest_Response_model action(::custom_messeage::srv::RobotArmRequest_Response::_action_type arg)
   {
-    msg_.shelf_num = std::move(arg);
+    msg_.action = std::move(arg);
     return Init_RobotArmRequest_Response_model(msg_);
   }
 
@@ -178,16 +178,32 @@ private:
   ::custom_messeage::srv::RobotArmRequest_Response msg_;
 };
 
-class Init_RobotArmRequest_Response_action
+class Init_RobotArmRequest_Response_amr_id
 {
 public:
-  Init_RobotArmRequest_Response_action()
+  explicit Init_RobotArmRequest_Response_amr_id(::custom_messeage::srv::RobotArmRequest_Response & msg)
+  : msg_(msg)
+  {}
+  Init_RobotArmRequest_Response_action amr_id(::custom_messeage::srv::RobotArmRequest_Response::_amr_id_type arg)
+  {
+    msg_.amr_id = std::move(arg);
+    return Init_RobotArmRequest_Response_action(msg_);
+  }
+
+private:
+  ::custom_messeage::srv::RobotArmRequest_Response msg_;
+};
+
+class Init_RobotArmRequest_Response_robot_id
+{
+public:
+  Init_RobotArmRequest_Response_robot_id()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_RobotArmRequest_Response_shelf_num action(::custom_messeage::srv::RobotArmRequest_Response::_action_type arg)
+  Init_RobotArmRequest_Response_amr_id robot_id(::custom_messeage::srv::RobotArmRequest_Response::_robot_id_type arg)
   {
-    msg_.action = std::move(arg);
-    return Init_RobotArmRequest_Response_shelf_num(msg_);
+    msg_.robot_id = std::move(arg);
+    return Init_RobotArmRequest_Response_amr_id(msg_);
   }
 
 private:
@@ -205,7 +221,7 @@ template<>
 inline
 auto build<::custom_messeage::srv::RobotArmRequest_Response>()
 {
-  return custom_messeage::srv::builder::Init_RobotArmRequest_Response_action();
+  return custom_messeage::srv::builder::Init_RobotArmRequest_Response_robot_id();
 }
 
 }  // namespace custom_messeage

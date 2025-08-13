@@ -11,10 +11,10 @@ custom_messeage__srv__RobotArmRequest__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xf1, 0x1b, 0x27, 0xbf, 0xd2, 0x9d, 0x81, 0xfc,
-      0x2b, 0x52, 0x8a, 0xae, 0x91, 0x73, 0x63, 0x47,
-      0x08, 0x6a, 0x0a, 0x48, 0xe8, 0x27, 0x03, 0xe9,
-      0x99, 0x8b, 0x85, 0xa8, 0xfb, 0xd4, 0x7e, 0x65,
+      0x6a, 0xe1, 0x34, 0xa2, 0xd7, 0xbe, 0xaf, 0x84,
+      0xe0, 0xd6, 0xb4, 0xe4, 0x76, 0xe6, 0x3e, 0xf0,
+      0xbf, 0x4b, 0x89, 0xec, 0xd6, 0xf5, 0xe7, 0xb6,
+      0xe7, 0x97, 0x18, 0x0b, 0x70, 0x82, 0xae, 0xa5,
     }};
   return &hash;
 }
@@ -26,10 +26,10 @@ custom_messeage__srv__RobotArmRequest_Request__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0xcc, 0xac, 0xe1, 0x0b, 0xe6, 0x16, 0xe7, 0x7f,
-      0x85, 0x0d, 0x18, 0xbd, 0x82, 0xf4, 0x1f, 0x4b,
-      0x46, 0x2e, 0x06, 0x7e, 0xf0, 0xab, 0x2f, 0x73,
-      0x6d, 0x7e, 0x2d, 0xfc, 0xfd, 0x2b, 0x46, 0x98,
+      0x8a, 0x01, 0x16, 0x45, 0x10, 0xfe, 0x72, 0x7f,
+      0x65, 0x47, 0xac, 0x92, 0xe6, 0x53, 0x2e, 0xe6,
+      0x8f, 0xa7, 0x48, 0x67, 0xfc, 0x92, 0xf8, 0xd7,
+      0xeb, 0xab, 0x34, 0xec, 0xf5, 0x3f, 0xca, 0x6b,
     }};
   return &hash;
 }
@@ -41,10 +41,10 @@ custom_messeage__srv__RobotArmRequest_Response__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x29, 0xe8, 0x12, 0xeb, 0x7d, 0xf6, 0x1f, 0x40,
-      0x5d, 0xc3, 0x30, 0x42, 0x50, 0x38, 0x0f, 0xb0,
-      0xeb, 0x9d, 0x5a, 0x11, 0x90, 0xda, 0x2b, 0xd4,
-      0x5b, 0x9a, 0x94, 0xe3, 0x5e, 0xf3, 0x10, 0xfb,
+      0x6a, 0x56, 0x60, 0x18, 0x24, 0xbf, 0x02, 0x74,
+      0xf7, 0xf4, 0x00, 0x6a, 0xfd, 0x10, 0x63, 0x23,
+      0x43, 0x94, 0x03, 0x9b, 0x1c, 0xc4, 0x9e, 0xf6,
+      0xc4, 0x78, 0xa1, 0x68, 0xe2, 0x6e, 0xe6, 0xdd,
     }};
   return &hash;
 }
@@ -56,10 +56,10 @@ custom_messeage__srv__RobotArmRequest_Event__get_type_hash(
 {
   (void)type_support;
   static rosidl_type_hash_t hash = {1, {
-      0x2c, 0x0c, 0x11, 0x79, 0xdb, 0x58, 0x00, 0xa0,
-      0x1c, 0xbe, 0xa1, 0x08, 0x1f, 0xa6, 0xb2, 0x68,
-      0xb7, 0x68, 0x1b, 0x51, 0x1a, 0x63, 0x0a, 0x92,
-      0x5d, 0x79, 0x8a, 0xe0, 0x55, 0x02, 0x3f, 0x4f,
+      0x9e, 0x91, 0xa9, 0x34, 0xf7, 0xc7, 0x96, 0xe7,
+      0x2b, 0x7f, 0x7b, 0x0f, 0xa0, 0x21, 0x62, 0x40,
+      0xbd, 0x79, 0x7b, 0xe2, 0xbf, 0xa9, 0x26, 0xee,
+      0x26, 0x8b, 0xe1, 0x0d, 0xf9, 0x9a, 0x90, 0xec,
     }};
   return &hash;
 }
@@ -181,24 +181,13 @@ custom_messeage__srv__RobotArmRequest__get_type_description(
   return &description;
 }
 // Define type names, field names, and default values
-static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shelf_num[] = "shelf_num";
-static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__pinky_num[] = "pinky_num";
+static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__amr_id[] = "amr_id";
 static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__action[] = "action";
-static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shoe_info[] = "shoe_info";
+static char custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shelf_num[] = "shelf_num";
 
 static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmRequest_Request__FIELDS[] = {
   {
-    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shelf_num, 9, 9},
-    {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
-      0,
-      0,
-      {NULL, 0, 0},
-    },
-    {NULL, 0, 0},
-  },
-  {
-    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__pinky_num, 9, 9},
+    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__amr_id, 6, 6},
     {
       rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
@@ -218,9 +207,9 @@ static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmR
     {NULL, 0, 0},
   },
   {
-    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shoe_info, 9, 9},
+    {custom_messeage__srv__RobotArmRequest_Request__FIELD_NAME__shelf_num, 9, 9},
     {
-      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
       0,
       0,
       {NULL, 0, 0},
@@ -238,7 +227,7 @@ custom_messeage__srv__RobotArmRequest_Request__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {custom_messeage__srv__RobotArmRequest_Request__TYPE_NAME, 43, 43},
-      {custom_messeage__srv__RobotArmRequest_Request__FIELDS, 4, 4},
+      {custom_messeage__srv__RobotArmRequest_Request__FIELDS, 3, 3},
     },
     {NULL, 0, 0},
   };
@@ -248,9 +237,75 @@ custom_messeage__srv__RobotArmRequest_Request__get_type_description(
   return &description;
 }
 // Define type names, field names, and default values
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__robot_id[] = "robot_id";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__amr_id[] = "amr_id";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__action[] = "action";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__model[] = "model";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__size[] = "size";
+static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__color[] = "color";
 static char custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__success[] = "success";
 
 static rosidl_runtime_c__type_description__Field custom_messeage__srv__RobotArmRequest_Response__FIELDS[] = {
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__robot_id, 8, 8},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__amr_id, 6, 6},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__action, 6, 6},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__model, 5, 5},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__size, 4, 4},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_INT32,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
+  {
+    {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__color, 5, 5},
+    {
+      rosidl_runtime_c__type_description__FieldType__FIELD_TYPE_STRING,
+      0,
+      0,
+      {NULL, 0, 0},
+    },
+    {NULL, 0, 0},
+  },
   {
     {custom_messeage__srv__RobotArmRequest_Response__FIELD_NAME__success, 7, 7},
     {
@@ -272,7 +327,7 @@ custom_messeage__srv__RobotArmRequest_Response__get_type_description(
   static const rosidl_runtime_c__type_description__TypeDescription description = {
     {
       {custom_messeage__srv__RobotArmRequest_Response__TYPE_NAME, 44, 44},
-      {custom_messeage__srv__RobotArmRequest_Response__FIELDS, 1, 1},
+      {custom_messeage__srv__RobotArmRequest_Response__FIELDS, 7, 7},
     },
     {NULL, 0, 0},
   };
@@ -364,11 +419,16 @@ custom_messeage__srv__RobotArmRequest_Event__get_type_description(
 }
 
 static char toplevel_type_raw_source[] =
-  "int32 shelf_num\n"
-  "int32 pinky_num\n"
+  "int32 amr_id\n"
   "string action\n"
-  "string shoe_info\n"
+  "int32 shelf_num\n"
   "---\n"
+  "int32 robot_id\n"
+  "int32 amr_id\n"
+  "string action\n"
+  "string model\n"
+  "int32 size\n"
+  "string color\n"
   "bool success";
 
 static char srv_encoding[] = "srv";
@@ -384,7 +444,7 @@ custom_messeage__srv__RobotArmRequest__get_individual_type_description_source(
   static const rosidl_runtime_c__type_description__TypeSource source = {
     {custom_messeage__srv__RobotArmRequest__TYPE_NAME, 35, 35},
     {srv_encoding, 3, 3},
-    {toplevel_type_raw_source, 79, 79},
+    {toplevel_type_raw_source, 138, 138},
   };
   return &source;
 }

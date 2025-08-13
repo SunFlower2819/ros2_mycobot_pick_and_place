@@ -4,9 +4,9 @@
       "type_name": "custom_messeage/srv/RobotArmRequest_Response",
       "fields": [
         {
-          "name": "action",
+          "name": "robot_id",
           "type": {
-            "type_id": 17,
+            "type_id": 6,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -14,9 +14,19 @@
           "default_value": ""
         },
         {
-          "name": "shelf_num",
+          "name": "amr_id",
           "type": {
             "type_id": 6,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "action",
+          "type": {
+            "type_id": 17,
             "capacity": 0,
             "string_capacity": 0,
             "nested_type_name": ""
@@ -70,7 +80,7 @@
   "type_hashes": [
     {
       "type_name": "custom_messeage/srv/RobotArmRequest_Response",
-      "hash_string": "RIHS01_f28b2c1bff64ef99c296483b0f441244096f18b3e46b60a50ef5796aa792002a"
+      "hash_string": "RIHS01_6a56601824bf0274f7f4006afd1063234394039b1cc49ef6c478a168e26ee6dd"
     }
   ]
 }
