@@ -1,18 +1,14 @@
 import rclpy
 from rclpy.node import Node
 import time
-import numpy as np
 from pymycobot.mycobot280 import MyCobot280
-from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
 from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
-# from custom_messeage.srv import RobotArmRequest  # srv 경로에 따라 조정 필요
 from robocallee_fms.srv import RobotArmRequest
 
 ## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
-
 
 class Robot2ControlNode(Node):
     def __init__(self):
@@ -82,9 +78,6 @@ class Robot2ControlNode(Node):
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        # cur_joints_rad = self.mc.get_radians()
-        # print("라디안:", cur_joints_rad)
-
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         time.sleep(5)
         frame = self.camera.get_frame()
@@ -128,19 +121,21 @@ class Robot2ControlNode(Node):
                 time.sleep(3)
 
                 current_coords = self.mc.get_coords()
-
-                # IK의 해를 못찾아서 로봇이 이동하지 못할 경우 예외 처리
-                # |가야할 좌표값 - 이동 후 좌표값| 
-                ## Note: 되는데 안된다고 판단할 위험 있음 (오차 범위 재설정 필요)
-                if np.linalg.norm(np.array(approach_coords) - np.array(current_coords)) > 30.0:  # mm 단위 기준
-                    print("이동할 수 없는 좌표값입니다.")
-                    return False, '갈 수 없는 베이스 좌표로 인한 실패'
-
                 print(f"이동 후 현재 좌표: {current_coords}")
 
                 # 물체 잡기
                 time.sleep(3)
                 self.mc.set_gripper_value(0, 50)  # 그리퍼 닫기
+
+                print(f"{pinky_id} 경유 지점으로 이동...")
+                if pinky_id == 1:
+                    self.mc.send_angles([131.48, -14.23, -49.74, -11.33, 0.35, 93.16], 20) # 1번 버퍼 pick 후 경유 위치로 이동
+                elif pinky_id == 2:
+                    self.mc.send_angles([115.31, 5.27, -63.54, -7.64, 0.26, 61.61], 20)    # 2번 버퍼 pick 후 경유 위치로 이동
+                elif pinky_id == 3:
+                    self.mc.send_angles([95.88, 9.58, -56.33, -15.46, -1.14, 55.98], 20)   # 3번 버퍼 pick 후 경유 위치로 이동
+                else:
+                    print("정의되지 않은 핑키 번호")
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
@@ -156,7 +151,7 @@ class Robot2ControlNode(Node):
         print("\n=== 핑키로 place를 위한 이동 ===")
         
         # 핑키 바라보는 각도
-        self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
+        self.mc.send_angles([-14.23, 44.56, -23.55, -49.65, -0.61, 35.59], 25)
         time.sleep(5)
 
         # 수거존 위치 인식
@@ -171,26 +166,38 @@ class Robot2ControlNode(Node):
                 )
 
                 # 그리퍼 방향은 그대로 유지 (roll, pitch, yaw 고정)
-                base_coords2[3], base_coords2[4], base_coords2[5] = -136.02, 32.56, -131.44
+                base_coords2[3], base_coords2[4], base_coords2[5] = -92.63, 38.84, -85.73
 
                 # x,y,z 보정
-                base_coords2[0] -= 80
+                base_coords2[0] -= 110
                 base_coords2[1] += 0
-                base_coords2[2] += 80
+                base_coords2[2] += 10
                 print(f"수거존으로 이동할 좌표: {base_coords2}")
 
                 #경유지
-                self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
+                print("경유지 이동")
+                self.mc.send_angles([65.47, 119.44, -111.44, -12.04, -59.5, 42.62], 25)
+                time.sleep(2)
 
                 #도착지
-                time.sleep(2)
-                self.mc.send_coords(base_coords2, 20, 1)
                 print("수거존 위치로 이동 완료")
+                self.mc.send_coords(base_coords2, 20, 1)
+                time.sleep(2)
 
                 # 물건 내려놓기
-                time.sleep(3)
-                self.mc.set_gripper_value(100, 50)  # 그리퍼 열기
                 print("그리퍼를 열었습니다. 물건을 내려놓았습니다.")
+                self.mc.set_gripper_value(100, 50)  # 그리퍼 열기
+                time.sleep(1)
+
+                #후진
+                self.mc.send_angles([65.47, 119.44, -111.44, -12.04, -59.5, 42.62], 25)
+                time.sleep(2)
+
+                # 초기 위치로 복귀
+                print("초기 위치 복귀")
+                self.mc.send_angles([0, 0, 0, 0, 0, 40], 25)
+                time.sleep(2)
+                print("작업 완료")
                 
             except Exception as e:
                 print(f"수거존 이동 중 오류 발생: {e}")
@@ -198,16 +205,10 @@ class Robot2ControlNode(Node):
             print("수거존 AprilTag 인식 실패")
             return False, '에이프릴 테그 인식 실패' # "버퍼에서 핑키로 이동 실패
 
-        # 초기 위치로 이동
-        self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
-        time.sleep(2)
-        self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
-
         self.get_logger().info(f"버퍼 → 핑키{pinky_id}")
         return True, 'arm2_buffer_to_pinky' # "버퍼에서 핑키로 이동 완료"
     
 ##=========================================================================================
-    
     '''
     RobotArm2가 pinky에서 buffer로 물건을 옮기는 함수
     '''
@@ -216,20 +217,17 @@ class Robot2ControlNode(Node):
         
         # 핑키 바라보는 위치로 이동
         print("\n[1]: 핑키 방향으로 이동 중...")
-        self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
+        self.mc.send_angles([-14.23, 44.56, -23.55, -49.65, -0.61, 35.59], 25)
         self.mc.set_gripper_value(100, 50)  # 그리퍼 열기
         time.sleep(5)
 
         print("그리퍼를 완전히 엽니다.")
         self.mc.set_gripper_value(100, 50)
         
-        # cur_joints_rad = self.mc.get_radians()
-        # print("라디안:", cur_joints_rad)
-
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         print("\n[2] :brain: AprilTag 인식 중...")
         frame = self.camera.get_frame()
-        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=3) # 타겟 id 설정
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=id) # 타겟 id 설정 3 >> id
 
         if camera_coords is not None and rvec_deg is not None:
             print("\n=== April Tag 좌표 정보 ===")
@@ -243,18 +241,18 @@ class Robot2ControlNode(Node):
                 )
 
                 # roll, pitch, yaw 고정
-                base_coords[3], base_coords[4], base_coords[5] = -150.0, 25.0, -138.0
+                base_coords[3], base_coords[4], base_coords[5] = -92.77, 39.31, -87.4
                 print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
 
                 # 핑크로 가는 경유지로 이동 (1차)
                 print("\n[3]: 경유지(1차) 이동 중...")
-                self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
+                self.mc.send_angles([99.75, 121.55, -114.08, -1.05, -101.95, 42.18], 25)
                 time.sleep(3)
 
                 # offset값 설정
-                base_coords[0] -= 50
-                base_coords[1] += 10
-                base_coords[2] += 70
+                base_coords[0] -= 57
+                base_coords[1] += 0
+                base_coords[2] -= 10
                 
                 # base 기준 좌표로 이동 후 물건 잡기
                 self.mc.send_coords(base_coords, 20, 1)
@@ -264,34 +262,26 @@ class Robot2ControlNode(Node):
 
                 # 핑키에서 후진하는 경유지
                 print("\n[4]: 경유지(후진) 이동")
-                self.mc.send_angles([-10.81, 62.4, -118.74, 8.43, -3.69, 44.38], 20)
+                self.mc.send_angles([64.59, 118.74, -111.88, -11.07, -60.38, 42.53], 30)
                 time.sleep(3)
 
-                # 콜렉션 이동하기 전에 경유지
-                self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
-                time.sleep(3)
-                
                 # collection으로 이동
                 print(f"\n[5]: 버퍼로 이동 중...")
-                self.mc.send_angles([78.04, -53.43, -19.07, -11.33, 1.05, 33.66], 20)
+                self.mc.send_angles([76.2, -45.7, -39.72, 5.8, 7.2, 26.89], 30) 
                 time.sleep(3)
-
+                
                 # 놓기
                 print("\n[6]: 그리퍼 열기")
                 self.mc.set_gripper_value(100, 50)
                 time.sleep(1)
 
-                # 초기위치로 가기 전의 경유지 후진 
-                print("\n[7]: 후진(상승) 동작")
-                self.mc.send_angles([76.64, -21.0, -16.78, -40.42, 0.87, 29.35], 20)
-                time.sleep(3)
-
                 # 초기 위치(핑키 바라보는 방향) 복귀
-                print("\n[8]: 초기 위치 복귀")
+                print("\n[7]: 초기 위치 복귀")
                 self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
                 time.sleep(2)
+                
                 self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
-                print("\n[9]: 작업 완료")
+                print("\n[8]: 작업 완료")
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")

@@ -1,6 +1,6 @@
 {
   "package_name": "custom_messeage",
   "non_idl_tuples": [
-    "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage:srv/RobotArmRequest.srv"
+    "/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage:srv/RobotArmRequest.srv"
   ]
 }

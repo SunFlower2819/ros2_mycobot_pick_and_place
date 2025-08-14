@@ -1,0 +1,327 @@
+[0.253s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.253s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0xffffa0c0e0f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffffa0c0de50>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffffa0c0de50>>, mixin_verb=('build',))
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.371s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.371s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/jetcobot/sun_ws/ros2_ws'
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.371s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.372s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.413s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.414s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.415s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extensions ['ignore', 'ignore_ament_install']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extension 'ignore'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extension 'ignore_ament_install'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extensions ['colcon_pkg']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extension 'colcon_pkg'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extensions ['colcon_meta']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extension 'colcon_meta'
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extensions ['ros']
+[0.416s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_messeage) by extension 'ros'
+[0.423s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_messeage' with type 'ros.ament_cmake' and name 'custom_messeage'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extensions ['ignore', 'ignore_ament_install']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extension 'ignore'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extension 'ignore_ament_install'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extensions ['colcon_pkg']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extension 'colcon_pkg'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extensions ['colcon_meta']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extension 'colcon_meta'
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extensions ['ros']
+[0.424s] Level 1:colcon.colcon_core.package_identification:_identify(src/pick_and_place) by extension 'ros'
+[0.425s] DEBUG:colcon.colcon_core.package_identification:Package 'src/pick_and_place' with type 'ros.ament_python' and name 'pick_and_place'
+[0.425s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'ignore'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'ignore_ament_install'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['colcon_pkg']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'colcon_pkg'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['colcon_meta']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'colcon_meta'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['ros']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'ros'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['cmake', 'python']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'cmake'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'python'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extensions ['python_setup_py']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs) by extension 'python_setup_py'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['ignore', 'ignore_ament_install']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'ignore'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'ignore_ament_install'
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['colcon_pkg']
+[0.426s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'colcon_pkg'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'ros'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['cmake', 'python']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'cmake'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'python'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extensions ['python_setup_py']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src) by extension 'python_setup_py'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extensions ['ignore', 'ignore_ament_install']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extension 'ignore'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extension 'ignore_ament_install'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extensions ['colcon_pkg']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extension 'colcon_pkg'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extensions ['colcon_meta']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extension 'colcon_meta'
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extensions ['ros']
+[0.427s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2_custom_msgs/src/robocallee_fms) by extension 'ros'
+[0.428s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2_custom_msgs/src/robocallee_fms' with type 'ros.ament_cmake' and name 'robocallee_fms'
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.428s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.462s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.462s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.464s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.464s] WARNING:colcon.colcon_ros.prefix_path.ament:The path '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' in the environment variable AMENT_PREFIX_PATH doesn't exist
+[0.465s] WARNING:colcon.colcon_ros.prefix_path.catkin:The path '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' in the environment variable CMAKE_PREFIX_PATH doesn't exist
+[0.466s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 0 installed packages in /home/jetcobot/sun_ws/ros2_ws/install
+[0.467s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install
+[0.470s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 379 installed packages in /opt/ros/jazzy
+[0.474s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.564s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_target' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_clean_cache' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_clean_first' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'cmake_force_configure' from command line to 'False'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'ament_cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'catkin_cmake_args' from command line to 'None'
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'custom_messeage' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.565s] DEBUG:colcon.colcon_core.verb:Building package 'custom_messeage' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage', 'merge_install': False, 'path': '/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage', 'symlink_install': True, 'test_result_base': None}
+[0.565s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_target' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_clean_cache' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_clean_first' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'cmake_force_configure' from command line to 'False'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'ament_cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'catkin_cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'pick_and_place' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.566s] DEBUG:colcon.colcon_core.verb:Building package 'pick_and_place' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place', 'merge_install': False, 'path': '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place', 'symlink_install': True, 'test_result_base': None}
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_args' from command line to 'None'
+[0.566s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_target' from command line to 'None'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_clean_cache' from command line to 'False'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_clean_first' from command line to 'False'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'cmake_force_configure' from command line to 'False'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'ament_cmake_args' from command line to 'None'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'catkin_cmake_args' from command line to 'None'
+[0.567s] Level 5:colcon.colcon_core.verb:set package 'robocallee_fms' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.567s] DEBUG:colcon.colcon_core.verb:Building package 'robocallee_fms' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms', 'merge_install': False, 'path': '/home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms', 'symlink_install': True, 'test_result_base': None}
+[0.567s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.569s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.570s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage' with build type 'ament_cmake'
+[0.570s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage'
+[0.574s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.574s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.574s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.583s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place' with build type 'ament_python'
+[0.584s] Level 1:colcon.colcon_core.shell:create_environment_hook('pick_and_place', 'ament_prefix_path')
+[0.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/ament_prefix_path.ps1'
+[0.590s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/ament_prefix_path.dsv'
+[0.593s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/ament_prefix_path.sh'
+[0.595s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.595s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.605s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms' with build type 'ament_cmake'
+[0.606s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms'
+[0.606s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.606s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jetcobot/sun_ws/ros2_ws/src/custom_messeage -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage
+[1.275s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/jetcobot/sun_ws/ros2_ws/src/pick_and_place'
+[1.279s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.279s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms
+[3.030s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data
+[5.556s] Level 1:colcon.colcon_core.shell:create_environment_hook('pick_and_place', 'pythonpath_develop')
+[5.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.ps1'
+[5.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.dsv'
+[5.559s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/share/pick_and_place/hook/pythonpath_develop.sh'
+[5.561s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data
+[5.566s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place' for CMake module files
+[5.567s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place' for CMake config files
+[5.571s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib'
+[5.572s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/bin'
+[5.572s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pkgconfig/pick_and_place.pc'
+[5.575s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages'
+[5.575s] Level 1:colcon.colcon_core.shell:create_environment_hook('pick_and_place', 'pythonpath')
+[5.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/pythonpath.ps1'
+[5.577s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/pythonpath.dsv'
+[5.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/hook/pythonpath.sh'
+[5.583s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/bin'
+[5.583s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pick_and_place)
+[5.583s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/package.ps1'
+[5.585s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/package.dsv'
+[5.586s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/package.sh'
+[5.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/package.bash'
+[5.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/package.zsh'
+[5.589s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/colcon-core/packages/pick_and_place)
+[12.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jetcobot/sun_ws/ros2_ws/src/custom_messeage -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage
+[12.052s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage -- -j4 -l4
+[12.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms
+[12.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms -- -j4 -l4
+[29.028s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage -- -j4 -l4
+[29.058s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage
+[32.611s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_messeage)
+[32.612s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' for CMake module files
+[32.613s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' for CMake config files
+[32.617s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage
+[32.621s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'cmake_prefix_path')
+[32.622s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.ps1'
+[32.626s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.dsv'
+[32.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.sh'
+[32.628s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib'
+[32.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'ld_library_path_lib')
+[32.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.ps1'
+[32.637s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.dsv'
+[32.642s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.sh'
+[32.643s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/bin'
+[32.643s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/pkgconfig/custom_messeage.pc'
+[32.643s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages'
+[32.644s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'pythonpath')
+[32.644s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.ps1'
+[32.654s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.dsv'
+[32.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.sh'
+[32.656s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/bin'
+[32.664s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.ps1'
+[32.667s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.dsv'
+[32.672s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.sh'
+[32.676s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.bash'
+[32.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.zsh'
+[32.682s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/colcon-core/packages/custom_messeage)
+[32.685s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_messeage)
+[32.685s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' for CMake module files
+[32.686s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage' for CMake config files
+[32.687s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'cmake_prefix_path')
+[32.693s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.ps1'
+[32.694s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.dsv'
+[32.696s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/cmake_prefix_path.sh'
+[32.698s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib'
+[32.701s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'ld_library_path_lib')
+[32.701s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.ps1'
+[32.702s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.dsv'
+[32.707s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/ld_library_path_lib.sh'
+[32.708s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/bin'
+[32.708s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/pkgconfig/custom_messeage.pc'
+[32.709s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages'
+[32.709s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_messeage', 'pythonpath')
+[32.709s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.ps1'
+[32.712s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.dsv'
+[32.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/hook/pythonpath.sh'
+[32.715s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/bin'
+[32.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.ps1'
+[32.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.dsv'
+[32.722s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.sh'
+[32.723s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.bash'
+[32.728s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.zsh'
+[32.729s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/colcon-core/packages/custom_messeage)
+[35.807s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms -- -j4 -l4
+[35.808s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms
+[38.783s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocallee_fms)
+[38.785s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms' for CMake module files
+[38.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms
+[38.786s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms' for CMake config files
+[38.788s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'cmake_prefix_path')
+[38.788s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.ps1'
+[38.789s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.dsv'
+[38.790s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.sh'
+[38.790s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib'
+[38.791s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'ld_library_path_lib')
+[38.791s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.ps1'
+[38.792s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.dsv'
+[38.792s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.sh'
+[38.793s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/bin'
+[38.793s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/pkgconfig/robocallee_fms.pc'
+[38.793s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages'
+[38.793s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'pythonpath')
+[38.794s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.ps1'
+[38.794s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.dsv'
+[38.795s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.sh'
+[38.796s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/bin'
+[38.796s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.ps1'
+[38.797s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.dsv'
+[38.798s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.sh'
+[38.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.bash'
+[38.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.zsh'
+[38.800s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/colcon-core/packages/robocallee_fms)
+[38.801s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robocallee_fms)
+[38.801s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms' for CMake module files
+[38.802s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms' for CMake config files
+[38.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'cmake_prefix_path')
+[38.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.ps1'
+[38.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.dsv'
+[38.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/cmake_prefix_path.sh'
+[38.807s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib'
+[38.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'ld_library_path_lib')
+[38.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.ps1'
+[38.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.dsv'
+[38.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/ld_library_path_lib.sh'
+[38.809s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/bin'
+[38.809s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/pkgconfig/robocallee_fms.pc'
+[38.810s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages'
+[38.810s] Level 1:colcon.colcon_core.shell:create_environment_hook('robocallee_fms', 'pythonpath')
+[38.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.ps1'
+[38.811s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.dsv'
+[38.812s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/hook/pythonpath.sh'
+[38.813s] Level 1:colcon.colcon_core.environment:checking '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/bin'
+[38.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.ps1'
+[38.815s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.dsv'
+[38.817s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.sh'
+[38.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.bash'
+[38.819s] INFO:colcon.colcon_core.shell:Creating package script '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.zsh'
+[38.820s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/colcon-core/packages/robocallee_fms)
+[38.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[38.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[38.821s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[38.821s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[38.829s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[38.830s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[38.830s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[38.852s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[38.852s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetcobot/sun_ws/ros2_ws/install/local_setup.ps1'
+[38.854s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jetcobot/sun_ws/ros2_ws/install/_local_setup_util_ps1.py'
+[38.856s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetcobot/sun_ws/ros2_ws/install/setup.ps1'
+[38.858s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetcobot/sun_ws/ros2_ws/install/local_setup.sh'
+[38.858s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/jetcobot/sun_ws/ros2_ws/install/_local_setup_util_sh.py'
+[38.860s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetcobot/sun_ws/ros2_ws/install/setup.sh'
+[38.861s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetcobot/sun_ws/ros2_ws/install/local_setup.bash'
+[38.862s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetcobot/sun_ws/ros2_ws/install/setup.bash'
+[38.864s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/jetcobot/sun_ws/ros2_ws/install/local_setup.zsh'
+[38.865s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/jetcobot/sun_ws/ros2_ws/install/setup.zsh'

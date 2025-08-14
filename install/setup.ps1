@@ -23,9 +23,6 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/jazzy\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/jetcobot/ros2_ws/src/jetcobot_ruckig_test/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/jetcobot/jetcobot_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/jetcobot/ros2_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install\local_setup.ps1"
 
 # source this prefix

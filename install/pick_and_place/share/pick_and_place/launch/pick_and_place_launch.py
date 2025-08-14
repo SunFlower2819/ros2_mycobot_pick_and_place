@@ -1,1 +1,1 @@
-/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/launch/pick_and_place_launch.py
+/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/launch/pick_and_place_launch.py

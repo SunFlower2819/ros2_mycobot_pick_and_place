@@ -23,8 +23,8 @@ robocallee_fms__msg__ArucoPoseArray__get_type_hash(
 #include <string.h>
 
 // Include directives for referenced types
-#include "robocallee_fms/msg/detail/aruco_pose__functions.h"
 #include "std_msgs/msg/detail/header__functions.h"
+#include "robocallee_fms/msg/detail/aruco_pose__functions.h"
 #include "builtin_interfaces/msg/detail/time__functions.h"
 
 // Hashes for external referenced types

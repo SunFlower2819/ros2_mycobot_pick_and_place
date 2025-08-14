@@ -1,1 +1,1 @@
-/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage/ament_cmake_core/custom_messeageConfig.cmake
+/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/ament_cmake_core/custom_messeageConfig.cmake
