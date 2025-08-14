@@ -1,4 +1,1 @@
-int32 id
-float64 x
-float64 y
-float64 yaw
+/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms/msg/ArucoPose.msg

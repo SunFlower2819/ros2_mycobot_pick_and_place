@@ -1,9 +1,7 @@
 import rclpy
 from rclpy.node import Node
 import time
-import numpy as np
 from pymycobot.mycobot280 import MyCobot280
-from pymycobot.genre import Angle, Coord
 
 from pick_and_place.base_coordinate_transform import transform_target_pose_camera_to_base
 from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
@@ -18,8 +16,8 @@ from robocallee_fms.srv import RobotArmRequest
 # ───────────────────────────────────────────────────
 BUFFER_POSITIONS = {
     "buffer1": [-100.1, -59.23, -13.27, -4.13, -2.19, 36.03],
-    "buffer2":[-86.22, -62.84, 6.5, -24.96, -2.46, 48.69],
-    "buffer3":[-66.35, -53.7, -15.9, -14.67, -6.24, 66.88]
+    "buffer2": [-86.22, -62.84, 6.5, -24.96, -2.46, 48.69],
+    "buffer3": [-66.35, -53.7, -15.9, -14.67, -6.24, 66.88]
 }
 
 # ✅ 버퍼별 1차 후퇴 조인트 각도 정의
@@ -71,7 +69,7 @@ class Robot2ControlNode(Node):
         if action == 'shelf_to_buffer':
             success, msg = self.handle_shelf_to_buffer(pinky_id, shelf_num)
         elif action == 'buffer_to_shelf':
-            success, msg = self.handle_buffer_to_shelf(pinky_id)
+            success, msg = self.handle_buffer_to_shelf(pinky_id, shelf_num)
         else:
             success = False, f"지원하지 않는 action: {action}"
 
@@ -97,8 +95,8 @@ class Robot2ControlNode(Node):
             self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20) # 1,2번 선반 보는 초기 자세
         elif shelf_num == 3 or shelf_num == 4:
             self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66], 20)  # 3,4번 선반 보는 초기 자세
-        elif shelf_num == 5 or shelf_num == 6:
-            self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66],20)   # 4,5번 선반 보는 초기 자세
+        # elif shelf_num == 5 or shelf_num == 6:
+        #     self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66],20)   # 4,5번 선반 보는 초기 자세 --> 기획상으로만 존재
         else:
             print("정의되지 않은 선반 번호")
 
@@ -108,7 +106,7 @@ class Robot2ControlNode(Node):
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
         time.sleep(5)
         frame = self.camera.get_frame()
-        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=pinky_id) # 타겟 id = pinky_id
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=shelf_num) # 타겟 id = shelf_num
 
         if camera_coords is not None and rvec_deg is not None:
             print("\n=== April Tag 좌표 정보 ===")
@@ -125,49 +123,60 @@ class Robot2ControlNode(Node):
                 print(f"베이스 좌표 [x, y, z, roll, pitch, yaw]: {base_coords}")
 
                 approach_coords = base_coords.copy()
-                # 선반의 offset값 설정
-                approach_coords[0] -= 80
-                approach_coords[1] -= 0
-                approach_coords[2] -= 8
 
-                print(f"1차 Joint 접근 목표: {approach_coords}")
+                # 선반의 offset값 설정
+                if shelf_num == 1 or shelf_num == 2:
+                    approach_coords[0] -= 80
+                    approach_coords[1] -= 0
+                    approach_coords[2] -= 8
+                elif shelf_num == 3 or shelf_num == 4:
+                    approach_coords[0] -= 70
+                    approach_coords[1] += 0
+                    approach_coords[2] -= 8
+
+                print(f"Joint 접근 목표: {approach_coords}")
                 self.mc.send_coords(approach_coords, 20, 0)
                 print("접근 위치로 이동 중...")
-                
-                print("로봇 이동(2단계) 명령을 전송했습니다.")
-                print("이동 완료까지 대기 중...")
                 time.sleep(3)
-
-                current_coords = self.mc.get_coords()
-
-                # IK의 해를 못찾아서 로봇이 이동하지 못할 경우 예외 처리
-                # |가야할 좌표값 - 이동 후 좌표값| 
-                ## Note: 되는데 안된다고 판단할 위험 있음 (오차 범위 재설정 필요)
-                if np.linalg.norm(np.array(approach_coords) - np.array(current_coords)) > 30.0:  # mm 단위 기준
-                    print("이동할 수 없는 좌표값입니다.")
-                    return False, '갈 수 없는 베이스 좌표로 인한 실패'
-
-                print(f"이동 후 현재 좌표: {current_coords}")
+                print(f"이동 후 현재 좌표: {self.mc.get_coords()}")
 
                 # 집기
                 print("그리퍼를 완전히 닫습니다.")
                 self.mc.set_gripper_value(0, 50)
                 time.sleep(2)
 
-                #경유지 설정( 타겟 충돌 방지)
-                self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20)
+                #경유지 설정(타겟 충돌 방지)
+                print(f"{shelf_num}번 선반 기준 경유지 이동..")
+                if shelf_num == 1 or shelf_num == 2:
+                    self.mc.send_angles([1.05, 34.71, -81.47, 45.52, -5.62, 44.82], 20)  # 1,2번 선반 경유지
+                    time.sleep(2)
+                elif shelf_num == 3 or shelf_num == 4:
+                    self.mc.send_angles([-9.4, -7.38, -108.28, 102.83, 7.64, 42.53], 20) # 3,4번 선반 경유지
+                    time.sleep(3)
+                    self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66], 20)
+                else:
+                    print("정의되지 않은 선반 번호")
                 time.sleep(2)
 
-                # 1차 경유지 이동
-                buffer_name = "buffer3"  # ← 여기를 "buffer1", "buffer2", "buffer3"로 바꿀 수 있음
 
-                # 버퍼별 2차 경유지 이동
+                ## Note: 버퍼 조인트 값 보정 필요
+                # 버퍼 위치 설정
+                if pinky_id == 1:
+                    buffer_name = "buffer1"  
+                elif pinky_id == 2:
+                    buffer_name = "buffer2"
+                elif pinky_id == 3:
+                    buffer_name = "buffer3"
+                else:
+                    print("잘못된 핑키 번호입니다.")
+
+                # 버퍼별 경유지 이동
                 if buffer_name in BUFFER_APPROACH_ANGLES:
                     print("버퍼 상단으로 1차 이동 중...")
                     self.mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
                     time.sleep(2)
 
-                # ✅ 도착지 이름으로 이동
+                # 버퍼로 이동
                 move_to_buffer(self.mc, buffer_name)
                 time.sleep(2)
 
@@ -176,9 +185,9 @@ class Robot2ControlNode(Node):
                 self.mc.set_gripper_value(100, 50)
                 time.sleep(1)
 
-                # 버퍼별 1차 후퇴 앵글로 이동
+                # 버퍼별 후퇴 경유지로 이동
                 if buffer_name in BUFFER_APPROACH_ANGLES:
-                    print("버퍼 상단으로 1차 이동 중...")
+                    print("버퍼에서 벗어나는 이동 중...")
                     self.mc.send_angles(BUFFER_APPROACH_ANGLES[buffer_name], 20)
                     time.sleep(1)
 
@@ -194,17 +203,119 @@ class Robot2ControlNode(Node):
             return False, '에이프릴 테그 인식 실패' # "선반에서 버퍼로 이동 실패"
 
         self.get_logger().info(f"선반 → 버퍼{pinky_id}")
-        return True, 'arm1_shelf_to_buffer' # "선반에서 버퍼로 이동 완료"
+        return True, 'shelf_to_buffer' # "선반에서 버퍼로 이동 완료"
     
 ##=========================================================================================
-
     '''
     RobotArm1이 buffer에서 shelf로 물건을 옮기는 함수
     '''
-    def handle_buffer_to_shelf(self, pinky_id):
+    def handle_buffer_to_shelf(self, pinky_id, shelf_num):
         # TODO: 실제 로봇 로직 작성
+
+        print("\ncamera: 콜렉션 시야 확보 위치로 이동")
+        self.mc.send_angles( [-61.34, -90.57, 87.89, -62.92, 4.83, 45.0] , 28)
+        time.sleep(1)
+
+        print("그리퍼 열기")
+        self.mc.set_gripper_value(100, 50)
+        time.sleep(1)
+    
+     # 프레임 가져오고, 프레임에서 에이프릴테그 감지
+        time.sleep(5)
+        frame = self.camera.get_frame()
+        camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=shelf_num) # 타겟 id = shelf_num
+
+        if camera_coords is not None and rvec_deg is not None:
+            print("\n=== April Tag 좌표 정보 ===")
+            print(f"카메라 기준 좌표: {camera_coords}")
+            print(f"회전 벡터 (도): {rvec_deg}")
+
+            try:
+                print("\n=== Base 좌표계로 변환 중... ===")
+                base_coords = transform_target_pose_camera_to_base(
+                    camera_coords, rvec_deg, self.mc.get_radians()
+                )
+
+                # RPY 고정
+                base_coords[3], base_coords[4], base_coords[5] = -166.52, 10.74, 132.51
+
+                # XYZ 보정
+                base_coords[0] += 10
+                base_coords[1] += 30
+                base_coords[2] += 65
+
+                print(f"이동 좌표(base): {base_coords}")
+                self.mc.send_coords(base_coords, 25, 0)
+
+                print("그리퍼 닫기")
+                self.mc.set_gripper_value(0, 50)
+                time.sleep(1.5)
+
+                self.mc.send_angles([-47.63, -32.34, 9.93, -44.47, -11.68, 79.01], 20) # 위로 살짝 들기 
+                time.sleep(1.5)
+
+                if shelf_num == 1:
+                    self.mc.send_angles([1.84, 18.36, -20.3, -8.87, -0.52, 50.18], 20) # 3층 안전지대 경유지
+                    time.sleep(2)
+
+                    self.mc.send_angles([32.95, -12.3, -46.31, 56.6, -34.54, 47.37], 20) # 물건 플레이스
+                    time.sleep(2)
+
+                    print("\nopen_hands: 물건 내려놓기")
+                    self.mc.set_gripper_value(100, 50)
+                    time.sleep(1)
+
+                    self.mc.send_angles([32.08, 9.49, -46.84, 34.36, -29.09, 49.21], 20) # 물건 놓고 후진
+                    time.sleep(2)
+
+                elif shelf_num == 2:
+                    self.mc.send_angles([1.84, 18.36, -20.3, -8.87, -0.52, 50.18], 20) # 3층 안전지대 경유지
+                    time.sleep(2)
+
+                    self.mc.send_angles([-11.33, -35.68, -1.66, 34.18, 11.68, 47.28], 20) # 물건 플레이스
+                    time.sleep(2)
+
+                    print("\nopen_hands: 물건 내려놓기")
+                    self.mc.set_gripper_value(100, 50)
+                    time.sleep(1)
+
+                    self.mc.send_angles([-10.01, -3.42, -2.9, -2.19, 1.84, 50.88], 20) # 물건 놓고 후진
+                    time.sleep(2)
+
+                ## Note: 3,4 경유지 보정 필요
+                elif shelf_num == 3:
+
+                    self.mc.send_angles([0.7, 54.58, -127.17, 45.52, 1.93, 48.86], 20) # 2층 안전지대 경유지
+                    time.sleep(2)
+
+                    self.mc.send_angles([31.64, -17.84, -128.14, 127.88, -31.55, 53.52], 20) # 물건 플레이스
+                    time.sleep(2)
+
+                    print("\nopen_hands: 물건 내려놓기")
+                    self.mc.set_gripper_value(100, 50)
+                    time.sleep(1)
+
+                    self.mc.send_angles([-10.01, -3.42, -2.9, -2.19, 1.84, 50.88], 20) # 물건 놓고 후진
+                    time.sleep(2)
+                    
+                elif shelf_num == 4:
+                    self.mc.send_angles([]) #2번 경유지
+                    time.sleep(2)
+                    self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20)
+                else:
+                    print("정의되지 않은 선반 번호")
+                    
+                self.mc.send_angles([-65.21, 35.15, -41.92, -46.4, 3.42, 32.78], 20)
+
+            except Exception as e:
+                print(f"좌표 변환 또는 이동 중 오류 발생: {e}")
+                return False, "좌표 변환 또는 로봇 이동 중 오류 발생"
+        else:
+            print("April Tag 좌표를 가져올 수 없습니다.")
+            return False, '에이프릴 테그 인식 실패' # "선반에서 버퍼로 이동 실패"
+
         self.get_logger().info(f"버퍼 → 선반")
-        return True, 'arm1_buffer_to_shelf' # "버퍼에서 선반으로 이동 완료"
+        return True, 'buffer_to_shelf' # "버퍼에서 선반으로 이동 완료"
 ##=========================================================================================
 
 

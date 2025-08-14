@@ -328,17 +328,17 @@ custom_messeage__rosidl_typesupport_cpp/fast:
 .PHONY : custom_messeage__rosidl_typesupport_cpp/fast
 
 #=============================================================================
-# Target rules for targets named ament_cmake_python_copy_custom_messeage
+# Target rules for targets named ament_cmake_python_symlink_custom_messeage
 
 # Build rule for target.
-ament_cmake_python_copy_custom_messeage: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_copy_custom_messeage
-.PHONY : ament_cmake_python_copy_custom_messeage
+ament_cmake_python_symlink_custom_messeage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ament_cmake_python_symlink_custom_messeage
+.PHONY : ament_cmake_python_symlink_custom_messeage
 
 # fast build rule for target.
-ament_cmake_python_copy_custom_messeage/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_copy_custom_messeage.dir/build.make CMakeFiles/ament_cmake_python_copy_custom_messeage.dir/build
-.PHONY : ament_cmake_python_copy_custom_messeage/fast
+ament_cmake_python_symlink_custom_messeage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ament_cmake_python_symlink_custom_messeage.dir/build.make CMakeFiles/ament_cmake_python_symlink_custom_messeage.dir/build
+.PHONY : ament_cmake_python_symlink_custom_messeage/fast
 
 #=============================================================================
 # Target rules for targets named ament_cmake_python_build_custom_messeage_egg
@@ -744,7 +744,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... ament_cmake_python_build_custom_messeage_egg"
-	@echo "... ament_cmake_python_copy_custom_messeage"
+	@echo "... ament_cmake_python_symlink_custom_messeage"
 	@echo "... custom_messeage"
 	@echo "... custom_messeage__cpp"
 	@echo "... custom_messeage__py"

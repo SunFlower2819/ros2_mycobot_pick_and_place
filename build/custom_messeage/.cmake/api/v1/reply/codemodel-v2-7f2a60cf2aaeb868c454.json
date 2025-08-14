@@ -1,0 +1,242 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1b5d649abae39444b704.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "custom_messeage__py",
+					"jsonFile" : "directory-custom_messeage__py-f31d481a006a07dda6e7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage/custom_messeage__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "custom_messeage",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_custom_messeage_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_custom_messeage_egg-296ee7fdd151d99f1942.json",
+					"name" : "ament_cmake_python_build_custom_messeage_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_symlink_custom_messeage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_symlink_custom_messeage-c3fcfcc66a70957ffc00.json",
+					"name" : "ament_cmake_python_symlink_custom_messeage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage-16b517b1459a3c02c525.json",
+					"name" : "custom_messeage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__cpp-f8fa56d7faf71e027257.json",
+					"name" : "custom_messeage__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "custom_messeage__py::@081c49a374fc4ac3518c",
+					"jsonFile" : "target-custom_messeage__py-489bdcda986deccab659.json",
+					"name" : "custom_messeage__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_generator_c-1fb54cc04afc129d3cf2.json",
+					"name" : "custom_messeage__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_generator_py-50ff4581dac909abd2d7.json",
+					"name" : "custom_messeage__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_generator_type_description::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_generator_type_description-53d4682531afa77719b0.json",
+					"name" : "custom_messeage__rosidl_generator_type_description",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_c-a2a3b614ceb1fe40cd8e.json",
+					"name" : "custom_messeage__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_cpp-ffddf1be3c0fd32fb26a.json",
+					"name" : "custom_messeage__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_fastrtps_c-b3966b0de2d63c98ffcb.json",
+					"name" : "custom_messeage__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_fastrtps_cpp-8a850e7a776a012dcfb3.json",
+					"name" : "custom_messeage__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_introspection_c-b0a5592a9dc451c0d1bf.json",
+					"name" : "custom_messeage__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage__rosidl_typesupport_introspection_cpp-bc7328626ef883647354.json",
+					"name" : "custom_messeage__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage_s__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage_s__rosidl_typesupport_c-d54b0e9c7b2902f52334.json",
+					"name" : "custom_messeage_s__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage_s__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage_s__rosidl_typesupport_fastrtps_c-2b30b2bef040cf0572c6.json",
+					"name" : "custom_messeage_s__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage_s__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage_s__rosidl_typesupport_introspection_c-0badeca02ea22e11869e.json",
+					"name" : "custom_messeage_s__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "custom_messeage_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-custom_messeage_uninstall-55444a5d84f9a1d6d5cf.json",
+					"name" : "custom_messeage_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-f0671ac4715b0693ad1a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/custom_messeage",
+		"source" : "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,18 +1,1 @@
-// generated from rosidl_adapter/resource/msg.idl.em
-// with input from robocallee_fms/msg/ArucoPose.msg
-// generated code does not contain a copyright notice
-
-
-module robocallee_fms {
-  module msg {
-    struct ArucoPose {
-      int32 id;
-
-      double x;
-
-      double y;
-
-      double yaw;
-    };
-  };
-};
+/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/robocallee_fms/rosidl_adapter/robocallee_fms/msg/ArucoPose.idl

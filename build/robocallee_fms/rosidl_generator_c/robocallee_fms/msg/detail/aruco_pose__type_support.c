@@ -4,10 +4,10 @@
 
 #include <string.h>
 
-#include "rosidl_typesupport_interface/macros.h"
-#include "robocallee_fms/msg/detail/aruco_pose__struct.h"
-#include "robocallee_fms/msg/detail/aruco_pose__type_support.h"
 #include "robocallee_fms/msg/detail/aruco_pose__functions.h"
+#include "robocallee_fms/msg/detail/aruco_pose__type_support.h"
+#include "robocallee_fms/msg/detail/aruco_pose__struct.h"
+#include "rosidl_typesupport_interface/macros.h"
 
 #ifdef __cplusplus
 extern "C"

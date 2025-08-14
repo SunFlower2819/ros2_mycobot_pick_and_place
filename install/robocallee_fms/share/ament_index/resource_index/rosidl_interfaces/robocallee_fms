@@ -1,10 +1,1 @@
-msg/ArucoPose.idl
-msg/ArucoPose.msg
-msg/ArucoPoseArray.idl
-msg/ArucoPoseArray.msg
-srv/CustomerRequest.idl
-srv/CustomerRequest.srv
-srv/EmployeeRequest.idl
-srv/EmployeeRequest.srv
-srv/RobotArmRequest.idl
-srv/RobotArmRequest.srv
+/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/robocallee_fms/ament_cmake_index/share/ament_index/resource_index/rosidl_interfaces/robocallee_fms

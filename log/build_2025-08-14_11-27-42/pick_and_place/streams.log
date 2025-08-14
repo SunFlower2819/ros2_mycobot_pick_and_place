@@ -1,0 +1,33 @@
+[1.711s] Invoking command in '/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data
+[2.340s] running develop
+[2.873s] running egg_info
+[2.876s] creating pick_and_place.egg-info
+[2.934s] writing pick_and_place.egg-info/PKG-INFO
+[2.936s] writing dependency_links to pick_and_place.egg-info/dependency_links.txt
+[2.938s] writing entry points to pick_and_place.egg-info/entry_points.txt
+[2.940s] writing requirements to pick_and_place.egg-info/requires.txt
+[2.941s] writing top-level names to pick_and_place.egg-info/top_level.txt
+[2.947s] writing manifest file 'pick_and_place.egg-info/SOURCES.txt'
+[3.140s] reading manifest file 'pick_and_place.egg-info/SOURCES.txt'
+[3.149s] writing manifest file 'pick_and_place.egg-info/SOURCES.txt'
+[3.310s] running build_ext
+[3.315s] Creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick-and-place.egg-link (link to .)
+[3.319s] Installing camera_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.319s] Installing camera_test_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.320s] Installing control_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.321s] Installing detection_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.321s] Installing robot1_control_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.321s] Installing robot2_control_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.321s] Installing transform_node script to /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/pick_and_place
+[3.322s] 
+[3.322s] Installed /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place
+[3.322s] running symlink_data
+[3.322s] creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/ament_index
+[3.323s] creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index
+[3.323s] creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index/packages
+[3.323s] symbolically linking /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/resource/pick_and_place -> /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index/packages
+[3.323s] symbolically linking /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/package.xml -> /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/pick_and_place
+[3.324s] creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/pick_and_place/launch
+[3.324s] symbolically linking /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/launch/pick_and_place_launch.py -> /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/pick_and_place/launch
+[3.327s] creating /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/share/pick_and_place/srv
+[3.585s] Invoked command in '/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/pick_and_place/build --no-deps symlink_data

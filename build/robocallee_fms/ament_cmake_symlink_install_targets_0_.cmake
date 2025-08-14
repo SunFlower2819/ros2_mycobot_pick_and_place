@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/build/robocallee_fms/rosidl_generator_py/robocallee_fms/robocallee_fms_s__rosidl_typesupport_fastrtps_c.so" "TARGETS" "robocallee_fms_s__rosidl_typesupport_fastrtps_c" "DESTINATION" "lib/python3.12/site-packages/robocallee_fms")

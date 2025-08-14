@@ -1,11 +1,1 @@
-int32 amr_id
-string action
-int32 shelf_num
----
-int32 robot_id
-int32 amr_id
-string action
-string model
-int32 size
-string color
-bool success
+/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/custom_messeage/srv/RobotArmRequest.srv

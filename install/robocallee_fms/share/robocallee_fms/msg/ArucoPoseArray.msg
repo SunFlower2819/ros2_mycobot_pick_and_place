@@ -1,3 +1,1 @@
-std_msgs/Header header
-ArucoPose[] poses
-int32 count
+/home/jetcobot/venv/mycobot/dev/moon_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms/msg/ArucoPoseArray.msg
