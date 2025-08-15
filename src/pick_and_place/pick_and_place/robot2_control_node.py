@@ -7,6 +7,7 @@ from pick_and_place.base_coordinate_transform import transform_target_pose_camer
 from pick_and_place.image_capture import CameraManager  # CameraManager 클래스 가져오기
 from pick_and_place.image_detection import detect_target  # detect() 내부에서 _detect_april_tag 호출
 from robocallee_fms.srv import RobotArmRequest
+from pick_and_place.django_client import ask_django_ocr
 
 ## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
 
@@ -35,6 +36,19 @@ class Robot2ControlNode(Node):
             self.camera = None  # 카메라 없이도 동작하도록
  
     def arm2_control_callback(self, request, response):
+        
+        # 장고에 OCR 결과 받기-----------------------------
+        time.sleep(3)
+        print("이미지 찍는 중")
+        django_url = 'http://192.168.5.17:8000/gwanje/ocr_from_flask_stream/'
+        shoe_info = ask_django_ocr(django_url, 'get_shoe_info')
+
+        response.model = shoe_info['model']
+        response.color = shoe_info['color']
+        response.size = shoe_info['size']
+        self.get_logger().info(f'[서비스 요청] model: {response.model}, color: {response.color}, size: {response.size}')
+        # -----------------------------------------------
+
         pinky_id = request.amr_id
         action = request.action.lower()
         shelf_num = request.shelf_num
@@ -52,10 +66,11 @@ class Robot2ControlNode(Node):
         response.robot_id = 2
         response.amr_id = pinky_id
         response.action = msg
-        response.model = 'None'
-        response.size = -1
-        response.color = 'None'
+        # response.model = 'None'
+        # response.size = -1
+        # response.color = 'None'
         response.success = success
+
         return response
 
 

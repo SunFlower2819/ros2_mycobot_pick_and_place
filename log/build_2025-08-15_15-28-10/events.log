@@ -1,0 +1,1280 @@
+[0.000000] (-) TimerEvent: {}
+[0.000261] (custom_messeage) JobQueued: {'identifier': 'custom_messeage', 'dependencies': OrderedDict()}
+[0.000444] (pick_and_place) JobQueued: {'identifier': 'pick_and_place', 'dependencies': OrderedDict()}
+[0.000469] (robocallee_fms) JobQueued: {'identifier': 'robocallee_fms', 'dependencies': OrderedDict()}
+[0.001085] (custom_messeage) JobStarted: {'identifier': 'custom_messeage'}
+[0.008999] (pick_and_place) JobStarted: {'identifier': 'pick_and_place'}
+[0.020348] (robocallee_fms) JobStarted: {'identifier': 'robocallee_fms'}
+[0.029205] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'cmake'}
+[0.030025] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '/home/jetcobot/sun_ws/ros2_ws/src/custom_messeage', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[0.099689] (-) TimerEvent: {}
+[0.200043] (-) TimerEvent: {}
+[0.300410] (-) TimerEvent: {}
+[0.400923] (-) TimerEvent: {}
+[0.447639] (custom_messeage) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.450302] (robocallee_fms) JobProgress: {'identifier': 'robocallee_fms', 'progress': 'cmake'}
+[0.450458] (robocallee_fms) Command: {'cmd': ['/usr/bin/cmake', '/home/jetcobot/sun_ws/ros2_ws/src/ros2_custom_msgs/src/robocallee_fms', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[0.500907] (-) TimerEvent: {}
+[0.588822] (robocallee_fms) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.601154] (-) TimerEvent: {}
+[0.701504] (-) TimerEvent: {}
+[0.802397] (-) TimerEvent: {}
+[0.866871] (robocallee_fms) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.870299] (custom_messeage) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.902543] (-) TimerEvent: {}
+[0.910200] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.910466] (robocallee_fms) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.002642] (-) TimerEvent: {}
+[1.103058] (-) TimerEvent: {}
+[1.141368] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.155521] (robocallee_fms) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.158409] (custom_messeage) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.158671] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.159006] (custom_messeage) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.173072] (robocallee_fms) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.173597] (robocallee_fms) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.174630] (robocallee_fms) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.182395] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.190353] (robocallee_fms) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.203649] (-) TimerEvent: {}
+[1.305294] (-) TimerEvent: {}
+[1.406081] (-) TimerEvent: {}
+[1.456312] (robocallee_fms) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.462710] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.476322] (robocallee_fms) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.476563] (robocallee_fms) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.478439] (robocallee_fms) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.478690] (custom_messeage) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.482327] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.482573] (custom_messeage) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.506177] (-) TimerEvent: {}
+[1.593501] (custom_messeage) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.593763] (robocallee_fms) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.606268] (-) TimerEvent: {}
+[1.706644] (-) TimerEvent: {}
+[1.755462] (pick_and_place) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/build', '--no-deps', 'symlink_data'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.808847] (-) TimerEvent: {}
+[1.909565] (-) TimerEvent: {}
+[1.962053] (custom_messeage) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.990681] (robocallee_fms) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[2.009663] (-) TimerEvent: {}
+[2.110020] (-) TimerEvent: {}
+[2.128089] (custom_messeage) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.168407] (robocallee_fms) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.210138] (-) TimerEvent: {}
+[2.271979] (custom_messeage) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.272287] (robocallee_fms) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.6.0 (/opt/ros/jazzy/share/rosidl_default_generators/cmake)\n'}
+[2.310227] (-) TimerEvent: {}
+[2.319471] (robocallee_fms) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.319762] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.410410] (pick_and_place) StdoutLine: {'line': b'running develop\n'}
+[2.410727] (-) TimerEvent: {}
+[2.510990] (-) TimerEvent: {}
+[2.611314] (-) TimerEvent: {}
+[2.713241] (-) TimerEvent: {}
+[2.789946] (pick_and_place) StdoutLine: {'line': b'running egg_info\n'}
+[2.790484] (pick_and_place) StdoutLine: {'line': b'creating pick_and_place.egg-info\n'}
+[2.813343] (-) TimerEvent: {}
+[2.826041] (pick_and_place) StdoutLine: {'line': b'writing pick_and_place.egg-info/PKG-INFO\n'}
+[2.826963] (pick_and_place) StdoutLine: {'line': b'writing dependency_links to pick_and_place.egg-info/dependency_links.txt\n'}
+[2.827579] (pick_and_place) StdoutLine: {'line': b'writing entry points to pick_and_place.egg-info/entry_points.txt\n'}
+[2.828080] (pick_and_place) StdoutLine: {'line': b'writing requirements to pick_and_place.egg-info/requires.txt\n'}
+[2.828337] (pick_and_place) StdoutLine: {'line': b'writing top-level names to pick_and_place.egg-info/top_level.txt\n'}
+[2.828729] (pick_and_place) StdoutLine: {'line': b"writing manifest file 'pick_and_place.egg-info/SOURCES.txt'\n"}
+[2.906262] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.911306] (robocallee_fms) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.913728] (-) TimerEvent: {}
+[2.967476] (pick_and_place) StdoutLine: {'line': b"reading manifest file 'pick_and_place.egg-info/SOURCES.txt'\n"}
+[2.967805] (pick_and_place) StdoutLine: {'line': b"writing manifest file 'pick_and_place.egg-info/SOURCES.txt'\n"}
+[3.013856] (-) TimerEvent: {}
+[3.043327] (pick_and_place) StdoutLine: {'line': b'running build_ext\n'}
+[3.044120] (pick_and_place) StdoutLine: {'line': b'Creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages/pick-and-place.egg-link (link to .)\n'}
+[3.047134] (pick_and_place) StdoutLine: {'line': b'Installing camera_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.049463] (pick_and_place) StdoutLine: {'line': b'Installing camera_test_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.051395] (pick_and_place) StdoutLine: {'line': b'Installing control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.053177] (pick_and_place) StdoutLine: {'line': b'Installing detection_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.054924] (pick_and_place) StdoutLine: {'line': b'Installing robot1_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.055769] (pick_and_place) StdoutLine: {'line': b'Installing robot2_control_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.056060] (pick_and_place) StdoutLine: {'line': b'Installing transform_node script to /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/pick_and_place\n'}
+[3.056272] (pick_and_place) StdoutLine: {'line': b'\n'}
+[3.056381] (pick_and_place) StdoutLine: {'line': b'Installed /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place\n'}
+[3.056482] (pick_and_place) StdoutLine: {'line': b'running symlink_data\n'}
+[3.056570] (pick_and_place) StdoutLine: {'line': b'creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/ament_index\n'}
+[3.056950] (pick_and_place) StdoutLine: {'line': b'creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index\n'}
+[3.057811] (pick_and_place) StdoutLine: {'line': b'creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index/packages\n'}
+[3.058524] (pick_and_place) StdoutLine: {'line': b'symbolically linking /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/resource/pick_and_place -> /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/ament_index/resource_index/packages\n'}
+[3.058741] (pick_and_place) StdoutLine: {'line': b'symbolically linking /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/package.xml -> /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place\n'}
+[3.059610] (pick_and_place) StdoutLine: {'line': b'creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/launch\n'}
+[3.059852] (pick_and_place) StdoutLine: {'line': b'symbolically linking /home/jetcobot/sun_ws/ros2_ws/build/pick_and_place/launch/pick_and_place_launch.py -> /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/launch\n'}
+[3.061272] (pick_and_place) StdoutLine: {'line': b'creating /home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/share/pick_and_place/srv\n'}
+[3.114015] (-) TimerEvent: {}
+[3.215600] (-) TimerEvent: {}
+[3.221576] (pick_and_place) CommandEnded: {'returncode': 0}
+[3.247592] (pick_and_place) JobEnded: {'identifier': 'pick_and_place', 'rc': 0}
+[3.288078] (custom_messeage) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[3.290348] (robocallee_fms) StdoutLine: {'line': b'-- Found rosidl_adapter: 4.6.5 (/opt/ros/jazzy/share/rosidl_adapter/cmake)\n'}
+[3.316801] (-) TimerEvent: {}
+[3.317672] (robocallee_fms) StdoutLine: {'line': b'-- Found std_msgs: 5.3.5 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[3.416942] (-) TimerEvent: {}
+[3.517654] (-) TimerEvent: {}
+[3.623253] (-) TimerEvent: {}
+[3.724772] (-) TimerEvent: {}
+[3.828100] (-) TimerEvent: {}
+[3.928553] (-) TimerEvent: {}
+[4.029230] (-) TimerEvent: {}
+[4.132256] (-) TimerEvent: {}
+[4.232808] (-) TimerEvent: {}
+[4.333245] (-) TimerEvent: {}
+[4.434995] (-) TimerEvent: {}
+[4.537489] (-) TimerEvent: {}
+[4.638683] (-) TimerEvent: {}
+[4.739144] (-) TimerEvent: {}
+[4.842247] (-) TimerEvent: {}
+[4.941994] (custom_messeage) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[4.942326] (-) TimerEvent: {}
+[5.042616] (-) TimerEvent: {}
+[5.143758] (-) TimerEvent: {}
+[5.191834] (robocallee_fms) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.12.0 (/opt/ros/jazzy/share/ament_cmake_ros/cmake)\n'}
+[5.243962] (-) TimerEvent: {}
+[5.344582] (-) TimerEvent: {}
+[5.445426] (-) TimerEvent: {}
+[5.547554] (-) TimerEvent: {}
+[5.649202] (-) TimerEvent: {}
+[5.749740] (-) TimerEvent: {}
+[5.850290] (-) TimerEvent: {}
+[5.950769] (-) TimerEvent: {}
+[6.051416] (-) TimerEvent: {}
+[6.101086] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.155140] (-) TimerEvent: {}
+[6.255565] (-) TimerEvent: {}
+[6.358289] (-) TimerEvent: {}
+[6.443362] (robocallee_fms) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.458398] (-) TimerEvent: {}
+[6.558809] (-) TimerEvent: {}
+[6.660120] (-) TimerEvent: {}
+[6.760768] (-) TimerEvent: {}
+[6.861266] (-) TimerEvent: {}
+[6.961690] (-) TimerEvent: {}
+[7.062077] (-) TimerEvent: {}
+[7.162500] (-) TimerEvent: {}
+[7.262898] (-) TimerEvent: {}
+[7.334855] (custom_messeage) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.344504] (custom_messeage) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[7.362997] (-) TimerEvent: {}
+[7.463373] (-) TimerEvent: {}
+[7.582355] (-) TimerEvent: {}
+[7.604394] (custom_messeage) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[7.660592] (robocallee_fms) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.668700] (robocallee_fms) StdoutLine: {'line': b'-- Found python_cmake_module: 0.11.1 (/opt/ros/jazzy/share/python_cmake_module/cmake)\n'}
+[7.682468] (-) TimerEvent: {}
+[7.782881] (-) TimerEvent: {}
+[7.883248] (-) TimerEvent: {}
+[7.922283] (robocallee_fms) StdoutLine: {'line': b'-- Found PythonExtra: /usr/bin/python3  \n'}
+[7.983354] (-) TimerEvent: {}
+[8.083694] (-) TimerEvent: {}
+[8.186411] (-) TimerEvent: {}
+[8.288224] (-) TimerEvent: {}
+[8.388680] (-) TimerEvent: {}
+[8.455306] (custom_messeage) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.488788] (-) TimerEvent: {}
+[8.541517] (custom_messeage) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[8.591256] (-) TimerEvent: {}
+[8.649530] (custom_messeage) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.657290] (custom_messeage) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.668313] (custom_messeage) StdoutLine: {'line': b'-- Configuring done (8.6s)\n'}
+[8.700254] (-) TimerEvent: {}
+[8.745262] (custom_messeage) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[8.763334] (robocallee_fms) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter Development NumPy Development.Module Development.Embed \n'}
+[8.767252] (custom_messeage) StdoutLine: {'line': b'-- Build files have been written to: /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage\n'}
+[8.791425] (custom_messeage) CommandEnded: {'returncode': 0}
+[8.792360] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'build'}
+[8.794252] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', '--', '-j4', '-l4'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[8.800673] (-) TimerEvent: {}
+[8.862573] (robocallee_fms) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[8.900716] (-) TimerEvent: {}
+[8.909571] (custom_messeage) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[8.930222] (custom_messeage) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_symlink_custom_messeage\n'}
+[8.931293] (robocallee_fms) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[8.933580] (robocallee_fms) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[8.942548] (robocallee_fms) StdoutLine: {'line': b'-- Configuring done (8.5s)\n'}
+[9.000928] (-) TimerEvent: {}
+[9.031325] (robocallee_fms) StdoutLine: {'line': b'-- Generating done (0.1s)\n'}
+[9.055212] (robocallee_fms) StdoutLine: {'line': b'-- Build files have been written to: /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms\n'}
+[9.082863] (robocallee_fms) CommandEnded: {'returncode': 0}
+[9.083836] (robocallee_fms) JobProgress: {'identifier': 'robocallee_fms', 'progress': 'build'}
+[9.084281] (robocallee_fms) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', '--', '-j4', '-l4'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[9.101095] (-) TimerEvent: {}
+[9.203259] (-) TimerEvent: {}
+[9.211873] (robocallee_fms) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating type hashes for ROS interfaces\x1b[0m\n'}
+[9.239341] (robocallee_fms) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_symlink_robocallee_fms\n'}
+[9.303680] (-) TimerEvent: {}
+[9.404760] (-) TimerEvent: {}
+[9.505476] (-) TimerEvent: {}
+[9.508056] (custom_messeage) StdoutLine: {'line': b'running egg_info\n'}
+[9.510087] (custom_messeage) StdoutLine: {'line': b'creating custom_messeage.egg-info\n'}
+[9.556000] (custom_messeage) StdoutLine: {'line': b'writing custom_messeage.egg-info/PKG-INFO\n'}
+[9.557160] (custom_messeage) StdoutLine: {'line': b'writing dependency_links to custom_messeage.egg-info/dependency_links.txt\n'}
+[9.557460] (custom_messeage) StdoutLine: {'line': b'writing top-level names to custom_messeage.egg-info/top_level.txt\n'}
+[9.559240] (custom_messeage) StdoutLine: {'line': b"writing manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[9.606227] (-) TimerEvent: {}
+[9.685711] (custom_messeage) StdoutLine: {'line': b"reading manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[9.686814] (custom_messeage) StdoutLine: {'line': b"writing manifest file 'custom_messeage.egg-info/SOURCES.txt'\n"}
+[9.706882] (-) TimerEvent: {}
+[9.749607] (robocallee_fms) StdoutLine: {'line': b'running egg_info\n'}
+[9.750900] (robocallee_fms) StdoutLine: {'line': b'creating robocallee_fms.egg-info\n'}
+[9.776301] (custom_messeage) StdoutLine: {'line': b'[  2%] Built target ament_cmake_python_build_custom_messeage_egg\n'}
+[9.787656] (robocallee_fms) StdoutLine: {'line': b'writing robocallee_fms.egg-info/PKG-INFO\n'}
+[9.787989] (robocallee_fms) StdoutLine: {'line': b'writing dependency_links to robocallee_fms.egg-info/dependency_links.txt\n'}
+[9.788231] (robocallee_fms) StdoutLine: {'line': b'writing top-level names to robocallee_fms.egg-info/top_level.txt\n'}
+[9.788564] (robocallee_fms) StdoutLine: {'line': b"writing manifest file 'robocallee_fms.egg-info/SOURCES.txt'\n"}
+[9.806978] (-) TimerEvent: {}
+[9.896709] (robocallee_fms) StdoutLine: {'line': b"reading manifest file 'robocallee_fms.egg-info/SOURCES.txt'\n"}
+[9.897416] (robocallee_fms) StdoutLine: {'line': b"writing manifest file 'robocallee_fms.egg-info/SOURCES.txt'\n"}
+[9.907090] (-) TimerEvent: {}
+[9.975263] (robocallee_fms) StdoutLine: {'line': b'[  1%] Built target ament_cmake_python_build_robocallee_fms_egg\n'}
+[10.007222] (-) TimerEvent: {}
+[10.098269] (custom_messeage) StdoutLine: {'line': b'[  2%] Built target custom_messeage__rosidl_generator_type_description\n'}
+[10.108813] (-) TimerEvent: {}
+[10.119956] (custom_messeage) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[10.142779] (custom_messeage) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[10.208931] (-) TimerEvent: {}
+[10.309244] (-) TimerEvent: {}
+[10.409619] (-) TimerEvent: {}
+[10.434937] (robocallee_fms) StdoutLine: {'line': b'[  1%] Built target robocallee_fms__rosidl_generator_type_description\n'}
+[10.469416] (robocallee_fms) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[10.509757] (-) TimerEvent: {}
+[10.610190] (-) TimerEvent: {}
+[10.710773] (-) TimerEvent: {}
+[10.811134] (-) TimerEvent: {}
+[10.911517] (-) TimerEvent: {}
+[11.011895] (-) TimerEvent: {}
+[11.112235] (-) TimerEvent: {}
+[11.212564] (-) TimerEvent: {}
+[11.312901] (-) TimerEvent: {}
+[11.413242] (-) TimerEvent: {}
+[11.513606] (-) TimerEvent: {}
+[11.613933] (-) TimerEvent: {}
+[11.714257] (-) TimerEvent: {}
+[11.814559] (-) TimerEvent: {}
+[11.914853] (-) TimerEvent: {}
+[12.015183] (-) TimerEvent: {}
+[12.115527] (-) TimerEvent: {}
+[12.215847] (-) TimerEvent: {}
+[12.316200] (-) TimerEvent: {}
+[12.416551] (-) TimerEvent: {}
+[12.428931] (robocallee_fms) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[12.516675] (-) TimerEvent: {}
+[13.685417] (-) TimerEvent: {}
+[13.785804] (-) TimerEvent: {}
+[13.886193] (-) TimerEvent: {}
+[13.986551] (-) TimerEvent: {}
+[14.086936] (-) TimerEvent: {}
+[14.187529] (-) TimerEvent: {}
+[14.289071] (-) TimerEvent: {}
+[14.389533] (-) TimerEvent: {}
+[14.489926] (-) TimerEvent: {}
+[14.590331] (-) TimerEvent: {}
+[14.690733] (-) TimerEvent: {}
+[14.791114] (-) TimerEvent: {}
+[14.891502] (-) TimerEvent: {}
+[14.991913] (-) TimerEvent: {}
+[15.092343] (-) TimerEvent: {}
+[15.192721] (-) TimerEvent: {}
+[15.293092] (-) TimerEvent: {}
+[15.393503] (-) TimerEvent: {}
+[15.493893] (-) TimerEvent: {}
+[15.594288] (-) TimerEvent: {}
+[15.694679] (-) TimerEvent: {}
+[15.795146] (-) TimerEvent: {}
+[15.895589] (-) TimerEvent: {}
+[15.996010] (-) TimerEvent: {}
+[16.096449] (-) TimerEvent: {}
+[16.196798] (-) TimerEvent: {}
+[16.297095] (-) TimerEvent: {}
+[16.397409] (-) TimerEvent: {}
+[16.497718] (-) TimerEvent: {}
+[16.598001] (-) TimerEvent: {}
+[16.698285] (-) TimerEvent: {}
+[16.798555] (-) TimerEvent: {}
+[16.898824] (-) TimerEvent: {}
+[16.999123] (-) TimerEvent: {}
+[17.099410] (-) TimerEvent: {}
+[17.199694] (-) TimerEvent: {}
+[17.299978] (-) TimerEvent: {}
+[17.400300] (-) TimerEvent: {}
+[17.500595] (-) TimerEvent: {}
+[17.600883] (-) TimerEvent: {}
+[21.354478] (-) TimerEvent: {}
+[21.454863] (-) TimerEvent: {}
+[21.555241] (-) TimerEvent: {}
+[21.655652] (-) TimerEvent: {}
+[21.758434] (-) TimerEvent: {}
+[21.858796] (-) TimerEvent: {}
+[21.959194] (-) TimerEvent: {}
+[22.059579] (-) TimerEvent: {}
+[22.159918] (-) TimerEvent: {}
+[22.260248] (-) TimerEvent: {}
+[22.360596] (-) TimerEvent: {}
+[22.460942] (-) TimerEvent: {}
+[22.561317] (-) TimerEvent: {}
+[22.661654] (-) TimerEvent: {}
+[22.761993] (-) TimerEvent: {}
+[25.919966] (-) TimerEvent: {}
+[26.020364] (-) TimerEvent: {}
+[26.120737] (-) TimerEvent: {}
+[26.221503] (-) TimerEvent: {}
+[26.322555] (-) TimerEvent: {}
+[26.422962] (-) TimerEvent: {}
+[26.523299] (-) TimerEvent: {}
+[26.627251] (-) TimerEvent: {}
+[26.721348] (custom_messeage) StdoutLine: {'line': b'[  8%] Built target custom_messeage__cpp\n'}
+[26.728393] (-) TimerEvent: {}
+[26.761372] (custom_messeage) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__description.c.o\x1b[0m\n'}
+[26.828522] (-) TimerEvent: {}
+[26.928940] (-) TimerEvent: {}
+[27.029649] (-) TimerEvent: {}
+[27.050286] (custom_messeage) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[27.129814] (-) TimerEvent: {}
+[27.165288] (custom_messeage) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__functions.c.o\x1b[0m\n'}
+[27.229947] (-) TimerEvent: {}
+[27.333288] (-) TimerEvent: {}
+[27.392543] (custom_messeage) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_generator_c.so\x1b[0m\n'}
+[27.433415] (-) TimerEvent: {}
+[27.515621] (robocallee_fms) StdoutLine: {'line': b'[  4%] Built target robocallee_fms__cpp\n'}
+[27.534201] (-) TimerEvent: {}
+[27.537058] (custom_messeage) StdoutLine: {'line': b'[ 20%] Built target custom_messeage__rosidl_generator_c\n'}
+[27.569263] (custom_messeage) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[27.634253] (-) TimerEvent: {}
+[27.734673] (-) TimerEvent: {}
+[27.835483] (-) TimerEvent: {}
+[27.935920] (-) TimerEvent: {}
+[28.026480] (robocallee_fms) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose__description.c.o\x1b[0m\n'}
+[28.036281] (-) TimerEvent: {}
+[28.137000] (-) TimerEvent: {}
+[28.239021] (-) TimerEvent: {}
+[28.258575] (robocallee_fms) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose_array__description.c.o\x1b[0m\n'}
+[28.339219] (-) TimerEvent: {}
+[28.403374] (custom_messeage) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/custom_messeage/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[28.409705] (robocallee_fms) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose_array__functions.c.o\x1b[0m\n'}
+[28.439340] (-) TimerEvent: {}
+[28.529067] (custom_messeage) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[28.539480] (-) TimerEvent: {}
+[28.541444] (robocallee_fms) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose_array__type_support.c.o\x1b[0m\n'}
+[28.618459] (robocallee_fms) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/customer_request__description.c.o\x1b[0m\n'}
+[28.626793] (custom_messeage) StdoutLine: {'line': b'[ 29%] Built target custom_messeage__rosidl_typesupport_introspection_c\n'}
+[28.639597] (-) TimerEvent: {}
+[28.739981] (-) TimerEvent: {}
+[28.792273] (robocallee_fms) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/customer_request__functions.c.o\x1b[0m\n'}
+[28.808638] (custom_messeage) StdoutLine: {'line': b'[ 32%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[28.840107] (-) TimerEvent: {}
+[28.940564] (-) TimerEvent: {}
+[28.975964] (robocallee_fms) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/customer_request__type_support.c.o\x1b[0m\n'}
+[29.041850] (-) TimerEvent: {}
+[29.067802] (robocallee_fms) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/employee_request__description.c.o\x1b[0m\n'}
+[29.141987] (-) TimerEvent: {}
+[29.242375] (-) TimerEvent: {}
+[29.342691] (-) TimerEvent: {}
+[29.443038] (-) TimerEvent: {}
+[29.543453] (-) TimerEvent: {}
+[29.643819] (-) TimerEvent: {}
+[29.744176] (-) TimerEvent: {}
+[29.844522] (-) TimerEvent: {}
+[29.944876] (-) TimerEvent: {}
+[30.045255] (-) TimerEvent: {}
+[30.145622] (-) TimerEvent: {}
+[30.245986] (-) TimerEvent: {}
+[30.346347] (-) TimerEvent: {}
+[30.446725] (-) TimerEvent: {}
+[30.547125] (-) TimerEvent: {}
+[30.647496] (-) TimerEvent: {}
+[30.747821] (-) TimerEvent: {}
+[30.848193] (-) TimerEvent: {}
+[30.948594] (-) TimerEvent: {}
+[31.049004] (-) TimerEvent: {}
+[31.149406] (-) TimerEvent: {}
+[31.249835] (-) TimerEvent: {}
+[31.350358] (-) TimerEvent: {}
+[31.450746] (-) TimerEvent: {}
+[31.551139] (-) TimerEvent: {}
+[31.651533] (-) TimerEvent: {}
+[31.751856] (-) TimerEvent: {}
+[31.852256] (-) TimerEvent: {}
+[31.952678] (-) TimerEvent: {}
+[32.053112] (-) TimerEvent: {}
+[32.153558] (-) TimerEvent: {}
+[32.253986] (-) TimerEvent: {}
+[32.354383] (-) TimerEvent: {}
+[32.454783] (-) TimerEvent: {}
+[32.555274] (-) TimerEvent: {}
+[32.655682] (-) TimerEvent: {}
+[32.756103] (-) TimerEvent: {}
+[32.856498] (-) TimerEvent: {}
+[32.956905] (-) TimerEvent: {}
+[33.160174] (-) TimerEvent: {}
+[33.260521] (-) TimerEvent: {}
+[33.360914] (-) TimerEvent: {}
+[34.216862] (-) TimerEvent: {}
+[42.977057] (-) TimerEvent: {}
+[43.077512] (-) TimerEvent: {}
+[43.177891] (-) TimerEvent: {}
+[43.278258] (-) TimerEvent: {}
+[43.378626] (-) TimerEvent: {}
+[43.478982] (-) TimerEvent: {}
+[43.579344] (-) TimerEvent: {}
+[43.679712] (-) TimerEvent: {}
+[43.780076] (-) TimerEvent: {}
+[43.880457] (-) TimerEvent: {}
+[43.980828] (-) TimerEvent: {}
+[44.081222] (-) TimerEvent: {}
+[44.181620] (-) TimerEvent: {}
+[44.282024] (-) TimerEvent: {}
+[44.382462] (-) TimerEvent: {}
+[44.482852] (-) TimerEvent: {}
+[44.583245] (-) TimerEvent: {}
+[45.036266] (-) TimerEvent: {}
+[45.136678] (-) TimerEvent: {}
+[45.237091] (-) TimerEvent: {}
+[45.337559] (-) TimerEvent: {}
+[45.437948] (-) TimerEvent: {}
+[45.538312] (-) TimerEvent: {}
+[45.638612] (-) TimerEvent: {}
+[45.738931] (-) TimerEvent: {}
+[45.839217] (-) TimerEvent: {}
+[45.939470] (-) TimerEvent: {}
+[46.039731] (-) TimerEvent: {}
+[46.140111] (-) TimerEvent: {}
+[46.240545] (-) TimerEvent: {}
+[46.340931] (-) TimerEvent: {}
+[46.441350] (-) TimerEvent: {}
+[46.541757] (-) TimerEvent: {}
+[46.642193] (-) TimerEvent: {}
+[46.742606] (-) TimerEvent: {}
+[46.843023] (-) TimerEvent: {}
+[46.943452] (-) TimerEvent: {}
+[47.043856] (-) TimerEvent: {}
+[47.144250] (-) TimerEvent: {}
+[47.244604] (-) TimerEvent: {}
+[47.344935] (-) TimerEvent: {}
+[47.445279] (-) TimerEvent: {}
+[47.545652] (-) TimerEvent: {}
+[47.646021] (-) TimerEvent: {}
+[47.746416] (-) TimerEvent: {}
+[47.846805] (-) TimerEvent: {}
+[47.959156] (robocallee_fms) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/employee_request__functions.c.o\x1b[0m\n'}
+[48.060763] (-) TimerEvent: {}
+[48.161141] (-) TimerEvent: {}
+[48.261734] (-) TimerEvent: {}
+[48.321023] (custom_messeage) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/custom_messeage/srv/detail/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[48.361864] (-) TimerEvent: {}
+[48.462249] (-) TimerEvent: {}
+[48.563013] (-) TimerEvent: {}
+[48.663392] (-) TimerEvent: {}
+[48.763768] (-) TimerEvent: {}
+[48.864128] (-) TimerEvent: {}
+[48.964500] (-) TimerEvent: {}
+[49.064854] (-) TimerEvent: {}
+[49.165256] (-) TimerEvent: {}
+[49.265623] (-) TimerEvent: {}
+[49.365993] (-) TimerEvent: {}
+[49.466365] (-) TimerEvent: {}
+[49.566734] (-) TimerEvent: {}
+[49.671415] (-) TimerEvent: {}
+[49.771797] (-) TimerEvent: {}
+[49.872192] (-) TimerEvent: {}
+[49.972592] (-) TimerEvent: {}
+[50.072973] (-) TimerEvent: {}
+[50.173347] (-) TimerEvent: {}
+[50.273662] (-) TimerEvent: {}
+[50.373972] (-) TimerEvent: {}
+[50.474332] (-) TimerEvent: {}
+[50.574667] (-) TimerEvent: {}
+[50.675036] (-) TimerEvent: {}
+[50.775404] (-) TimerEvent: {}
+[50.875714] (-) TimerEvent: {}
+[50.975988] (-) TimerEvent: {}
+[51.076339] (-) TimerEvent: {}
+[51.176719] (-) TimerEvent: {}
+[51.277105] (-) TimerEvent: {}
+[51.377464] (-) TimerEvent: {}
+[51.477768] (-) TimerEvent: {}
+[51.578092] (-) TimerEvent: {}
+[51.678455] (-) TimerEvent: {}
+[51.778741] (-) TimerEvent: {}
+[51.878994] (-) TimerEvent: {}
+[51.979289] (-) TimerEvent: {}
+[52.079567] (-) TimerEvent: {}
+[52.179901] (-) TimerEvent: {}
+[52.280205] (-) TimerEvent: {}
+[52.380504] (-) TimerEvent: {}
+[52.480853] (-) TimerEvent: {}
+[52.581190] (-) TimerEvent: {}
+[52.681522] (-) TimerEvent: {}
+[52.781856] (-) TimerEvent: {}
+[52.882204] (-) TimerEvent: {}
+[52.982505] (-) TimerEvent: {}
+[53.082812] (-) TimerEvent: {}
+[53.183112] (-) TimerEvent: {}
+[53.283467] (-) TimerEvent: {}
+[53.383792] (-) TimerEvent: {}
+[53.484116] (-) TimerEvent: {}
+[53.584393] (-) TimerEvent: {}
+[53.684726] (-) TimerEvent: {}
+[53.785073] (-) TimerEvent: {}
+[53.885381] (-) TimerEvent: {}
+[53.985652] (-) TimerEvent: {}
+[54.085914] (-) TimerEvent: {}
+[54.186237] (-) TimerEvent: {}
+[54.286569] (-) TimerEvent: {}
+[54.386868] (-) TimerEvent: {}
+[54.487156] (-) TimerEvent: {}
+[54.587459] (-) TimerEvent: {}
+[58.328839] (-) TimerEvent: {}
+[58.429240] (-) TimerEvent: {}
+[58.529629] (-) TimerEvent: {}
+[58.630001] (-) TimerEvent: {}
+[58.730652] (-) TimerEvent: {}
+[58.831089] (-) TimerEvent: {}
+[58.931506] (-) TimerEvent: {}
+[59.031931] (-) TimerEvent: {}
+[59.132326] (-) TimerEvent: {}
+[59.232732] (-) TimerEvent: {}
+[59.333124] (-) TimerEvent: {}
+[59.433531] (-) TimerEvent: {}
+[59.533921] (-) TimerEvent: {}
+[59.634302] (-) TimerEvent: {}
+[59.734696] (-) TimerEvent: {}
+[59.835101] (-) TimerEvent: {}
+[59.935476] (-) TimerEvent: {}
+[60.035934] (-) TimerEvent: {}
+[60.138653] (-) TimerEvent: {}
+[60.239069] (-) TimerEvent: {}
+[60.339477] (-) TimerEvent: {}
+[60.440835] (-) TimerEvent: {}
+[60.541726] (-) TimerEvent: {}
+[60.642116] (-) TimerEvent: {}
+[60.742553] (-) TimerEvent: {}
+[60.842923] (-) TimerEvent: {}
+[60.943268] (-) TimerEvent: {}
+[61.043635] (-) TimerEvent: {}
+[61.144043] (-) TimerEvent: {}
+[61.244490] (-) TimerEvent: {}
+[61.344919] (-) TimerEvent: {}
+[61.445341] (-) TimerEvent: {}
+[61.545736] (-) TimerEvent: {}
+[61.646116] (-) TimerEvent: {}
+[61.746526] (-) TimerEvent: {}
+[61.847008] (-) TimerEvent: {}
+[61.947434] (-) TimerEvent: {}
+[62.047896] (-) TimerEvent: {}
+[62.136344] (robocallee_fms) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/employee_request__type_support.c.o\x1b[0m\n'}
+[62.191654] (-) TimerEvent: {}
+[62.293014] (-) TimerEvent: {}
+[62.394562] (-) TimerEvent: {}
+[62.469907] (robocallee_fms) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/robot_arm_request__description.c.o\x1b[0m\n'}
+[62.494800] (-) TimerEvent: {}
+[62.595553] (-) TimerEvent: {}
+[62.677160] (robocallee_fms) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/robot_arm_request__functions.c.o\x1b[0m\n'}
+[62.695851] (-) TimerEvent: {}
+[62.796635] (-) TimerEvent: {}
+[62.897813] (-) TimerEvent: {}
+[62.982300] (robocallee_fms) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[63.002305] (-) TimerEvent: {}
+[63.038859] (custom_messeage) StdoutLine: {'line': b'[ 38%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[63.102545] (-) TimerEvent: {}
+[63.136802] (robocallee_fms) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose__type_support.c.o\x1b[0m\n'}
+[63.202880] (-) TimerEvent: {}
+[63.276337] (robocallee_fms) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose__functions.c.o\x1b[0m\n'}
+[63.304301] (-) TimerEvent: {}
+[63.405270] (-) TimerEvent: {}
+[63.470878] (robocallee_fms) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking C shared library librobocallee_fms__rosidl_generator_c.so\x1b[0m\n'}
+[63.488814] (custom_messeage) StdoutLine: {'line': b'[ 38%] Built target custom_messeage__rosidl_typesupport_introspection_cpp\n'}
+[63.505348] (-) TimerEvent: {}
+[63.517839] (custom_messeage) StdoutLine: {'line': b'[ 41%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[63.578293] (robocallee_fms) StdoutLine: {'line': b'[ 25%] Built target robocallee_fms__rosidl_generator_c\n'}
+[63.605454] (-) TimerEvent: {}
+[63.636536] (robocallee_fms) StdoutLine: {'line': b'[ 27%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[63.705553] (-) TimerEvent: {}
+[63.805910] (-) TimerEvent: {}
+[63.906316] (-) TimerEvent: {}
+[64.006668] (-) TimerEvent: {}
+[64.107023] (-) TimerEvent: {}
+[64.180006] (custom_messeage) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/custom_messeage/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[64.207122] (-) TimerEvent: {}
+[64.307500] (-) TimerEvent: {}
+[64.401918] (robocallee_fms) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robocallee_fms/msg/aruco_pose__type_support.cpp.o\x1b[0m\n'}
+[64.407620] (-) TimerEvent: {}
+[64.508059] (-) TimerEvent: {}
+[64.608516] (-) TimerEvent: {}
+[64.708933] (-) TimerEvent: {}
+[64.809350] (-) TimerEvent: {}
+[64.906669] (custom_messeage) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[64.909458] (-) TimerEvent: {}
+[64.924517] (robocallee_fms) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robocallee_fms/msg/aruco_pose_array__type_support.cpp.o\x1b[0m\n'}
+[65.009587] (-) TimerEvent: {}
+[65.079067] (custom_messeage) StdoutLine: {'line': b'[ 47%] Built target custom_messeage__rosidl_typesupport_cpp\n'}
+[65.106476] (custom_messeage) StdoutLine: {'line': b'[ 50%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[65.109716] (-) TimerEvent: {}
+[65.210101] (-) TimerEvent: {}
+[65.310510] (-) TimerEvent: {}
+[65.410979] (-) TimerEvent: {}
+[65.450658] (robocallee_fms) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robocallee_fms/srv/customer_request__type_support.cpp.o\x1b[0m\n'}
+[65.511100] (-) TimerEvent: {}
+[65.611757] (-) TimerEvent: {}
+[65.658762] (custom_messeage) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/custom_messeage/srv/detail/robot_arm_request__type_support_c.cpp.o\x1b[0m\n'}
+[65.711883] (-) TimerEvent: {}
+[65.812276] (-) TimerEvent: {}
+[65.912667] (-) TimerEvent: {}
+[66.013134] (-) TimerEvent: {}
+[66.113594] (-) TimerEvent: {}
+[66.148820] (robocallee_fms) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robocallee_fms/srv/employee_request__type_support.cpp.o\x1b[0m\n'}
+[66.213735] (-) TimerEvent: {}
+[66.314569] (-) TimerEvent: {}
+[66.414958] (-) TimerEvent: {}
+[66.515348] (-) TimerEvent: {}
+[66.570460] (custom_messeage) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[66.615547] (-) TimerEvent: {}
+[66.716071] (-) TimerEvent: {}
+[66.746668] (custom_messeage) StdoutLine: {'line': b'[ 55%] Built target custom_messeage__rosidl_typesupport_fastrtps_c\n'}
+[66.771727] (custom_messeage) StdoutLine: {'line': b'[ 58%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[66.816216] (-) TimerEvent: {}
+[66.885636] (robocallee_fms) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/robocallee_fms/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[66.916321] (-) TimerEvent: {}
+[67.016655] (-) TimerEvent: {}
+[67.117025] (-) TimerEvent: {}
+[67.217491] (-) TimerEvent: {}
+[67.296044] (custom_messeage) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/custom_messeage/srv/detail/dds_fastrtps/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[67.317600] (-) TimerEvent: {}
+[67.418076] (-) TimerEvent: {}
+[67.518580] (-) TimerEvent: {}
+[67.604873] (robocallee_fms) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX shared library librobocallee_fms__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[67.618719] (-) TimerEvent: {}
+[67.719573] (-) TimerEvent: {}
+[67.814344] (robocallee_fms) StdoutLine: {'line': b'[ 35%] Built target robocallee_fms__rosidl_typesupport_cpp\n'}
+[67.819675] (-) TimerEvent: {}
+[67.837429] (robocallee_fms) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[67.919791] (-) TimerEvent: {}
+[68.020246] (-) TimerEvent: {}
+[68.120623] (-) TimerEvent: {}
+[68.221114] (-) TimerEvent: {}
+[68.321502] (-) TimerEvent: {}
+[68.369879] (custom_messeage) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[68.421658] (-) TimerEvent: {}
+[68.492565] (robocallee_fms) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_c.dir/rosidl_typesupport_c/robocallee_fms/msg/aruco_pose__type_support.cpp.o\x1b[0m\n'}
+[68.521776] (-) TimerEvent: {}
+[68.549631] (custom_messeage) StdoutLine: {'line': b'[ 64%] Built target custom_messeage__rosidl_typesupport_fastrtps_cpp\n'}
+[68.573747] (custom_messeage) StdoutLine: {'line': b'[ 67%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[68.577488] (robocallee_fms) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_c.dir/rosidl_typesupport_c/robocallee_fms/msg/aruco_pose_array__type_support.cpp.o\x1b[0m\n'}
+[68.621896] (-) TimerEvent: {}
+[68.664947] (robocallee_fms) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_c.dir/rosidl_typesupport_c/robocallee_fms/srv/customer_request__type_support.cpp.o\x1b[0m\n'}
+[68.722008] (-) TimerEvent: {}
+[68.760863] (robocallee_fms) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_c.dir/rosidl_typesupport_c/robocallee_fms/srv/employee_request__type_support.cpp.o\x1b[0m\n'}
+[68.822136] (-) TimerEvent: {}
+[68.850265] (robocallee_fms) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_c.dir/rosidl_typesupport_c/robocallee_fms/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[68.922295] (-) TimerEvent: {}
+[68.948074] (robocallee_fms) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library librobocallee_fms__rosidl_typesupport_c.so\x1b[0m\n'}
+[68.965827] (custom_messeage) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/custom_messeage__rosidl_typesupport_c.dir/rosidl_typesupport_c/custom_messeage/srv/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[69.022435] (-) TimerEvent: {}
+[69.044089] (robocallee_fms) StdoutLine: {'line': b'[ 44%] Built target robocallee_fms__rosidl_typesupport_c\n'}
+[69.055386] (custom_messeage) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libcustom_messeage__rosidl_typesupport_c.so\x1b[0m\n'}
+[69.071620] (robocallee_fms) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[69.122914] (-) TimerEvent: {}
+[69.137597] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage__rosidl_typesupport_c\n'}
+[69.183134] (custom_messeage) StdoutLine: {'line': b'[ 73%] Built target custom_messeage\n'}
+[69.223328] (-) TimerEvent: {}
+[69.229263] (custom_messeage) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[69.323439] (-) TimerEvent: {}
+[69.423799] (-) TimerEvent: {}
+[69.524125] (-) TimerEvent: {}
+[69.624457] (-) TimerEvent: {}
+[69.724769] (-) TimerEvent: {}
+[69.825102] (-) TimerEvent: {}
+[69.909358] (custom_messeage) StdoutLine: {'line': b'[ 76%] Built target custom_messeage__py\n'}
+[69.925272] (-) TimerEvent: {}
+[69.955715] (custom_messeage) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/custom_messeage__rosidl_generator_py.dir/rosidl_generator_py/custom_messeage/srv/_robot_arm_request_s.c.o\x1b[0m\n'}
+[70.025379] (-) TimerEvent: {}
+[70.123129] (robocallee_fms) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robocallee_fms/msg/detail/dds_fastrtps/aruco_pose__type_support.cpp.o\x1b[0m\n'}
+[70.125498] (-) TimerEvent: {}
+[70.225880] (-) TimerEvent: {}
+[70.326261] (-) TimerEvent: {}
+[70.342061] (custom_messeage) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking C shared library libcustom_messeage__rosidl_generator_py.so\x1b[0m\n'}
+[70.426401] (-) TimerEvent: {}
+[70.443952] (custom_messeage) StdoutLine: {'line': b'[ 82%] Built target custom_messeage__rosidl_generator_py\n'}
+[70.493747] (custom_messeage) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[70.526514] (-) TimerEvent: {}
+[70.626899] (-) TimerEvent: {}
+[70.707564] (custom_messeage) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[70.727036] (-) TimerEvent: {}
+[70.776118] (custom_messeage) StdoutLine: {'line': b'[ 88%] Built target custom_messeage_s__rosidl_typesupport_fastrtps_c\n'}
+[70.822781] (custom_messeage) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[70.827151] (-) TimerEvent: {}
+[70.917801] (robocallee_fms) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robocallee_fms/msg/detail/dds_fastrtps/aruco_pose_array__type_support.cpp.o\x1b[0m\n'}
+[70.927281] (-) TimerEvent: {}
+[71.008119] (custom_messeage) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[71.027393] (-) TimerEvent: {}
+[71.072383] (custom_messeage) StdoutLine: {'line': b'[ 94%] Built target custom_messeage_s__rosidl_typesupport_c\n'}
+[71.119221] (custom_messeage) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/custom_messeage_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[71.127510] (-) TimerEvent: {}
+[71.227952] (-) TimerEvent: {}
+[71.311934] (custom_messeage) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[71.328099] (-) TimerEvent: {}
+[71.380794] (custom_messeage) StdoutLine: {'line': b'[100%] Built target custom_messeage_s__rosidl_typesupport_introspection_c\n'}
+[71.416901] (custom_messeage) CommandEnded: {'returncode': 0}
+[71.428186] (-) TimerEvent: {}
+[71.430100] (custom_messeage) JobProgress: {'identifier': 'custom_messeage', 'progress': 'install'}
+[71.453776] (custom_messeage) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/custom_messeage', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[71.476097] (custom_messeage) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[71.482960] (custom_messeage) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[71.486084] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/rosidl_interfaces/custom_messeage\n'}
+[71.507957] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.json\n'}
+[71.528295] (-) TimerEvent: {}
+[71.530550] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_c__visibility_control.h\n'}
+[71.550044] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__functions.h\n'}
+[71.570403] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.h\n'}
+[71.590327] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.h\n'}
+[71.610560] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.h\n'}
+[71.628415] (-) TimerEvent: {}
+[71.630899] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.sh\n'}
+[71.652378] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/library_path.dsv\n'}
+[71.672152] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[71.693257] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_c.h\n'}
+[71.715201] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[71.728544] (-) TimerEvent: {}
+[71.735613] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_c.h\n'}
+[71.757287] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[71.777505] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__builder.hpp\n'}
+[71.797825] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__struct.hpp\n'}
+[71.820407] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__traits.hpp\n'}
+[71.828672] (-) TimerEvent: {}
+[71.840869] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__type_support.hpp\n'}
+[71.841752] (robocallee_fms) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robocallee_fms/srv/detail/dds_fastrtps/customer_request__type_support.cpp.o\x1b[0m\n'}
+[71.862487] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/robot_arm_request.hpp\n'}
+[71.882919] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[71.903026] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[71.924968] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/include/custom_messeage/custom_messeage/srv/detail/robot_arm_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[71.928805] (-) TimerEvent: {}
+[71.945847] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.sh\n'}
+[71.969094] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/pythonpath.dsv\n'}
+[71.991950] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[72.013676] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[72.028942] (-) TimerEvent: {}
+[72.034672] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[72.056373] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[72.079095] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/__init__.py\n'}
+[72.100801] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_c.c\n'}
+[72.121684] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[72.129058] (-) TimerEvent: {}
+[72.144102] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/_custom_messeage_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[72.168104] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\n'}
+[72.189262] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\n'}
+[72.210593] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\n'}
+[72.229202] (-) TimerEvent: {}
+[72.233567] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/__init__.py\n'}
+[72.253219] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request.py\n'}
+[72.274190] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request_s.c\n'}
+[72.296438] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_fastrtps_c.so\n'}
+[72.297362] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_introspection_c.so\n'}
+[72.298208] (custom_messeage) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/custom_messeage_s__rosidl_typesupport_c.so\n'}
+[72.298481] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.idl\n'}
+[72.320388] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/srv/RobotArmRequest.srv\n'}
+[72.329322] (-) TimerEvent: {}
+[72.343530] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/package_run_dependencies/custom_messeage\n'}
+[72.366676] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/parent_prefix_path/custom_messeage\n'}
+[72.388963] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.sh\n'}
+[72.413850] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/ament_prefix_path.dsv\n'}
+[72.429455] (-) TimerEvent: {}
+[72.430789] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.sh\n'}
+[72.452740] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/environment/path.dsv\n'}
+[72.473584] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.bash\n'}
+[72.495219] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.sh\n'}
+[72.516882] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.zsh\n'}
+[72.529583] (-) TimerEvent: {}
+[72.540386] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/local_setup.dsv\n'}
+[72.561340] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.dsv\n'}
+[72.583468] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/ament_index/resource_index/packages/custom_messeage\n'}
+[72.607089] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake-extras.cmake\n'}
+[72.629875] (-) TimerEvent: {}
+[72.630384] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[72.653336] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[72.677190] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[72.697808] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[72.720952] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[72.730004] (-) TimerEvent: {}
+[72.744361] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[72.767915] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeageConfig.cmake\n'}
+[72.790302] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeageConfig-version.cmake\n'}
+[72.810600] (custom_messeage) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/package.xml\n'}
+[72.830147] (-) TimerEvent: {}
+[72.835015] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_c.so\n'}
+[72.846719] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_c.so" to ""\n'}
+[72.847142] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_c.so\n'}
+[72.847818] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[72.848084] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_c.so\n'}
+[72.849362] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_c.so" to ""\n'}
+[72.849677] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_c.so\n'}
+[72.850332] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_c.so" to ""\n'}
+[72.850600] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so\n'}
+[72.851711] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[72.851996] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_cpp.so\n'}
+[72.852845] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[72.853092] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_cpp.so\n'}
+[72.853938] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_typesupport_cpp.so" to ""\n'}
+[72.906147] (robocallee_fms) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robocallee_fms/srv/detail/dds_fastrtps/employee_request__type_support.cpp.o\x1b[0m\n'}
+[72.930278] (-) TimerEvent: {}
+[72.932022] (custom_messeage) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage'...\n"}
+[72.932339] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/__init__.py'...\n"}
+[72.932457] (custom_messeage) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv'...\n"}
+[72.932605] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/__init__.py'...\n"}
+[72.932742] (custom_messeage) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages/custom_messeage/srv/_robot_arm_request.py'...\n"}
+[72.945845] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_py.so\n'}
+[72.946703] (custom_messeage) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/libcustom_messeage__rosidl_generator_py.so" to ""\n'}
+[72.947940] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cExport.cmake\n'}
+[72.948726] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cExport-noconfig.cmake\n'}
+[72.949279] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[72.949874] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[72.950441] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cExport.cmake\n'}
+[72.951033] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[72.951563] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cExport.cmake\n'}
+[72.952126] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[72.952665] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_cppExport.cmake\n'}
+[72.953334] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[72.953981] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[72.954529] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[72.955117] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[72.955691] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cppExport.cmake\n'}
+[72.956290] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/custom_messeage__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[72.956818] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_pyExport.cmake\n'}
+[72.957361] (custom_messeage) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/share/custom_messeage/cmake/export_custom_messeage__rosidl_generator_pyExport-noconfig.cmake\n'}
+[72.961815] (custom_messeage) CommandEnded: {'returncode': 0}
+[72.998305] (custom_messeage) JobEnded: {'identifier': 'custom_messeage', 'rc': 0}
+[73.030422] (-) TimerEvent: {}
+[73.130789] (-) TimerEvent: {}
+[73.231194] (-) TimerEvent: {}
+[73.331626] (-) TimerEvent: {}
+[73.432087] (-) TimerEvent: {}
+[73.532500] (-) TimerEvent: {}
+[73.632893] (-) TimerEvent: {}
+[73.733265] (-) TimerEvent: {}
+[73.833628] (-) TimerEvent: {}
+[73.841844] (robocallee_fms) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/robocallee_fms/srv/detail/dds_fastrtps/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[73.933734] (-) TimerEvent: {}
+[74.034081] (-) TimerEvent: {}
+[74.134440] (-) TimerEvent: {}
+[74.234775] (-) TimerEvent: {}
+[74.335116] (-) TimerEvent: {}
+[74.435471] (-) TimerEvent: {}
+[74.535789] (-) TimerEvent: {}
+[74.636119] (-) TimerEvent: {}
+[74.736454] (-) TimerEvent: {}
+[74.834721] (robocallee_fms) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library librobocallee_fms__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[74.836532] (-) TimerEvent: {}
+[74.936902] (-) TimerEvent: {}
+[75.019946] (robocallee_fms) StdoutLine: {'line': b'[ 54%] Built target robocallee_fms__rosidl_typesupport_fastrtps_cpp\n'}
+[75.036992] (-) TimerEvent: {}
+[75.047963] (robocallee_fms) StdoutLine: {'line': b'[ 55%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[75.137080] (-) TimerEvent: {}
+[75.237402] (-) TimerEvent: {}
+[75.337698] (-) TimerEvent: {}
+[75.438004] (-) TimerEvent: {}
+[75.538333] (-) TimerEvent: {}
+[75.638660] (-) TimerEvent: {}
+[75.739024] (-) TimerEvent: {}
+[75.815629] (robocallee_fms) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robocallee_fms/msg/detail/aruco_pose__type_support.cpp.o\x1b[0m\n'}
+[75.839128] (-) TimerEvent: {}
+[75.939482] (-) TimerEvent: {}
+[76.039839] (-) TimerEvent: {}
+[76.140209] (-) TimerEvent: {}
+[76.240557] (-) TimerEvent: {}
+[76.309377] (robocallee_fms) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robocallee_fms/msg/detail/aruco_pose_array__type_support.cpp.o\x1b[0m\n'}
+[76.340672] (-) TimerEvent: {}
+[76.441025] (-) TimerEvent: {}
+[76.541386] (-) TimerEvent: {}
+[76.641739] (-) TimerEvent: {}
+[76.742112] (-) TimerEvent: {}
+[76.819497] (robocallee_fms) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robocallee_fms/srv/detail/customer_request__type_support.cpp.o\x1b[0m\n'}
+[76.842232] (-) TimerEvent: {}
+[76.942578] (-) TimerEvent: {}
+[77.042952] (-) TimerEvent: {}
+[77.143326] (-) TimerEvent: {}
+[77.243707] (-) TimerEvent: {}
+[77.344077] (-) TimerEvent: {}
+[77.441224] (robocallee_fms) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robocallee_fms/srv/detail/employee_request__type_support.cpp.o\x1b[0m\n'}
+[77.444199] (-) TimerEvent: {}
+[77.544522] (-) TimerEvent: {}
+[77.644890] (-) TimerEvent: {}
+[77.745250] (-) TimerEvent: {}
+[77.845600] (-) TimerEvent: {}
+[77.945963] (-) TimerEvent: {}
+[78.046333] (-) TimerEvent: {}
+[78.051672] (robocallee_fms) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/robocallee_fms/srv/detail/robot_arm_request__type_support.cpp.o\x1b[0m\n'}
+[78.146449] (-) TimerEvent: {}
+[78.246805] (-) TimerEvent: {}
+[78.347187] (-) TimerEvent: {}
+[78.447557] (-) TimerEvent: {}
+[78.547929] (-) TimerEvent: {}
+[78.648256] (-) TimerEvent: {}
+[78.696583] (robocallee_fms) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library librobocallee_fms__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[78.748418] (-) TimerEvent: {}
+[78.848857] (-) TimerEvent: {}
+[78.872824] (robocallee_fms) StdoutLine: {'line': b'[ 63%] Built target robocallee_fms__rosidl_typesupport_introspection_cpp\n'}
+[78.900686] (robocallee_fms) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[78.948956] (-) TimerEvent: {}
+[79.049302] (-) TimerEvent: {}
+[79.149622] (-) TimerEvent: {}
+[79.249935] (-) TimerEvent: {}
+[79.350231] (-) TimerEvent: {}
+[79.450612] (-) TimerEvent: {}
+[79.550928] (-) TimerEvent: {}
+[79.651313] (-) TimerEvent: {}
+[79.751686] (-) TimerEvent: {}
+[79.754872] (robocallee_fms) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robocallee_fms/msg/detail/aruco_pose__type_support.c.o\x1b[0m\n'}
+[79.831590] (robocallee_fms) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robocallee_fms/srv/detail/customer_request__type_support.c.o\x1b[0m\n'}
+[79.851827] (-) TimerEvent: {}
+[79.920489] (robocallee_fms) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robocallee_fms/srv/detail/employee_request__type_support.c.o\x1b[0m\n'}
+[79.951939] (-) TimerEvent: {}
+[80.007947] (robocallee_fms) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robocallee_fms/srv/detail/robot_arm_request__type_support.c.o\x1b[0m\n'}
+[80.052061] (-) TimerEvent: {}
+[80.095484] (robocallee_fms) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/robocallee_fms/msg/detail/aruco_pose_array__type_support.c.o\x1b[0m\n'}
+[80.152201] (-) TimerEvent: {}
+[80.175772] (robocallee_fms) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking C shared library librobocallee_fms__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[80.252292] (-) TimerEvent: {}
+[80.253921] (robocallee_fms) StdoutLine: {'line': b'[ 72%] Built target robocallee_fms__rosidl_typesupport_introspection_c\n'}
+[80.281441] (robocallee_fms) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[80.352433] (-) TimerEvent: {}
+[80.452749] (-) TimerEvent: {}
+[80.553059] (-) TimerEvent: {}
+[80.653385] (-) TimerEvent: {}
+[80.753682] (-) TimerEvent: {}
+[80.854036] (-) TimerEvent: {}
+[80.954355] (-) TimerEvent: {}
+[81.054645] (-) TimerEvent: {}
+[81.154961] (-) TimerEvent: {}
+[81.255346] (-) TimerEvent: {}
+[81.313696] (robocallee_fms) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robocallee_fms/msg/detail/aruco_pose__type_support_c.cpp.o\x1b[0m\n'}
+[81.355481] (-) TimerEvent: {}
+[81.455862] (-) TimerEvent: {}
+[81.556243] (-) TimerEvent: {}
+[81.656612] (-) TimerEvent: {}
+[81.756977] (-) TimerEvent: {}
+[81.857365] (-) TimerEvent: {}
+[81.957796] (-) TimerEvent: {}
+[81.982572] (robocallee_fms) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robocallee_fms/srv/detail/employee_request__type_support_c.cpp.o\x1b[0m\n'}
+[82.057909] (-) TimerEvent: {}
+[82.158396] (-) TimerEvent: {}
+[82.258747] (-) TimerEvent: {}
+[82.359106] (-) TimerEvent: {}
+[82.459481] (-) TimerEvent: {}
+[82.559825] (-) TimerEvent: {}
+[82.660179] (-) TimerEvent: {}
+[82.724945] (robocallee_fms) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robocallee_fms/srv/detail/robot_arm_request__type_support_c.cpp.o\x1b[0m\n'}
+[82.760250] (-) TimerEvent: {}
+[82.860601] (-) TimerEvent: {}
+[82.960937] (-) TimerEvent: {}
+[83.061300] (-) TimerEvent: {}
+[83.161671] (-) TimerEvent: {}
+[83.262015] (-) TimerEvent: {}
+[83.362364] (-) TimerEvent: {}
+[83.462691] (-) TimerEvent: {}
+[83.488004] (robocallee_fms) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robocallee_fms/srv/detail/customer_request__type_support_c.cpp.o\x1b[0m\n'}
+[83.562807] (-) TimerEvent: {}
+[83.663157] (-) TimerEvent: {}
+[83.763523] (-) TimerEvent: {}
+[83.863887] (-) TimerEvent: {}
+[83.964370] (-) TimerEvent: {}
+[84.064748] (-) TimerEvent: {}
+[84.165089] (-) TimerEvent: {}
+[84.246352] (robocallee_fms) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/robocallee_fms__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/robocallee_fms/msg/detail/aruco_pose_array__type_support_c.cpp.o\x1b[0m\n'}
+[84.265249] (-) TimerEvent: {}
+[84.365751] (-) TimerEvent: {}
+[84.466343] (-) TimerEvent: {}
+[84.566700] (-) TimerEvent: {}
+[84.667051] (-) TimerEvent: {}
+[84.767425] (-) TimerEvent: {}
+[84.867792] (-) TimerEvent: {}
+[84.913605] (robocallee_fms) StdoutLine: {'line': b'[ 82%] \x1b[32m\x1b[1mLinking CXX shared library librobocallee_fms__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[84.967956] (-) TimerEvent: {}
+[85.068507] (-) TimerEvent: {}
+[85.081400] (robocallee_fms) StdoutLine: {'line': b'[ 82%] Built target robocallee_fms__rosidl_typesupport_fastrtps_c\n'}
+[85.129817] (robocallee_fms) StdoutLine: {'line': b'[ 82%] Built target robocallee_fms\n'}
+[85.168634] (-) TimerEvent: {}
+[85.178875] (robocallee_fms) StdoutLine: {'line': b'[ 83%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[85.268739] (-) TimerEvent: {}
+[85.369064] (-) TimerEvent: {}
+[85.469389] (-) TimerEvent: {}
+[85.569701] (-) TimerEvent: {}
+[85.670019] (-) TimerEvent: {}
+[85.770356] (-) TimerEvent: {}
+[85.870653] (-) TimerEvent: {}
+[85.970947] (-) TimerEvent: {}
+[86.071248] (-) TimerEvent: {}
+[86.171565] (-) TimerEvent: {}
+[86.271864] (-) TimerEvent: {}
+[86.372193] (-) TimerEvent: {}
+[86.472577] (-) TimerEvent: {}
+[86.572939] (-) TimerEvent: {}
+[86.612490] (robocallee_fms) StdoutLine: {'line': b'[ 83%] Built target robocallee_fms__py\n'}
+[86.673542] (-) TimerEvent: {}
+[86.675539] (robocallee_fms) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_py.dir/rosidl_generator_py/robocallee_fms/msg/_aruco_pose_s.c.o\x1b[0m\n'}
+[86.773437] (-) TimerEvent: {}
+[86.873808] (-) TimerEvent: {}
+[86.964290] (robocallee_fms) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_py.dir/rosidl_generator_py/robocallee_fms/srv/_employee_request_s.c.o\x1b[0m\n'}
+[86.974027] (-) TimerEvent: {}
+[87.074660] (-) TimerEvent: {}
+[87.175338] (-) TimerEvent: {}
+[87.276203] (-) TimerEvent: {}
+[87.300349] (robocallee_fms) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_py.dir/rosidl_generator_py/robocallee_fms/srv/_robot_arm_request_s.c.o\x1b[0m\n'}
+[87.376331] (-) TimerEvent: {}
+[87.478705] (-) TimerEvent: {}
+[87.579108] (-) TimerEvent: {}
+[87.610139] (robocallee_fms) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_py.dir/rosidl_generator_py/robocallee_fms/srv/_customer_request_s.c.o\x1b[0m\n'}
+[87.679225] (-) TimerEvent: {}
+[87.779595] (-) TimerEvent: {}
+[87.880006] (-) TimerEvent: {}
+[87.944343] (robocallee_fms) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms__rosidl_generator_py.dir/rosidl_generator_py/robocallee_fms/msg/_aruco_pose_array_s.c.o\x1b[0m\n'}
+[87.980146] (-) TimerEvent: {}
+[88.080563] (-) TimerEvent: {}
+[88.180975] (-) TimerEvent: {}
+[88.220339] (robocallee_fms) StdoutLine: {'line': b'[ 91%] \x1b[32m\x1b[1mLinking C shared library librobocallee_fms__rosidl_generator_py.so\x1b[0m\n'}
+[88.281130] (-) TimerEvent: {}
+[88.333325] (robocallee_fms) StdoutLine: {'line': b'[ 91%] Built target robocallee_fms__rosidl_generator_py\n'}
+[88.381101] (robocallee_fms) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms_s__rosidl_typesupport_fastrtps_c.dir/rosidl_generator_py/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[88.381449] (-) TimerEvent: {}
+[88.481802] (-) TimerEvent: {}
+[88.582250] (-) TimerEvent: {}
+[88.635661] (robocallee_fms) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robocallee_fms/robocallee_fms_s__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[88.682893] (-) TimerEvent: {}
+[88.722704] (robocallee_fms) StdoutLine: {'line': b'[ 94%] Built target robocallee_fms_s__rosidl_typesupport_fastrtps_c\n'}
+[88.777984] (robocallee_fms) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms_s__rosidl_typesupport_c.dir/rosidl_generator_py/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[88.782710] (-) TimerEvent: {}
+[88.883153] (-) TimerEvent: {}
+[88.983751] (-) TimerEvent: {}
+[89.059225] (robocallee_fms) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robocallee_fms/robocallee_fms_s__rosidl_typesupport_c.so\x1b[0m\n'}
+[89.083869] (-) TimerEvent: {}
+[89.136316] (robocallee_fms) StdoutLine: {'line': b'[ 97%] Built target robocallee_fms_s__rosidl_typesupport_c\n'}
+[89.184070] (-) TimerEvent: {}
+[89.190882] (robocallee_fms) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding C object CMakeFiles/robocallee_fms_s__rosidl_typesupport_introspection_c.dir/rosidl_generator_py/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[89.284189] (-) TimerEvent: {}
+[89.384558] (-) TimerEvent: {}
+[89.464819] (robocallee_fms) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared module rosidl_generator_py/robocallee_fms/robocallee_fms_s__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[89.484680] (-) TimerEvent: {}
+[89.541624] (robocallee_fms) StdoutLine: {'line': b'[100%] Built target robocallee_fms_s__rosidl_typesupport_introspection_c\n'}
+[89.570219] (robocallee_fms) CommandEnded: {'returncode': 0}
+[89.578154] (robocallee_fms) JobProgress: {'identifier': 'robocallee_fms', 'progress': 'install'}
+[89.579626] (robocallee_fms) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms'], 'cwd': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'jetcobot', 'SSH_CLIENT': '192.168.5.17 51190 22', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'tty', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib:/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/aarch64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/jetcobot', 'OLDPWD': '/home/jetcobot/sun_ws', 'QTDIR': '/usr', 'SSH_TTY': '/dev/pts/0', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'jetcobot', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '191', 'PATH': '/home/jetcobot/.local/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '59', 'AMENT_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.5.17 51190 192.168.0.168 22', 'XDG_DATA_DIRS': '/usr/share/gnome:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/build/pick_and_place:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place/lib/python3.12/site-packages:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage/lib/python3.12/site-packages:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms:/home/jetcobot/sun_ws/ros2_ws/install/custom_messeage:/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install/robocallee_fms:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/jetcobot/sun_ws/ros2_ws/install/pick_and_place:/opt/ros/jazzy'}), 'shell': False}
+[89.584785] (-) TimerEvent: {}
+[89.599902] (robocallee_fms) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[89.601800] (robocallee_fms) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[89.602530] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/ament_index/resource_index/rosidl_interfaces/robocallee_fms\n'}
+[89.634312] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPose.json\n'}
+[89.655722] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPoseArray.json\n'}
+[89.681359] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/CustomerRequest.json\n'}
+[89.685342] (-) TimerEvent: {}
+[89.706650] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/EmployeeRequest.json\n'}
+[89.732805] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/RobotArmRequest.json\n'}
+[89.755119] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/aruco_pose.h\n'}
+[89.777294] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/aruco_pose_array.h\n'}
+[89.785433] (-) TimerEvent: {}
+[89.800504] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__functions.h\n'}
+[89.823703] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__struct.h\n'}
+[89.848717] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__type_support.h\n'}
+[89.872590] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__functions.h\n'}
+[89.885577] (-) TimerEvent: {}
+[89.897023] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__struct.h\n'}
+[89.918313] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__type_support.h\n'}
+[89.941520] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/rosidl_generator_c__visibility_control.h\n'}
+[89.962442] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/customer_request.h\n'}
+[89.983796] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__functions.h\n'}
+[89.985683] (-) TimerEvent: {}
+[90.005104] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__struct.h\n'}
+[90.025628] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__type_support.h\n'}
+[90.046566] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__functions.h\n'}
+[90.072816] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__struct.h\n'}
+[90.085840] (-) TimerEvent: {}
+[90.096596] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__type_support.h\n'}
+[90.119721] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__functions.h\n'}
+[90.141150] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__struct.h\n'}
+[90.162148] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__type_support.h\n'}
+[90.184416] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/employee_request.h\n'}
+[90.185934] (-) TimerEvent: {}
+[90.210743] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/robot_arm_request.h\n'}
+[90.232139] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/library_path.sh\n'}
+[90.255426] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/library_path.dsv\n'}
+[90.276897] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[90.286091] (-) TimerEvent: {}
+[90.299032] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__rosidl_typesupport_fastrtps_c.h\n'}
+[90.325552] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[90.348278] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__rosidl_typesupport_fastrtps_c.h\n'}
+[90.368639] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__rosidl_typesupport_fastrtps_c.h\n'}
+[90.386280] (-) TimerEvent: {}
+[90.391621] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_c.h\n'}
+[90.416249] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__rosidl_typesupport_introspection_c.h\n'}
+[90.444450] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__rosidl_typesupport_introspection_c.h\n'}
+[90.468551] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[90.486403] (-) TimerEvent: {}
+[90.489616] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__rosidl_typesupport_introspection_c.h\n'}
+[90.520669] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__rosidl_typesupport_introspection_c.h\n'}
+[90.545490] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__rosidl_typesupport_introspection_c.h\n'}
+[90.571193] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/aruco_pose.hpp\n'}
+[90.586531] (-) TimerEvent: {}
+[90.592428] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/aruco_pose_array.hpp\n'}
+[90.618431] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__builder.hpp\n'}
+[90.639007] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__struct.hpp\n'}
+[90.658107] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__traits.hpp\n'}
+[90.678034] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__type_support.hpp\n'}
+[90.686648] (-) TimerEvent: {}
+[90.697921] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__builder.hpp\n'}
+[90.719172] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__struct.hpp\n'}
+[90.738547] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__traits.hpp\n'}
+[90.758141] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__type_support.hpp\n'}
+[90.777311] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[90.786739] (-) TimerEvent: {}
+[90.797050] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/customer_request.hpp\n'}
+[90.817586] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__builder.hpp\n'}
+[90.836683] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__struct.hpp\n'}
+[90.856202] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__traits.hpp\n'}
+[90.875163] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__type_support.hpp\n'}
+[90.886843] (-) TimerEvent: {}
+[90.894984] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__builder.hpp\n'}
+[90.914120] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__struct.hpp\n'}
+[90.933810] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__traits.hpp\n'}
+[90.953398] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__type_support.hpp\n'}
+[90.973361] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__builder.hpp\n'}
+[90.986949] (-) TimerEvent: {}
+[90.992277] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__struct.hpp\n'}
+[91.012388] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__traits.hpp\n'}
+[91.031659] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__type_support.hpp\n'}
+[91.050972] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/employee_request.hpp\n'}
+[91.071008] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/robot_arm_request.hpp\n'}
+[91.087047] (-) TimerEvent: {}
+[91.090383] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[91.110134] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[91.129260] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[91.148560] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[91.167799] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[91.187121] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[91.187365] (-) TimerEvent: {}
+[91.206948] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[91.226535] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/msg/detail/aruco_pose_array__rosidl_typesupport_introspection_cpp.hpp\n'}
+[91.245381] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/customer_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[91.264311] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/employee_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[91.284485] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/include/robocallee_fms/robocallee_fms/srv/detail/robot_arm_request__rosidl_typesupport_introspection_cpp.hpp\n'}
+[91.287473] (-) TimerEvent: {}
+[91.304033] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/pythonpath.sh\n'}
+[91.323619] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/pythonpath.dsv\n'}
+[91.343655] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms-0.0.0-py3.12.egg-info/PKG-INFO\n'}
+[91.363835] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms-0.0.0-py3.12.egg-info/SOURCES.txt\n'}
+[91.384063] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms-0.0.0-py3.12.egg-info/dependency_links.txt\n'}
+[91.387551] (-) TimerEvent: {}
+[91.403315] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms-0.0.0-py3.12.egg-info/top_level.txt\n'}
+[91.424856] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/__init__.py\n'}
+[91.445002] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_c.c\n'}
+[91.464090] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[91.484145] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/_robocallee_fms_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[91.487651] (-) TimerEvent: {}
+[91.503459] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/__init__.py\n'}
+[91.523351] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose.py\n'}
+[91.543366] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose_array.py\n'}
+[91.562413] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose_array_s.c\n'}
+[91.582264] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose_s.c\n'}
+[91.587754] (-) TimerEvent: {}
+[91.601767] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_c.so\n'}
+[91.621033] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_fastrtps_c.so\n'}
+[91.640371] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_introspection_c.so\n'}
+[91.660565] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/__init__.py\n'}
+[91.679734] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_customer_request.py\n'}
+[91.687844] (-) TimerEvent: {}
+[91.698895] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_customer_request_s.c\n'}
+[91.719720] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_employee_request.py\n'}
+[91.738808] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_employee_request_s.c\n'}
+[91.758491] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_robot_arm_request.py\n'}
+[91.777513] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_robot_arm_request_s.c\n'}
+[91.787992] (-) TimerEvent: {}
+[91.798259] (robocallee_fms) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_fastrtps_c.so\n'}
+[91.798972] (robocallee_fms) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_introspection_c.so\n'}
+[91.799780] (robocallee_fms) StdoutLine: {'line': b'-- Up-to-date symlink: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/robocallee_fms_s__rosidl_typesupport_c.so\n'}
+[91.799984] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPose.idl\n'}
+[91.820107] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPoseArray.idl\n'}
+[91.840161] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/CustomerRequest.idl\n'}
+[91.862327] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/EmployeeRequest.idl\n'}
+[91.882994] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/RobotArmRequest.idl\n'}
+[91.888104] (-) TimerEvent: {}
+[91.904433] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPose.msg\n'}
+[91.924597] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/msg/ArucoPoseArray.msg\n'}
+[91.943563] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/CustomerRequest.srv\n'}
+[91.965130] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/EmployeeRequest.srv\n'}
+[91.985964] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/srv/RobotArmRequest.srv\n'}
+[91.988187] (-) TimerEvent: {}
+[92.006259] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/ament_index/resource_index/package_run_dependencies/robocallee_fms\n'}
+[92.027220] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/ament_index/resource_index/parent_prefix_path/robocallee_fms\n'}
+[92.046867] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/ament_prefix_path.sh\n'}
+[92.067263] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/ament_prefix_path.dsv\n'}
+[92.086494] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/path.sh\n'}
+[92.088265] (-) TimerEvent: {}
+[92.107435] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/environment/path.dsv\n'}
+[92.127749] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/local_setup.bash\n'}
+[92.148979] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/local_setup.sh\n'}
+[92.169361] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/local_setup.zsh\n'}
+[92.188414] (-) TimerEvent: {}
+[92.189959] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/local_setup.dsv\n'}
+[92.209484] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.dsv\n'}
+[92.229048] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/ament_index/resource_index/packages/robocallee_fms\n'}
+[92.248958] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/rosidl_cmake-extras.cmake\n'}
+[92.268872] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[92.288549] (-) TimerEvent: {}
+[92.288988] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[92.307672] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[92.327881] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[92.347440] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[92.367884] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[92.387248] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fmsConfig.cmake\n'}
+[92.388613] (-) TimerEvent: {}
+[92.406541] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fmsConfig-version.cmake\n'}
+[92.425999] (robocallee_fms) StdoutLine: {'line': b'-- Symlinking: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/package.xml\n'}
+[92.445263] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_generator_c.so\n'}
+[92.446398] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_generator_c.so" to ""\n'}
+[92.446616] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_fastrtps_c.so\n'}
+[92.447533] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[92.447708] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_introspection_c.so\n'}
+[92.448398] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_introspection_c.so" to ""\n'}
+[92.448561] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_c.so\n'}
+[92.449187] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_c.so" to ""\n'}
+[92.449338] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_fastrtps_cpp.so\n'}
+[92.450732] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[92.450935] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_introspection_cpp.so\n'}
+[92.452051] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[92.452278] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_cpp.so\n'}
+[92.453190] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_typesupport_cpp.so" to ""\n'}
+[92.488711] (-) TimerEvent: {}
+[92.542889] (robocallee_fms) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms'...\n"}
+[92.543253] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/__init__.py'...\n"}
+[92.543378] (robocallee_fms) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg'...\n"}
+[92.543477] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/__init__.py'...\n"}
+[92.543579] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose.py'...\n"}
+[92.543667] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/msg/_aruco_pose_array.py'...\n"}
+[92.543778] (robocallee_fms) StdoutLine: {'line': b"Listing '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv'...\n"}
+[92.543862] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/__init__.py'...\n"}
+[92.543949] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_customer_request.py'...\n"}
+[92.544034] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_employee_request.py'...\n"}
+[92.544117] (robocallee_fms) StdoutLine: {'line': b"Compiling '/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/python3.12/site-packages/robocallee_fms/srv/_robot_arm_request.py'...\n"}
+[92.557148] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_generator_py.so\n'}
+[92.558133] (robocallee_fms) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/lib/librobocallee_fms__rosidl_generator_py.so" to ""\n'}
+[92.558332] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_generator_cExport.cmake\n'}
+[92.559070] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_generator_cExport-noconfig.cmake\n'}
+[92.559606] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[92.560156] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[92.560662] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_introspection_cExport.cmake\n'}
+[92.561236] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[92.561703] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_cExport.cmake\n'}
+[92.562230] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[92.562705] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_generator_cppExport.cmake\n'}
+[92.563255] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[92.563800] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[92.564285] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[92.564833] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[92.565364] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_cppExport.cmake\n'}
+[92.565915] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/robocallee_fms__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[92.566422] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_generator_pyExport.cmake\n'}
+[92.566897] (robocallee_fms) StdoutLine: {'line': b'-- Installing: /home/jetcobot/sun_ws/ros2_ws/install/robocallee_fms/share/robocallee_fms/cmake/export_robocallee_fms__rosidl_generator_pyExport-noconfig.cmake\n'}
+[92.571723] (robocallee_fms) CommandEnded: {'returncode': 0}
+[92.589044] (-) TimerEvent: {}
+[92.606972] (robocallee_fms) JobEnded: {'identifier': 'robocallee_fms', 'rc': 0}
+[92.608109] (-) EventReactorShutdown: {}

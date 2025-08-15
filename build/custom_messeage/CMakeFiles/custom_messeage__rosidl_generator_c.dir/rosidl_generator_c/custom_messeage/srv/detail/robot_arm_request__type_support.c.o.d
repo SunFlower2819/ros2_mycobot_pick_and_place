@@ -13,8 +13,8 @@ CMakeFiles/custom_messeage__rosidl_generator_c.dir/rosidl_generator_c/custom_mes
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__type_support.h \
  /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
+ /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/rosidl_generator_c/custom_messeage/srv/detail/robot_arm_request__type_support.h \
  /home/jetcobot/sun_ws/ros2_ws/build/custom_messeage/rosidl_generator_c/custom_messeage/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/type_description/type_description__struct.h \
