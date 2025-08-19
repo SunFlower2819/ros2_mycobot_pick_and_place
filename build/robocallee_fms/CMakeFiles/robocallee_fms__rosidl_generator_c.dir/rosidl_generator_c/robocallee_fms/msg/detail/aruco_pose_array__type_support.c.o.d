@@ -13,6 +13,7 @@ CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_
  /usr/include/aarch64-linux-gnu/bits/types/locale_t.h \
  /usr/include/aarch64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
+ /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose_array__struct.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdbool.h \
  /usr/lib/gcc/aarch64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
@@ -28,7 +29,6 @@ CMakeFiles/robocallee_fms__rosidl_generator_c.dir/rosidl_generator_c/robocallee_
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose__struct.h \
- /opt/ros/jazzy/include/rosidl_typesupport_interface/rosidl_typesupport_interface/macros.h \
  /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms/rosidl_generator_c/robocallee_fms/msg/detail/aruco_pose_array__type_support.h \
  /home/jetcobot/sun_ws/ros2_ws/build/robocallee_fms/rosidl_generator_c/robocallee_fms/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/jazzy/include/rosidl_runtime_c/rosidl_runtime_c/message_type_support_struct.h \

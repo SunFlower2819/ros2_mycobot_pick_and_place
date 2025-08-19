@@ -38,15 +38,31 @@ class Robot2ControlNode(Node):
     def arm2_control_callback(self, request, response):
         
         # 장고에 OCR 결과 받기-----------------------------
-        time.sleep(3)
-        print("이미지 찍는 중")
-        django_url = 'http://192.168.5.17:8000/gwanje/ocr_from_flask_stream/'
-        shoe_info = ask_django_ocr(django_url, 'get_shoe_info')
+        time.sleep(1)
 
-        response.model = shoe_info['model']
-        response.color = shoe_info['color']
-        response.size = shoe_info['size']
-        self.get_logger().info(f'[서비스 요청] model: {response.model}, color: {response.color}, size: {response.size}')
+        # 기본값 설정
+        shoe_info = {'model': 'None', 'color': 'None', 'size': -1}
+
+        try:
+            django_url = 'http://192.168.5.17:8000/gwanje/ocr_from_flask_stream/'
+            result = ask_django_ocr(django_url, 'get_shoe_info')
+
+            # None 이 아닐 때만 반영
+            if result is not None:
+                shoe_info = result
+            else:
+                self.get_logger().warn("OCR 서버 응답이 None, 기본값 사용")
+        except Exception as e:
+            self.get_logger().error(f"OCR 서버 요청 실패, 기본값 사용: {e}")
+
+        # 응답 세팅
+        response.model = shoe_info.get('model', 'None')
+        response.color = shoe_info.get('color', 'None')
+        response.size = shoe_info.get('size', -1)
+
+        self.get_logger().info(
+            f'[서비스 요청] model: {response.model}, color: {response.color}, size: {response.size}'
+        )
         # -----------------------------------------------
 
         pinky_id = request.amr_id
@@ -82,11 +98,11 @@ class Robot2ControlNode(Node):
         # TODO: 실제 로봇 로직 작성
         print(f"{pinky_id} 버퍼를 위한 초기자세로 이동..")
         if pinky_id == 1:
-            self.mc.send_angles([137.1, -9.84, -31.28, -30.84, -3.69, 91.14], 20) # 1번 버퍼 보는 초기 자세
+            self.mc.send_angles([137.1, -9.84, -31.28, -30.84, -3.69, 91.14], 25) # 1번 버퍼 보는 초기 자세
         elif pinky_id == 2:
-            self.mc.send_angles([119.0, -12.04, -32.34, -36.12, -2.1, 69.78], 20) # 2번 버퍼 보는 초기 자세
+            self.mc.send_angles([119.0, -12.04, -32.34, -36.12, -2.1, 69.78], 25) # 2번 버퍼 보는 초기 자세
         elif pinky_id == 3:
-            self.mc.send_angles([86.39, -7.2, -32.34, -39.99, -0.7, 42.8], 20) # 3번 버퍼 보는 초기 자세
+            self.mc.send_angles([86.39, -7.2, -32.34, -39.99, -0.7, 42.8], 25) # 3번 버퍼 보는 초기 자세
         else:
             print("정의되지 않은 핑키 번호")
 
@@ -94,7 +110,7 @@ class Robot2ControlNode(Node):
         self.mc.set_gripper_value(100, 50)
         
         # 프레임 가져오고, 프레임에서 에이프릴테그 감지
-        time.sleep(5)
+        time.sleep(4)
         frame = self.camera.get_frame()
         camera_coords, rvec_deg, tag_id = detect_target(frame, target_id=pinky_id) # 타겟 id = pinky_id
 
@@ -133,24 +149,25 @@ class Robot2ControlNode(Node):
                 self.mc.send_coords(approach_coords, 20, 1)
                 print("로봇 이동(2단계) 명령을 전송했습니다.")
                 print("이동 완료까지 대기 중...")
-                time.sleep(3)
+                time.sleep(1)
 
                 current_coords = self.mc.get_coords()
                 print(f"이동 후 현재 좌표: {current_coords}")
 
                 # 물체 잡기
-                time.sleep(3)
                 self.mc.set_gripper_value(0, 50)  # 그리퍼 닫기
+                time.sleep(0.5)
 
                 print(f"{pinky_id} 경유 지점으로 이동...")
                 if pinky_id == 1:
-                    self.mc.send_angles([131.48, -14.23, -49.74, -11.33, 0.35, 93.16], 20) # 1번 버퍼 pick 후 경유 위치로 이동
+                    self.mc.send_angles([131.48, -14.23, -49.74, -11.33, 0.35, 93.16], 25) # 1번 버퍼 pick 후 경유 위치로 이동
                 elif pinky_id == 2:
-                    self.mc.send_angles([115.31, 5.27, -63.54, -7.64, 0.26, 61.61], 20)    # 2번 버퍼 pick 후 경유 위치로 이동
+                    self.mc.send_angles([115.31, 5.27, -63.54, -7.64, 0.26, 61.61], 25)    # 2번 버퍼 pick 후 경유 위치로 이동
                 elif pinky_id == 3:
-                    self.mc.send_angles([95.88, 9.58, -56.33, -15.46, -1.14, 55.98], 20)   # 3번 버퍼 pick 후 경유 위치로 이동
+                    self.mc.send_angles([95.88, 9.58, -56.33, -15.46, -1.14, 55.98], 25)   # 3번 버퍼 pick 후 경유 위치로 이동
                 else:
                     print("정의되지 않은 핑키 번호")
+                time.sleep(0.5)
 
             except Exception as e:
                 print(f"좌표 변환 또는 로봇 이동 중 오류 발생: {e}")
@@ -186,7 +203,7 @@ class Robot2ControlNode(Node):
                 # x,y,z 보정
                 base_coords2[0] -= 110
                 base_coords2[1] += 0
-                base_coords2[2] += 10
+                base_coords2[2] += 7
                 print(f"수거존으로 이동할 좌표: {base_coords2}")
 
                 #경유지
@@ -218,6 +235,60 @@ class Robot2ControlNode(Node):
                 print(f"수거존 이동 중 오류 발생: {e}")
         else:
             print("수거존 AprilTag 인식 실패")
+
+            # 버퍼 위치별 동작 정의 (AprilTag 인식 실패 시 fallback용)
+            if pinky_id == 1:
+                # 경유지 이동 (전)
+                self.mc.send_angles([132.27, -32.6, -0.7, -34.89, -6.94, 47.72], 25) 
+                time.sleep(3)
+                
+                # 버퍼로 이동
+                self.mc.send_angles([129.55, -51.76, -12.12, -31.11, 0.35, 87.09], 20)
+                time.sleep(3)
+
+                # 놓기
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(0.5)
+
+                # 경유지 이동 (후)
+                self.mc.send_angles([131.48, -14.23, -49.74, -11.33, 0.35, 93.16], 25) 
+                time.sleep(2)
+            elif pinky_id == 2:
+                # 경유지 이동 (전)
+                self.mc.send_angles([115.31, 5.27, -63.54, -7.64, 0.26, 61.61], 25)   
+                time.sleep(2)
+                
+                # 버퍼로 이동
+                self.mc.send_angles([113.55, -31.2, -54.49, -7.2, -1.84, 70.31], 20)
+                time.sleep(2)
+
+                # 놓기
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(0.5)
+
+                # 경유지 이동 (후)
+                self.mc.send_angles([115.31, 5.27, -63.54, -7.64, 0.26, 61.61], 25) 
+                time.sleep(2)
+            elif pinky_id == 3:
+                # 경유지 이동 (전)
+                self.mc.send_angles([93.95, -29.17, -24.78, -37.44, -1.31, 51.59], 20)
+                time.sleep(2)
+
+                # 버퍼로 이동
+                self.mc.send_angles([94.13, -30.67, -53.43, -7.91, -0.17, 48.69], 20)
+                time.sleep(2)
+
+                # 놓기
+                self.mc.set_gripper_value(100, 50)
+                time.sleep(0.5)
+
+                # # 경유지 이동 (후)
+                self.mc.send_angles([93.95, -29.17, -24.78, -37.44, -1.31, 51.59], 20)
+                time.sleep(2)
+            else:
+                print("잘못된 핑키 번호입니다.")
+
+            self.mc.send_angles([0, 0, 0, 0, 0, 40], 25)
             return False, '에이프릴 테그 인식 실패' # "버퍼에서 핑키로 이동 실패
 
         self.get_logger().info(f"버퍼 → 핑키{pinky_id}")
@@ -292,10 +363,10 @@ class Robot2ControlNode(Node):
 
                 # 초기 위치(핑키 바라보는 방향) 복귀
                 print("\n[7]: 초기 위치 복귀")
-                self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 20)
+                self.mc.send_angles([-14.67, 91.58, -87.62, -37.79, -6.67, 44.2], 25)
                 time.sleep(2)
                 
-                self.mc.send_angles([0, 0, 0, 0, 0, 40], 20)
+                self.mc.send_angles([0, 0, 0, 0, 0, 40], 25)
                 print("\n[8]: 작업 완료")
 
             except Exception as e:

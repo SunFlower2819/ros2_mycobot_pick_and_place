@@ -23,7 +23,9 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/jazzy\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/jetcobot/CJ_ws/ros_ws/src/robocallee_fms/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/jetcobot/CJ_ws/jetcobot_rotus/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/jetcobot/CJ_ws/moveit_ws/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/jetcobot/CJ_ws/ros2_custom_msgs/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

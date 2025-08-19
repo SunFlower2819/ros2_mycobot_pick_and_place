@@ -10,7 +10,7 @@ from robocallee_fms.srv import RobotArmRequest
 
 ## Note: pick, place 각각 따로 모듈화하기(분리시켜 놓기)
 
-class Robot2ControlNode(Node):
+class Robot1ControlNode(Node):
     def __init__(self):
         super().__init__('robot1_control_node')
         self.srv = self.create_service(
@@ -67,9 +67,9 @@ class Robot2ControlNode(Node):
         # TODO: 실제 로봇 로직 작성
         print(f"{shelf_num}번 선반을 위한 초기자세로 이동..")
         if shelf_num == 1 or shelf_num == 2:
-            self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20) # 1,2번 선반 보는 초기 자세
+            self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 25) # 1,2번 선반 보는 초기 자세
         elif shelf_num == 3 or shelf_num == 4:
-            self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66], 20)  # 3,4번 선반 보는 초기 자세
+            self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66], 25)  # 3,4번 선반 보는 초기 자세
         # elif shelf_num == 5 or shelf_num == 6:
         #     self.mc.send_angles([-10.28, 84.11, -119.09, 13.53, 9.22, 46.66],20)   # 4,5번 선반 보는 초기 자세 --> 기획상으로만 존재
         else:
@@ -110,75 +110,75 @@ class Robot2ControlNode(Node):
                     approach_coords[2] -= 8
 
                 print(f"Joint 접근 목표: {approach_coords}")
-                self.mc.send_coords(approach_coords, 20, 0)
+                self.mc.send_coords(approach_coords, 25, 0)
                 print("접근 위치로 이동 중...")
-                time.sleep(3)
+                time.sleep(2)
                 print(f"이동 후 현재 좌표: {self.mc.get_coords()}")
 
                 # 집기
                 print("그리퍼를 완전히 닫습니다.")
                 self.mc.set_gripper_value(0, 50)
-                time.sleep(2)
+                time.sleep(1)
 
                 #경유지 설정(타겟 충돌 방지)
                 print(f"{shelf_num}번 선반 기준 경유지 이동..")
                 if shelf_num == 1 or shelf_num == 2:
-                    self.mc.send_angles([1.05, 34.71, -81.47, 45.52, -5.62, 44.82], 20)  # 1,2번 선반 경유지
-                    time.sleep(3)
+                    self.mc.send_angles([1.05, 34.71, -81.47, 45.52, -5.62, 44.82], 25)  # 1,2번 선반 경유지
+                    time.sleep(2)
                 elif shelf_num == 3 or shelf_num == 4:
-                    self.mc.send_angles([16.43, -5.53, -109.33, 110.91, -16.61, 51.06], 20) # 3,4번 선반 경유지
-                    time.sleep(3)
+                    self.mc.send_angles([16.43, -5.53, -109.33, 110.91, -16.61, 51.06], 25) # 3,4번 선반 경유지
+                    time.sleep(2)
 
                     # 돌아오면서 선반에 부딪힘을 방지하기 위해 초기 위치로 경유지를 설정
-                    self.mc.send_angles([1.05, 34.71, -81.47, 45.52, -5.62, 44.82], 20)  # 1,2번 선반 경유지
-                    time.sleep(3)
+                    self.mc.send_angles([1.05, 34.71, -81.47, 45.52, -5.62, 44.82], 25)  # 1,2번 선반 경유지
+                    time.sleep(2)
                 else:
                     print("정의되지 않은 선반 번호")
 
                 # 버퍼별 경유지로 이동 -> 버퍼로 이동 -> 후퇴 경유지 이동
                 if pinky_id == 1:
                     # 경유지 이동
-                    self.mc.send_angles([-96.06, -43.41, -13.27, -23.81, -5.71, 44.56], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-96.06, -43.41, -13.27, -23.81, -5.71, 44.56], 25)
+                    time.sleep(2)
                     
                     # 버퍼로 이동  
-                    self.mc.send_angles([-99.14, -77.6, 24.78, -23.46, -5.09, 40.51], 20)
+                    self.mc.send_angles([-99.14, -77.6, 24.78, -23.46, -5.09, 40.51], 25)
                     time.sleep(2)
                     self.mc.set_gripper_value(100, 50)
                     time.sleep(1)
                 
                     # 후퇴 경유지 이동
-                    self.mc.send_angles([-96.06, -43.41, -13.27, -23.81, -5.71, 44.56], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-96.06, -43.41, -13.27, -23.81, -5.71, 44.56], 25)
+                    time.sleep(2)
                 elif pinky_id == 2:
                     # 경유지 이동
-                    self.mc.send_angles([-83.23, -52.99, 7.11, -37.08, -5.18, 49.83], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-83.23, -52.99, 7.11, -37.08, -5.18, 49.83], 25)
+                    time.sleep(2)
 
                     # 버퍼로 이동
-                    self.mc.send_angles([-86.22, -62.84, 6.5, -24.96, -2.46, 48.69], 20)
+                    self.mc.send_angles([-86.22, -62.84, 6.5, -24.96, -2.46, 48.69], 25)
                     time.sleep(2)
                     self.mc.set_gripper_value(100, 50)
                     time.sleep(1)
 
                     # 후퇴 경유지 이동
-                    self.mc.send_angles([-83.23, -52.99, 7.11, -37.08, -5.18, 49.83], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-83.23, -52.99, 7.11, -37.08, -5.18, 49.83], 25)
+                    time.sleep(2)
 
                 elif pinky_id == 3:
                     # 경유지 이동
-                    self.mc.send_angles([-69.52, -38.75, -13.27, -26.19, -5.44, 65.91], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-69.52, -38.75, -13.27, -26.19, -5.44, 65.91], 25)
+                    time.sleep(2)
 
                     # 버퍼로 이동
-                    self.mc.send_angles([-66.35, -53.7, -15.9, -14.67, -6.24, 66.88], 20)
+                    self.mc.send_angles([-66.35, -53.7, -15.9, -14.67, -6.24, 66.88], 25)
                     time.sleep(2)
                     self.mc.set_gripper_value(100, 50)
                     time.sleep(1)
                     
                     # 후퇴 경유지 이동
-                    self.mc.send_angles([-69.52, -38.75, -13.27, -26.19, -5.44, 65.91], 20)
-                    time.sleep(3)
+                    self.mc.send_angles([-69.52, -38.75, -13.27, -26.19, -5.44, 65.91], 25)
+                    time.sleep(2)
                 else:
                     print("잘못된 핑키 번호입니다.")
                 
@@ -189,7 +189,7 @@ class Robot2ControlNode(Node):
 
                 # 복귀
                 print("초기 위치로 복귀합니다.")
-                self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 20)
+                self.mc.send_angles([-19.07, 57.04, -13.18, -36.82, 16.52, 47.37], 25)
 
             except Exception as e:
                 print(f"좌표 변환 또는 이동 중 오류 발생: {e}")
@@ -335,7 +335,7 @@ def destroy_node(self):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = Robot2ControlNode()
+    node = Robot1ControlNode()
     try:
         rclpy.spin(node)
     finally:

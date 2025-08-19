@@ -4,8 +4,8 @@
 
 #include <string.h>
 
-#include "robocallee_fms/msg/detail/aruco_pose_array__struct.h"
 #include "rosidl_typesupport_interface/macros.h"
+#include "robocallee_fms/msg/detail/aruco_pose_array__struct.h"
 #include "robocallee_fms/msg/detail/aruco_pose_array__type_support.h"
 #include "robocallee_fms/msg/detail/aruco_pose_array__functions.h"
 

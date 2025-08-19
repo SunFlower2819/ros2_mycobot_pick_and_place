@@ -6,8 +6,8 @@
 
 #include "rosidl_typesupport_interface/macros.h"
 #include "robocallee_fms/srv/detail/robot_arm_request__struct.h"
-#include "robocallee_fms/srv/detail/robot_arm_request__type_support.h"
 #include "robocallee_fms/srv/detail/robot_arm_request__functions.h"
+#include "robocallee_fms/srv/detail/robot_arm_request__type_support.h"
 
 #ifdef __cplusplus
 extern "C"
